@@ -1,0 +1,7 @@
+node_modules/
+.env
+.work/
+_preview/
+_site/
+data/
+.new_ig_token

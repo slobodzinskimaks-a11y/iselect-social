@@ -1,0 +1,85 @@
+{
+  "BRAND": "iSelect",
+  "IG_USERNAME": "iselect_hub",
+  "CITY": "Dzierżoniów",
+  "NEARBY": [
+    "Bielawa",
+    "Pieszyce",
+    "Świdnica",
+    "Ząbkowice Śląskie",
+    "Wrocław"
+  ],
+  "PHONE_NUMBER": "",
+  "CONTACT": [
+    "DM",
+    "telefon",
+    "OLX"
+  ],
+  "DELIVERY": [
+    "odbiór osobisty",
+    "wysyłka"
+  ],
+  "TRADE_IN": true,
+  "COLLABORATORS": [
+    "szymon_igg",
+    "majster_wihajsters"
+  ],
+  "TIMEZONE": "Europe/Warsaw",
+  "PUBLISH_HOUR": 21,
+  "PUBLISH_UNTIL_HOUR": 23,
+  "REQUEST_WEEKDAY": 0,
+  "REQUEST_HOUR": 10,
+  "GENERAL_FALLBACK_WEEKDAY": 1,
+  "GENERAL_FALLBACK_HOUR": 12,
+  "SUBMISSION_QUIET_MINUTES": 4,
+  "WEEK_PLAN": [
+    {
+      "weekday": 1,
+      "kind": "reel_hook"
+    },
+    {
+      "weekday": 2,
+      "kind": "story"
+    },
+    {
+      "weekday": 3,
+      "kind": "carousel_offer"
+    },
+    {
+      "weekday": 4,
+      "kind": "story"
+    },
+    {
+      "weekday": 5,
+      "kind": "reel_angle"
+    },
+    {
+      "weekday": 6,
+      "kind": "story"
+    },
+    {
+      "weekday": 0,
+      "kind": "carousel_value"
+    }
+  ],
+  "GEMINI_MODELS": [
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite",
+    "gemini-2.5-flash"
+  ],
+  "IG_API_VERSION": "v24.0",
+  "MAX_PHOTOS": 10,
+  "KEEP_WEEKS": 8,
+  "CHANNELS": {
+    "intake": "social-zgłoszenia",
+    "publish": "social-publikacje",
+    "log": "social-log"
+  },
+  "CHANNEL_IDS": {
+    "intake": "1561077593116119160",
+    "publish": "1561077594122756119",
+    "log": "1561077596052136028"
+  },
+  "SITE_URL": "https://slobodzinskimaks-a11y.github.io/iselect-social/"
+}

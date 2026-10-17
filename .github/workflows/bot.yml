@@ -1,0 +1,104 @@
+# Bot iSelect: budzi się co ~10 min (darmowe GitHub Actions w publicznym repozytorium), laptop nie jest potrzebny.
+name: bot
+
+on:
+  schedule:
+    - cron: '3-59/10 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: write
+
+concurrency:
+  group: bot
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+      REVIEW_WEBHOOK_URL: ${{ secrets.REVIEW_WEBHOOK_URL }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pobierz dane bota (gałąź data)
+        uses: actions/checkout@v4
+        with:
+          ref: data
+          path: data
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Cache przeglądarki do renderowania
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.remotion
+          key: remotion-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Przebieg bota
+        id: tick
+        run: node src/tick.js
+
+      - name: Zapisz odświeżony token Instagrama
+        if: ${{ hashFiles('.new_ig_token') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          gh secret set IG_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY" < .new_ig_token
+          rm .new_ig_token
+
+      - name: Złóż stronę akceptacji
+        if: ${{ steps.tick.outputs.deploy == 'true' }}
+        run: |
+          mkdir -p _site
+          cp -r web/. _site/
+          cp -r data/site/. _site/
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        if: ${{ steps.tick.outputs.deploy == 'true' }}
+        with:
+          path: _site
+
+      - uses: actions/deploy-pages@v4
+        if: ${{ steps.tick.outputs.deploy == 'true' }}
+
+      - name: Wyślij wiadomości na Discord
+        if: ${{ !cancelled() }}
+        run: node src/outbox.js
+
+      - name: Zapisz dane (bez historii, żeby repozytorium nie rosło)
+        if: ${{ !cancelled() }}
+        working-directory: data
+        run: |
+          git config user.name "iselect-bot"
+          git config user.email "iselect-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          git commit --amend --quiet -m "dane bota"
+          git push --force --quiet origin HEAD:data
+
+      - name: Podtrzymaj harmonogram (GitHub wyłącza go po 60 dniach bez aktywności)
+        if: ${{ github.event_name == 'schedule' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(date -u +%H%M)" \< "0010" ]; then
+            gh api -X PUT "repos/$GITHUB_REPOSITORY/actions/workflows/bot.yml/enable" || true
+          fi

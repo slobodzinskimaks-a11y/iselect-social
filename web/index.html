@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>iSelect – akceptacja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0e10; --card: #17181b; --line: #2a2c31; --text: #f4f1ea; --muted: #a9a59c;
+    --accent: #f5a95b; --ok: #6ee7a8; --warn: #ff7a66; --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+  body { padding: 0 16px calc(110px + env(safe-area-inset-bottom)); }
+  header { max-width: 720px; margin: 0 auto; padding: 22px 0 8px; }
+  .brand { font-weight: 900; font-size: 13px; letter-spacing: 3px; color: var(--muted); }
+  h1 { font-size: 26px; font-weight: 900; margin: 6px 0 4px; letter-spacing: -0.5px; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .sub { color: var(--muted); font-size: 14px; line-height: 1.45; }
+  main { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; padding-top: 10px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 14px 16px 10px; }
+  .date { font-weight: 800; font-size: 16px; text-transform: capitalize; }
+  .chip { font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .chip.auto { color: var(--ok); border-color: rgba(110,231,168,.35); }
+  .chip.manual { color: var(--accent); border-color: rgba(245,169,91,.4); }
+  .status { margin-left: auto; font-size: 12px; font-weight: 800; padding: 5px 10px; border-radius: 999px; background: #222429; }
+  .status.approved, .status.published, .status.sent { background: rgba(110,231,168,.14); color: var(--ok); }
+  .status.revise, .status.pending { background: rgba(245,169,91,.14); color: var(--accent); }
+  .label { padding: 0 16px 10px; color: var(--muted); font-size: 13px; }
+  .media { background: #000; position: relative; }
+  .strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .strip::-webkit-scrollbar { display: none; }
+  .strip img { flex: 0 0 100%; width: 100%; aspect-ratio: 4/5; object-fit: cover; scroll-snap-align: center; display: block; }
+  .counter { text-align: center; padding: 8px 0 0; font-size: 12px; font-weight: 700; color: var(--muted); background: var(--card); }
+  .vert { display: block; width: 100%; max-height: 78vh; aspect-ratio: 9/16; object-fit: contain; background: #000; margin: 0 auto; }
+  .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 12px; }
+  .music { font-size: 13px; color: var(--muted); background: #1e2024; border-radius: 12px; padding: 10px 12px; line-height: 1.45; }
+  .music b { color: var(--text); }
+  label.small { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; display: flex; justify-content: space-between; }
+  textarea { width: 100%; min-height: 150px; resize: vertical; background: #101114; color: var(--text); border: 1px solid var(--line); border-radius: 12px; padding: 12px; font: 15px/1.45 Inter, system-ui, sans-serif; }
+  textarea:focus { outline: 2px solid var(--accent); border-color: transparent; }
+  textarea.notes { min-height: 90px; }
+  .row { display: flex; gap: 10px; }
+  button { font: 800 15px Inter, system-ui, sans-serif; border-radius: 14px; padding: 14px 16px; border: 0; cursor: pointer; flex: 1; min-height: 48px; }
+  .approve { background: var(--accent); color: #111; }
+  .fix { background: #24262b; color: var(--text); border: 1px solid var(--line); }
+  button:disabled { opacity: .45; cursor: default; }
+  .fixbox { display: none; flex-direction: column; gap: 10px; }
+  .fixbox.open { display: flex; }
+  .done { font-size: 14px; color: var(--ok); font-weight: 700; }
+  .history { font-size: 12px; color: var(--muted); }
+  .bar { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: rgba(13,14,16,.92); backdrop-filter: blur(10px); border-top: 1px solid var(--line); }
+  .bar .inner { max-width: 720px; margin: 0 auto; display: flex; gap: 10px; align-items: center; }
+  .bar .info { flex: 1; font-size: 13px; color: var(--muted); }
+  .bar button { flex: 0 0 auto; }
+  .toast { position: fixed; left: 50%; top: 16px; transform: translateX(-50%); background: #24262b; border: 1px solid var(--line); padding: 12px 16px; border-radius: 12px; font-weight: 700; font-size: 14px; display: none; z-index: 9; max-width: calc(100% - 32px); }
+  .empty { color: var(--muted); padding: 40px 0; text-align: center; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">iSELECT · SOCIAL BOT</div>
+  <h1 id="title">Akceptacja <em>materiałów</em></h1>
+  <div class="sub" id="sub">Ładowanie…</div>
+</header>
+<main id="list"></main>
+<div class="bar" id="bar" hidden>
+  <div class="inner">
+    <div class="info" id="barInfo"></div>
+    <button class="approve" id="approveAll">Akceptuj wszystkie</button>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const qs = new URLSearchParams(location.search);
+  const draftId = qs.get('d');
+  const key = new URLSearchParams(location.hash.slice(1)).get('k');
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const STATUS = { review: 'Do akceptacji', approved: 'Zaakceptowane', revise: 'W poprawce', published: 'Opublikowane', sent: 'Wysłane do Ciebie', failed: 'Błąd', pending: 'Wysłano decyzję' };
+  const store = {
+    get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  };
+  let manifest = null;
+
+  function toast(msg, ms = 3500) {
+    const t = $('toast'); t.textContent = msg; t.style.display = 'block';
+    clearTimeout(toast.t); toast.t = setTimeout(() => (t.style.display = 'none'), ms);
+  }
+
+  async function sendDecisions(decisions) {
+    if (!key) throw new Error('Brak klucza w linku – otwórz link z Discorda.');
+    const batches = [[]];
+    for (const d of decisions) {
+      const cur = batches[batches.length - 1];
+      if (JSON.stringify([...cur, d]).length > 3600 && cur.length) batches.push([d]); else cur.push(d);
+    }
+    for (const batch of batches) {
+      const summary = batch.map((d) => `${d.action === 'approve' ? '✅' : '✏️'} ${d.label}${d.notes ? ` – „${d.notes.slice(0, 120)}”` : ''}`).join('\n');
+      const payload = { draft: draftId, decisions: batch.map(({ label, ...d }) => d) };
+      const res = await fetch(`https://discord.com/api/webhooks/${key}?wait=true`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: 'Strona akceptacji', content: summary.slice(0, 1900), embeds: [{ description: '```json\n' + JSON.stringify(payload) + '\n```' }] }),
+      });
+      if (!res.ok) throw new Error(`Discord: ${res.status}`);
+      await new Promise((r) => setTimeout(r, 400));
+    }
+    const sent = store.get('sent') || {};
+    for (const d of decisions) sent[`${d.item}@${d.version}`] = { action: d.action, at: Date.now() };
+    store.set('sent', sent);
+  }
+
+  function localStatus(it) {
+    const s = (store.get('sent') || {})[`${it.id}@${it.version}`];
+    if (s && ['review', 'approved'].includes(it.status) && !(it.status === 'approved' && s.action === 'approve')) return 'pending';
+    return it.status;
+  }
+
+  function decisionFor(it, action, notes) {
+    const ta = document.querySelector(`[data-caption="${it.id}"]`);
+    const d = { item: it.id, version: it.version, action, label: `${it.dateLabel} – ${it.label}` };
+    if (ta && ta.value.trim() !== (it.caption || '').trim()) d.caption = ta.value.trim();
+    if (notes) d.notes = notes;
+    return d;
+  }
+
+  function mediaHtml(it) {
+    const m = it.media || {};
+    if (it.format === 'carousel') {
+      return `<div class="media"><div class="strip" data-strip>${m.slides.map((s, i) => `<img loading="lazy" src="${esc(s)}?v=${it.version}" alt="Slajd ${i + 1}">`).join('')}</div><div class="counter" data-counter>1 / ${m.slides.length} · przesuń palcem</div></div>`;
+    }
+    if (it.format === 'reel') {
+      return `<div class="media"><video class="vert" src="${esc(m.video)}?v=${it.version}" poster="${esc(m.cover)}?v=${it.version}" controls playsinline loop muted preload="metadata"></video></div>`;
+    }
+    return `<div class="media"><img class="vert" src="${esc(m.image)}?v=${it.version}" alt="Relacja"></div>`;
+  }
+
+  function cardHtml(it) {
+    const st = localStatus(it);
+    const canAct = ['review', 'approved'].includes(it.status) && st !== 'pending';
+    const music = it.format === 'reel' && it.music
+      ? `<div class="music">🎵 Muzykę dodasz w aplikacji o ${manifest.publishHour}:00 (bot przypomni). Klimat: <b>${esc(it.music.mood)}</b>, tempo: ${esc(it.music.tempo)}${it.music.ideas?.length ? `<br>Szukaj w „Trendujące”: ${esc(it.music.ideas.join(' / '))}` : ''}</div>` : '';
+    const caption = it.format === 'story' ? '' : `
+      <label class="small">Opis posta <span data-count="${it.id}">${(it.caption || '').length} / 2200</span></label>
+      <textarea data-caption="${it.id}" ${canAct ? '' : 'readonly'}>${esc(it.caption)}</textarea>`;
+    const history = it.notes?.length ? `<div class="history">Poprzednie uwagi: ${it.notes.map((n) => `„${esc(n.text)}”`).join(', ')}</div>` : '';
+    const actions = canAct ? `
+      <div class="row">
+        <button class="approve" data-approve="${it.id}" ${it.status === 'approved' ? 'disabled' : ''}>${it.status === 'approved' ? 'Zaakceptowane ✓' : 'Akceptuj'}</button>
+        <button class="fix" data-fixtoggle="${it.id}">Popraw…</button>
+      </div>
+      <div class="fixbox" data-fixbox="${it.id}">
+        <textarea class="notes" data-notes="${it.id}" placeholder="Co zmienić? np. mocniejszy hook, inne zdjęcie na okładce, krótszy opis, cena na początku…"></textarea>
+        <button class="fix" data-fixsend="${it.id}">Wyślij do poprawki</button>
+      </div>` : st === 'pending' ? '<div class="done">Decyzja wysłana – bot zapisze ją w ciągu ok. 10 min.</div>'
+      : it.permalink ? `<div class="done"><a href="${esc(it.permalink)}" target="_blank" rel="noopener">Zobacz na Instagramie</a></div>` : '';
+    return `<section class="card" id="c-${it.id}">
+      <div class="head">
+        <span class="date">${esc(it.dateLabel)}</span>
+        <span class="chip ${it.auto ? 'auto' : 'manual'}">${it.auto ? `Auto ${manifest.publishHour}:00` : `📲 Ty o ${manifest.publishHour}:00 + muzyka`}</span>
+        <span class="status ${st}">${STATUS[st] || esc(st)}</span>
+      </div>
+      <div class="label">${esc(it.label)}${it.angle ? ` · ${esc(it.angle)}` : ''}</div>
+      ${mediaHtml(it)}
+      <div class="body">${music}${caption}${history}${actions}</div>
+    </section>`;
+  }
+
+  function render() {
+    const items = manifest.items;
+    $('title').innerHTML = `${esc(manifest.title)} <em>· akceptacja</em>`;
+    $('sub').innerHTML = `${items.length} materiałów. Karuzele i relacje bot publikuje sam o ${manifest.publishHour}:00 jako współtworzone z ${manifest.collaborators.map((c) => '@' + esc(c)).join(' i ')}. Rolki wyśle Ci na Discord, a Ty dodasz muzykę z Instagrama.${key ? '' : '<br><b style="color:var(--warn)">Tryb podglądu – otwórz link z Discorda, żeby akceptować.</b>'}`;
+    $('list').innerHTML = items.length ? items.map(cardHtml).join('') : '<div class="empty">Brak materiałów w tym szkicu.</div>';
+    const open = items.filter((it) => it.status === 'review' && localStatus(it) === 'review');
+    $('bar').hidden = !key || !open.length;
+    $('barInfo').textContent = `${open.length} do akceptacji`;
+    document.querySelectorAll('[data-strip]').forEach((strip) => {
+      const counter = strip.parentElement.querySelector('[data-counter]');
+      strip.addEventListener('scroll', () => {
+        const i = Math.round(strip.scrollLeft / strip.clientWidth);
+        counter.textContent = `${i + 1} / ${strip.children.length} · przesuń palcem`;
+      }, { passive: true });
+    });
+  }
+
+  async function act(decisions, okMsg) {
+    try {
+      document.querySelectorAll('button').forEach((b) => (b.disabled = true));
+      await sendDecisions(decisions);
+      toast(okMsg);
+    } catch (e) {
+      toast(`Nie udało się wysłać: ${e.message}`, 6000);
+    }
+    render();
+  }
+
+  document.addEventListener('input', (e) => {
+    const id = e.target.dataset.caption;
+    if (id) document.querySelector(`[data-count="${id}"]`).textContent = `${e.target.value.length} / 2200`;
+  });
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest('button');
+    if (!t) return;
+    const byId = (id) => manifest.items.find((x) => x.id === id);
+    if (t.dataset.approve) act([decisionFor(byId(t.dataset.approve), 'approve')], 'Zaakceptowane ✅');
+    if (t.dataset.fixtoggle) document.querySelector(`[data-fixbox="${t.dataset.fixtoggle}"]`).classList.toggle('open');
+    if (t.dataset.fixsend) {
+      const notes = document.querySelector(`[data-notes="${t.dataset.fixsend}"]`).value.trim();
+      if (!notes) return toast('Napisz, co zmienić 🙂');
+      act([decisionFor(byId(t.dataset.fixsend), 'revise', notes)], 'Wysłane do poprawki ✏️ Nowa wersja przyjdzie na Discord.');
+    }
+    if (t.id === 'approveAll') {
+      const open = manifest.items.filter((it) => it.status === 'review' && localStatus(it) === 'review');
+      if (open.length && confirm(`Zaakceptować ${open.length} materiałów?`)) act(open.map((it) => decisionFor(it, 'approve')), `Zaakceptowano ${open.length} ✅`);
+    }
+  });
+
+  async function load() {
+    try {
+      if (!draftId) {
+        const list = await (await fetch(`drafts/index.json?t=${Date.now()}`)).json();
+        $('sub').textContent = 'Ostatnie szkice:';
+        $('list').innerHTML = list.length ? list.map((d) => `<a class="card" style="display:block;padding:16px;text-decoration:none;color:var(--text)" href="?d=${encodeURIComponent(d.id)}${location.hash}"><b>${esc(d.title)}</b><div class="sub">tydzień od ${esc(d.weekStart)} · ${d.count} materiałów</div></a>`).join('') : '<div class="empty">Brak szkiców.</div>';
+        return;
+      }
+      manifest = await (await fetch(`drafts/${encodeURIComponent(draftId)}.json?t=${Date.now()}`)).json();
+      render();
+    } catch (e) {
+      $('sub').textContent = 'Nie mogę wczytać materiałów (strona może się jeszcze wdrażać – odśwież za minutę).';
+    }
+  }
+  load();
+})();
+</script>
+</body>
+</html>
