@@ -23,7 +23,7 @@ function say(state, content, { channel = 'intake', ping = false, files } = {}) {
 
 // ---------------- zgłoszenia (#social-zgłoszenia) ----------------
 const REQUEST_TEXT = (weekStart) => `📱 **Nowy tydzień (od ${formatDatePl(weekStart)}) – jaki telefon promujemy?**
-Odpisz tutaj jedną lub kilkoma wiadomościami:
+Wyślij tutaj dane i zdjęcia – w ilu chcesz wiadomościach (Discord pozwala na 10 zdjęć w jednej):
 \`\`\`
 Model:
 Pamięć:
@@ -34,7 +34,8 @@ Cena:
 Zestaw:
 Dodatkowo:
 \`\`\`
-+ **4–10 zdjęć** (przód, tył, boki, ekran z kondycją baterii, wady z bliska, telefon z pudełkiem).
++ **zdjęcia, do ${config.MAX_PHOTOS}** (przód, tył, boki, ekran z kondycją baterii, wady z bliska, telefon z pudełkiem).
+Gdy wyślesz wszystko, napisz **\`gotowe\`** – dopiero wtedy zaczynam.
 
 Inne odpowiedzi: \`dalej\` – zeszły telefon nadal dostępny (\`dalej 999\` = nowa cena) · \`ogólne\` – w tym tygodniu bez telefonu · \`sprzedany\` – zeszły sprzedany · \`status\` – plan publikacji.
 Jeśli nie odpiszesz do poniedziałku ${config.GENERAL_FALLBACK_HOUR}:00, przygotuję treści ogólne (porady, nowości, skup w rozliczeniu).`;
@@ -67,7 +68,7 @@ async function handleIntake(state, local) {
       if (/^sprzedan/.test(cmd)) { commandSold(state, local); continue; }
       if (/^(status|plan)/.test(cmd)) { say(state, statusText(state, local)); continue; }
       if (/^(pomoc|help)/.test(cmd)) { say(state, REQUEST_TEXT(mondayOf(addDays(local.date, 7)))); continue; }
-      if (/^(gotowe|generuj)/.test(cmd)) { state.buffer.force = true; continue; }
+      if (/^(gotowe|gotowy|generuj|koniec|to wszystko)/.test(cmd)) { state.buffer.force = true; continue; }
     }
     state.buffer.messages.push({
       id: m.id, at: m.timestamp, text,
@@ -81,23 +82,40 @@ async function handleIntake(state, local) {
 async function maybeProcessSubmission(state, local) {
   const buf = state.buffer;
   if (!buf.messages.length) return;
-  const lastAt = new Date(buf.messages.at(-1).at).getTime();
-  const quiet = Date.now() - lastAt >= config.SUBMISSION_QUIET_MINUTES * 60000;
-  if (!quiet && !buf.force) return;
+  if (buf.force) {
+    // linki do zdjęć na Discordzie wygasają po ~24 h – pobieramy świeże
+    for (const m of buf.messages.filter((x) => x.attachments.length)) {
+      try {
+        const fresh = await discord.getMessage(CH.intake, m.id);
+        m.attachments = fresh.attachments.map((a) => ({ url: a.url, filename: a.filename, content_type: a.content_type }));
+      } catch (e) {
+        log('Odświeżenie zdjęć', m.id, e.message);
+      }
+    }
+  }
   const attachments = buf.messages.flatMap((m) => m.attachments).filter(isImageAttachment);
   const text = buf.messages.map((m) => m.text).filter(Boolean).join('\n');
-  const askOnce = (key, msg) => {
-    if (buf.asked !== key) say(state, msg, { ping: true });
-    buf.asked = key;
+  // Zbieramy wiadomości aż do „gotowe” (zdjęcia przychodzą partiami po 10). Bez „gotowe” – tylko przypomnienie.
+  if (!buf.force) {
+    const idleMin = (Date.now() - new Date(buf.messages.at(-1).at).getTime()) / 60000;
+    if (idleMin >= config.SUBMISSION_REMIND_MINUTES && buf.reminded !== buf.messages.length) {
+      buf.reminded = buf.messages.length;
+      say(state, `📸 Mam ${attachments.length} zdjęć${text ? ' i opis' : ''}. Gdy wyślesz wszystko, napisz **gotowe** – wtedy zaczynam.`, { ping: true });
+    }
+    return;
+  }
+  const askOnce = (msg) => {
+    say(state, `${msg} Potem napisz **gotowe**.`, { ping: true });
     buf.force = false;
   };
-  if (!attachments.length) return askOnce(`photos-${buf.messages.length}`, 'Mam opis, brakuje **zdjęć** (4–10). Wrzuć je tutaj – resztę zrobię sam.');
-  if (!text) return askOnce(`text-${buf.messages.length}`, 'Mam zdjęcia 👍 Dopisz jeszcze **model, cenę, baterię i stan** (wystarczy jedna wiadomość).');
+  if (!attachments.length) return askOnce('Mam opis, ale brakuje **zdjęć**. Wrzuć je tutaj (po 10 w wiadomości).');
+  if (!text) return askOnce(`Mam ${attachments.length} zdjęć 👍 Dopisz jeszcze **model, cenę, baterię i stan** (wystarczy jedna wiadomość).`);
   const data = await extractPhone(text, !env.MOCK);
   const missing = missingFields(data);
   if (missing.includes('model') || missing.includes('cena')) {
-    return askOnce(`missing-${buf.messages.length}`, `Brakuje mi: **${missing.join(', ')}**. Dopisz to w kolejnej wiadomości.`);
+    return askOnce(`Brakuje mi: **${missing.join(', ')}**. Dopisz to w kolejnej wiadomości.`);
   }
+  if (attachments.length > config.MAX_PHOTOS) say(state, `ℹ️ Wysłałeś ${attachments.length} zdjęć – biorę pierwsze ${config.MAX_PHOTOS}.`);
 
   const phoneId = `${local.date}-${slug(data.model)}`;
   const files = await ingestAttachments(attachments, path.join(SITE, 'media', 'phones', phoneId), config.MAX_PHOTOS);

@@ -32,6 +32,8 @@ globalThis.fetch = async (url, opts = {}) => {
   if (u.host === 'discord.com') {
     const m = u.pathname.match(/channels\/(\d+)\/messages(?:\/(\d+)\/reactions)?/);
     if (m?.[2]) return new Response(null, { status: 204 });
+    const single = u.pathname.match(/channels\/(\d+)\/messages\/(\d+)$/);
+    if (single) return json(messages[single[1]].find((x) => x.id === single[2]));
     if (m && (opts.method ?? 'GET') === 'GET') {
       const after = u.searchParams.get('after');
       return json((messages[m[1]] ?? []).filter((x) => !after || BigInt(x.id) > BigInt(after)).reverse());
@@ -90,10 +92,18 @@ test('pełny tydzień bota', { timeout: 15 * 60 * 1000 }, async () => {
 
   // Właściciel wysyła dane + 3 zdjęcia (10 min temu)
   const ts = new Date(Date.now() - 10 * 60000).toISOString();
-  messages[10].push({ id: '101', author: { id: '555', bot: false }, timestamp: ts, content: 'Model: iPhone 13 Pro\nCena: 1100\nBateria: 100%\nStan: pęknięta szybka',
-    attachments: [0, 1, 2].map((i) => ({ url: `https://files.test/p${i}.jpg`, filename: `IMG_${i}.jpg`, content_type: 'image/jpeg' })) });
-  let state = await tick(at('2026-10-18T08:20:00Z'));
+  // 12 zdjęć w dwóch wiadomościach (Discord: max 10 na wiadomość), potem „gotowe”
+  const photos = (from, n) => Array.from({ length: n }, (_, i) => ({ url: `https://files.test/p${from + i}.jpg`, filename: `IMG_${from + i}.jpg`, content_type: 'image/jpeg' }));
+  messages[10].push({ id: '101', author: { id: '555', bot: false }, timestamp: ts, content: 'Model: iPhone 13 Pro\nCena: 1100\nBateria: 100%\nStan: pęknięta szybka', attachments: photos(0, 10) });
+  messages[10].push({ id: '102', author: { id: '555', bot: false }, timestamp: ts, content: '', attachments: photos(10, 2) });
+  let state = await tick(at('2026-10-18T08:12:00Z'));
+  assert.equal(Object.keys(state.items).length, 0, 'bez „gotowe” bot czeka na resztę zdjęć');
+  assert.equal(state.buffer.messages.length, 2);
+  takeOutbox();
+  messages[10].push({ id: '103', author: { id: '555', bot: false }, timestamp: new Date().toISOString(), content: 'gotowe', attachments: [] });
+  state = await tick(at('2026-10-18T08:20:00Z'));
   out = takeOutbox();
+  assert.equal(Object.values(state.phones)[0].photos.length, 12, 'wszystkie 12 zdjęć zapisane');
   assert.equal(state.ownerId, '555');
   const items = Object.values(state.items);
   assert.equal(items.length, 7, 'pakiet na 7 dni');
@@ -137,7 +147,7 @@ test('pełny tydzień bota', { timeout: 15 * 60 * 1000 }, async () => {
   assert.ok(igCalls.filter((c) => c.params.is_carousel_item === 'true').every((c) => c.params.image_url.startsWith('https://example.test/iselect/media/')));
 
   // Czwartek 12:00 – „sprzedany”
-  messages[10].push({ id: '102', author: { id: '555', bot: false }, timestamp: new Date().toISOString(), content: 'sprzedany', attachments: [] });
+  messages[10].push({ id: '104', author: { id: '555', bot: false }, timestamp: new Date().toISOString(), content: 'sprzedany', attachments: [] });
   state = await tick(at('2026-10-22T10:00:00Z'));
   out = takeOutbox();
   const all = Object.values(state.items);

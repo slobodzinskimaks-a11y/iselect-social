@@ -16,8 +16,9 @@ Działa w chmurze (GitHub Actions), **laptop nie musi być włączony**. Koszt: 
 | Sobota | Relacja | 🤖 bot |
 | Niedziela | Karuzela „do zapisania” (porady / ZA i PRZECIW) | 🤖 bot (współtworzona) |
 
-1. **Niedziela 10:00** – bot pisze na **#social-zgłoszenia**: prosi o model, pamięć, kolor, baterię, stan, cenę, zestaw + 4–10 zdjęć.
-2. Odpisujesz (jedną lub kilkoma wiadomościami). Po ~5–15 min dostajesz **link do strony akceptacji**.
+1. **Niedziela 10:00** – bot pisze na **#social-zgłoszenia**: prosi o model, pamięć, kolor, baterię, stan, cenę, zestaw + zdjęcia (do 40).
+2. Wysyłasz dane i zdjęcia w ilu chcesz wiadomościach (Discord: max 10 zdjęć w jednej), na końcu piszesz **`gotowe`**.
+   Po ~10–20 min dostajesz **link do strony akceptacji**. Bez „gotowe” bot czeka (po 30 min przypomni).
 3. Na stronie (działa na telefonie): oglądasz rolki i karuzele, możesz poprawić opis, klikasz **Akceptuj** albo **Popraw…** i wpisujesz uwagi
    → bot robi nową wersję i przysyła link. Niezaakceptowane materiały **nigdy** nie są publikowane.
 4. **O 21:00** bot publikuje karuzele i relacje. W dni rolek dostajesz na **#social-publikacje** wideo, okładkę, opis do skopiowania
@@ -31,7 +32,7 @@ Komendy na #social-zgłoszenia:
 | `ogólne` | w tym tygodniu bez telefonu – treści o iPhone'ach na podstawie aktualnych informacji z internetu |
 | `sprzedany` | wstrzymuje materiały o tym telefonie, robi relację „SPRZEDANE” i treści ogólne na resztę tygodnia |
 | `status` | plan publikacji i statusy |
-| `gotowe` | nie czekaj – generuj od razu z tego, co wysłałem |
+| `gotowe` | wysłałem już wszystkie dane i zdjęcia – zaczynaj |
 
 Brak odpowiedzi do poniedziałku 12:00 = bot sam przygotuje treści ogólne. Nowy telefon możesz wysłać **w dowolnym dniu** – bot podmieni kolejne dni tygodnia.
 

@@ -45,6 +45,8 @@ export async function readMessages(channelId, after) {
   return out.sort(byId);
 }
 
+export const getMessage = (channelId, messageId) => call('GET', `/channels/${channelId}/messages/${messageId}`);
+
 export async function latestMessageId(channelId) {
   const batch = await call('GET', `/channels/${channelId}/messages?limit=1`);
   return batch[0]?.id ?? null;

@@ -31,7 +31,7 @@
   "REQUEST_HOUR": 10,
   "GENERAL_FALLBACK_WEEKDAY": 1,
   "GENERAL_FALLBACK_HOUR": 12,
-  "SUBMISSION_QUIET_MINUTES": 4,
+  "SUBMISSION_REMIND_MINUTES": 30,
   "WEEK_PLAN": [
     {
       "weekday": 1,
@@ -69,7 +69,7 @@
     "gemini-2.5-flash"
   ],
   "IG_API_VERSION": "v24.0",
-  "MAX_PHOTOS": 10,
+  "MAX_PHOTOS": 40,
   "KEEP_WEEKS": 8,
   "CHANNELS": {
     "intake": "social-zgłoszenia",

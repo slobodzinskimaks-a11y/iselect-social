@@ -1,12 +1,15 @@
 // Darmowe Gemini API: tekst + zdjęcia → JSON, opcjonalnie z wyszukiwarką Google (aktualne tematy).
 import fs from 'node:fs';
+import sharp from 'sharp';
 import { config, env } from './config.js';
 import { log, sleep } from './util.js';
 
 const BASE = 'https://generativelanguage.googleapis.com/v1beta/models';
 
-export function imagePart(file, mime = 'image/jpeg') {
-  return { inline_data: { mime_type: mime, data: fs.readFileSync(file).toString('base64') } };
+// Do AI wysyłamy pomniejszone kopie (≤ 768 px) – 40 zdjęć mieści się wtedy w jednym zapytaniu.
+export async function imagePart(file) {
+  const data = await sharp(fs.readFileSync(file)).resize(768, 768, { fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 75 }).toBuffer();
+  return { inline_data: { mime_type: 'image/jpeg', data: data.toString('base64') } };
 }
 
 async function request(model, body) {

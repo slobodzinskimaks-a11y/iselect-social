@@ -54,12 +54,12 @@ TELEFON NA SPRZEDAŻ (jedyne źródło faktów o egzemplarzu):
 `.trim();
 }
 
-function photoParts(photos, label) {
+async function photoParts(photos, label) {
   const parts = [];
-  photos.forEach((p, i) => {
+  for (const [i, p] of photos.entries()) {
     parts.push({ text: `${label} ${i}:` });
-    parts.push(imagePart(p.file));
-  });
+    parts.push(await imagePart(p.file));
+  }
   return parts;
 }
 
@@ -94,7 +94,7 @@ ${FORMAT}`.trim();
 
   const out = await generateJson({
     system: brandGuide(),
-    parts: [{ text: prompt }, ...photoParts(photos, 'Zdjęcie')],
+    parts: [{ text: prompt }, ...(await photoParts(photos, 'Zdjęcie'))],
   });
   const items = out.items ?? out;
   const result = {};
@@ -120,7 +120,7 @@ ${photos.length ? `Zdjęcia: numery 0–${photos.length - 1} (poniżej).` : 'Bra
 Zwróć JSON: { "spec": <poprawiona specyfikacja w tym samym formacie> }
 
 ${FORMAT}`.trim();
-  const out = await generateJson({ system: brandGuide(), parts: [{ text: prompt }, ...photoParts(photos, 'Zdjęcie')], temperature: 0.7 });
+  const out = await generateJson({ system: brandGuide(), parts: [{ text: prompt }, ...(await photoParts(photos, 'Zdjęcie'))], temperature: 0.7 });
   return normalizeSpec(kind, out.spec ?? out, photos.length, stockClips.length);
 }
 
