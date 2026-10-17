@@ -92,7 +92,8 @@ function Icon({ type, color, size }) {
 }
 
 export function parseBullet(text) {
-  const m = text.match(/^\s*([+-]|\d+[.)])\s*(.*)$/);
+  // „1. krok” / „+ zaleta” / „- wada” – ale „128 GB” to zwykły tekst, nie numer punktu
+  const m = text.match(/^\s*([+-]|\d{1,2}[.)])\s+(.*)$/);
   if (!m) return { type: 'dot', text };
   if (m[1] === '+') return { type: 'plus', text: m[2] };
   if (m[1] === '-') return { type: 'minus', text: m[2] };

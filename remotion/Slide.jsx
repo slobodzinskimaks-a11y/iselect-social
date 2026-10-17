@@ -1,7 +1,7 @@
 // Slajd karuzeli 1080×1350 oraz relacja 1080×1920.
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
-import { Background, Bullet, Glass, MUTED, Pill, THEMES, Title } from './ui.jsx';
+import { Background, Bullet, Glass, MUTED, parseBullet, Pill, THEMES, Title } from './ui.jsx';
 
 const PAD = 72;
 
@@ -117,7 +117,7 @@ export function Slide({ slide, index, total, theme, photos, brand }) {
 
       {slide.kind === 'cover' && slide.bullets.length > 0 && (
         <div style={{ position: 'absolute', left: PAD, right: PAD, bottom: 190, display: 'flex', flexWrap: 'wrap', gap: 16 }}>
-          {slide.bullets.slice(0, 3).map((b, i) => <Pill key={i} text={b.replace(/^[+\-\d.)\s]+/, '').toUpperCase()} size={24} />)}
+          {slide.bullets.slice(0, 3).map((b, i) => <Pill key={i} text={parseBullet(b).text.toUpperCase()} size={24} />)}
         </div>
       )}
 
