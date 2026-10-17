@@ -122,7 +122,7 @@ async function maybeProcessSubmission(state, local) {
   state.phones[phoneId] = { id: phoneId, data, photos: files.map((f) => path.relative(SITE, f).split(path.sep).join('/')), status: 'available', createdAt: new Date().toISOString() };
   state.currentPhoneId = phoneId;
   state.buffer = { messages: [], asked: null };
-  const win = targetWindow(local, config.PUBLISH_HOUR);
+  const win = targetWindow(local, config.PUBLISH_HOUR, config.WEEK_PLAN);
   state.jobs.push({ type: 'generate', mode: 'phone', phoneId, ...win });
   const warn = missing.length ? `\n⚠️ Bez danych: ${missing.join(', ')} – pominę je w treściach.` : '';
   say(state, `✅ Przyjęte: **${data.model}**, ${data.price} zł, ${files.length} zdjęć. Tworzę materiały od ${formatDatePl(win.fromDate)} (zwykle 5–15 min).${warn}`);
@@ -134,13 +134,13 @@ async function commandContinue(state, local, cmd) {
   const price = Number(cmd.replace(/[^\d]/g, ''));
   if (price > 50) phone.data.price = price;
   phone.status = 'available';
-  const win = targetWindow(local, config.PUBLISH_HOUR);
+  const win = targetWindow(local, config.PUBLISH_HOUR, config.WEEK_PLAN);
   state.jobs.push({ type: 'generate', mode: 'continue', phoneId: phone.id, ...win });
   say(state, `👌 ${phone.data.model} dalej w ofercie${price > 50 ? ` (nowa cena: ${price} zł)` : ''}. Przygotuję nowe kąty i hooki.`);
 }
 
 function commandGeneral(state, local) {
-  const win = targetWindow(local, config.PUBLISH_HOUR);
+  const win = targetWindow(local, config.PUBLISH_HOUR, config.WEEK_PLAN);
   state.jobs.push({ type: 'generate', mode: 'general', ...win });
   say(state, '👌 W tym tygodniu treści ogólne – sprawdzę aktualne tematy w internecie i przygotuję materiały.');
 }

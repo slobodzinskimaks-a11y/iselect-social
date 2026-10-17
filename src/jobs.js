@@ -4,10 +4,10 @@ import path from 'node:path';
 import { config, reviewLink } from './config.js';
 import { generatePackage, reviseSpec, soldStorySpec } from './content.js';
 import { fetchStockClips } from './photos.js';
-import { KIND_INFO, weekSlots } from './plan.js';
+import { jobSlots, KIND_INFO } from './plan.js';
 import { createRenderer } from './render.js';
 import { SITE, toAbs, toRel } from './site.js';
-import { formatDatePl, log } from './util.js';
+import { addDays, formatDatePl, log } from './util.js';
 
 const OPEN = new Set(['review', 'approved', 'revise', 'generating']);
 
@@ -69,7 +69,7 @@ function newDraftId(weekStart, mode) {
 
 // job: { type: 'generate', mode: 'phone'|'continue'|'general', weekStart, fromDate, phoneId?, notes? }
 export async function runGenerate(state, job, { generator = generatePackage } = {}) {
-  const slots = weekSlots(job.weekStart, config.WEEK_PLAN, job.fromDate).map((s) => ({ ...s, id: `${s.date}_${s.kind}` }));
+  const slots = jobSlots(job, config.WEEK_PLAN).map((s) => ({ ...s, id: `${s.date}_${s.kind}` }));
   if (!slots.length) return null;
   const slotDates = new Set(slots.map((s) => `${s.date}|${KIND_INFO[s.kind].feed}`));
   for (const it of Object.values(state.items)) {
@@ -111,6 +111,7 @@ export async function runGenerate(state, job, { generator = generatePackage } = 
   }
   state.drafts[draftId] = { id: draftId, weekStart: job.weekStart, mode: job.mode, phoneId: phone?.id ?? null, createdAt: new Date().toISOString(), itemIds };
   state.weeks[job.weekStart] = { mode: job.mode, phoneId: phone?.id ?? null, draftId };
+  if (job.nextWeek) state.weeks[addDays(job.weekStart, 7)] = { mode: job.mode, phoneId: phone?.id ?? null, draftId };
 
   const first = slots[0].date;
   const last = slots[slots.length - 1].date;

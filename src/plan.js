@@ -20,13 +20,23 @@ export function weekSlots(weekStart, weekPlan, fromDate = weekStart) {
 
 // Dla zgłoszenia przyjętego "teraz": który tydzień i od którego dnia generujemy.
 // Niedziela → cały następny tydzień. Inny dzień → bieżący tydzień od dziś (jeśli zostało ≥ 3 h na akceptację) lub od jutra.
-export function targetWindow(local, publishHour) {
+// Gdy w bieżącym tygodniu zostało < 2 postów/rolek, od razu obejmujemy też cały następny tydzień (nextWeek).
+export function targetWindow(local, publishHour, weekPlan) {
   if (local.weekday === 0) {
     const weekStart = addDays(local.date, 1);
-    return { weekStart, fromDate: weekStart };
+    return { weekStart, fromDate: weekStart, nextWeek: false };
   }
   const fromDate = local.hour < publishHour - 3 ? local.date : addDays(local.date, 1);
-  return { weekStart: mondayOf(fromDate), fromDate };
+  const weekStart = mondayOf(fromDate);
+  const feedLeft = weekPlan ? weekSlots(weekStart, weekPlan, fromDate).filter((s) => KIND_INFO[s.kind].feed).length : 2;
+  return { weekStart, fromDate, nextWeek: feedLeft < 2 };
+}
+
+// Wszystkie sloty zadania generowania (bieżący tydzień od fromDate + ewentualnie cały następny).
+export function jobSlots(job, weekPlan) {
+  const slots = weekSlots(job.weekStart, weekPlan, job.fromDate);
+  if (job.nextWeek) slots.push(...weekSlots(addDays(job.weekStart, 7), weekPlan));
+  return slots;
 }
 
 // Tydzień, na który w niedzielę prosimy o telefon.

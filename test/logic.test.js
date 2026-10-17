@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { config } from '../src/config.js';
 import { missingFields, normalizeSpec, parseLines } from '../src/content.js';
-import { duePublications, targetWindow, waitingToday, weekSlots } from '../src/plan.js';
+import { duePublications, jobSlots, targetWindow, waitingToday, weekSlots } from '../src/plan.js';
 import { mondayOf, stripEmoji, zoned } from '../src/util.js';
 import { rawPackage, sampleSpecs } from './fixtures.js';
 
@@ -19,9 +19,14 @@ test('tydzień: co drugi dzień post/rolka, pomiędzy relacje', () => {
 });
 
 test('okno generowania: niedziela → następny tydzień; w tygodniu od dziś lub od jutra', () => {
-  assert.deepEqual(targetWindow({ date: '2026-10-18', hour: 10, weekday: 0 }, 21), { weekStart: '2026-10-19', fromDate: '2026-10-19' });
-  assert.deepEqual(targetWindow({ date: '2026-10-21', hour: 12, weekday: 3 }, 21), { weekStart: '2026-10-19', fromDate: '2026-10-21' });
-  assert.deepEqual(targetWindow({ date: '2026-10-21', hour: 19, weekday: 3 }, 21), { weekStart: '2026-10-19', fromDate: '2026-10-22' });
+  const P = config.WEEK_PLAN;
+  assert.deepEqual(targetWindow({ date: '2026-10-18', hour: 10, weekday: 0 }, 21, P), { weekStart: '2026-10-19', fromDate: '2026-10-19', nextWeek: false });
+  assert.deepEqual(targetWindow({ date: '2026-10-21', hour: 12, weekday: 3 }, 21, P), { weekStart: '2026-10-19', fromDate: '2026-10-21', nextWeek: false });
+  assert.deepEqual(targetWindow({ date: '2026-10-21', hour: 19, weekday: 3 }, 21, P), { weekStart: '2026-10-19', fromDate: '2026-10-22', nextWeek: false });
+  // sobota wieczór: zostaje tylko niedziela → od razu także cały następny tydzień
+  const sat = targetWindow({ date: '2026-10-17', hour: 20, weekday: 6 }, 21, P);
+  assert.deepEqual(sat, { weekStart: '2026-10-12', fromDate: '2026-10-18', nextWeek: true });
+  assert.equal(jobSlots(sat, P).length, 8);
   assert.equal(mondayOf('2026-10-25'), '2026-10-19');
 });
 
