@@ -24,12 +24,13 @@ Działa w chmurze (GitHub Actions), **laptop nie musi być włączony**. Koszt: 
 4. **O 21:00** bot publikuje karuzele i relacje. W dni rolek dostajesz na **#social-publikacje** wideo, okładkę, opis do skopiowania
    i podpowiedź, jakiego trendującego dźwięku szukać – publikacja zajmuje ok. minuty.
 
-Komendy na #social-zgłoszenia:
+Na #social-zgłoszenia możesz **pisać zwykłymi zdaniami** („ten sam telefon, nowa cena 1199”, „zrób treści ogólne”, „to wygląda słabo, zmień…”).
+AI rozpoznaje intencję, a stałe uwagi („nigdy…”, „zawsze…”) zapamiętuje na kolejne tygodnie. Krótkie komendy też działają:
 
 | Komenda | Działanie |
 |---|---|
-| `dalej` / `dalej 999` | zeszły telefon nadal dostępny (opcjonalnie nowa cena) – nowe hooki i kąty |
-| `ogólne` | w tym tygodniu bez telefonu – treści o iPhone'ach na podstawie aktualnych informacji z internetu |
+| `ten sam telefon` / `nadal dostępny 999` | telefon nadal dostępny (opcjonalnie nowa cena) – nowe hooki i kąty |
+| `ogólne` | bez telefonu – newsy, porady, rankingi z aktualnych źródeł, zdjęcia z Pixabay / wolnych licencji, styl redakcyjny |
 | `sprzedany` | wstrzymuje materiały o tym telefonie, robi relację „SPRZEDANE” i treści ogólne na resztę tygodnia |
 | `status` | plan publikacji i statusy |
 | `gotowe` | wysłałem już wszystkie dane i zdjęcia – zaczynaj |
@@ -71,8 +72,18 @@ Kanały **#social-zgłoszenia**, **#social-publikacje** i **#social-log** utworz
 ### 4. Gemini
 Możesz zostawić puste – skrypt użyje klucza z projektu `olx-iphone-hunter`.
 
-### 5. (Opcjonalnie) Pexels
-Darmowy klucz z <https://www.pexels.com/api/> → `PEXELS_API_KEY`. Daje legalne klipy wideo do rolek ogólnych.
+### 5. Pixabay (zdjęcia i filmy do treści ogólnych)
+Darmowy klucz: <https://pixabay.com/api/docs/> (sekcja Parameters → `key`) → `PIXABAY_API_KEY`. Pexels obecnie nie wydaje nowych kluczy.
+
+### 5b. Gemini – osobny projekt
+Darmowe limity Gemini liczą się na projekt Google. Bot social media ma **własny klucz w osobnym projekcie**, żeby nie dzielić limitu z botem OLX.
+Wyszukiwarka Google w Gemini jest płatna, więc aktualne informacje bot bierze z newsów RSS (`src/sources.js`).
+
+### 5c. Zegar – cron-job.org
+GitHub uruchamia harmonogram nieregularnie (potrafi co kilka godzin), więc bota budzi co 5 min darmowy **cron-job.org**:
+POST na `https://api.github.com/repos/<konto>/iselect-social/actions/workflows/bot.yml/dispatches`, body `{"ref":"main"}`,
+nagłówki `Authorization: Bearer <token fine-grained z uprawnieniem Actions: Read and write tylko do tego repo>`,
+`Accept: application/vnd.github+json`, `User-Agent: cron-job`. Harmonogram w GitHubie zostaje jako zapas.
 
 ### 6. Start
 ```powershell

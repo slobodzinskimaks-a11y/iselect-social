@@ -181,6 +181,8 @@ async function setupGithub(discordInfo) {
   saveConfig({ SITE_URL: `https://${owner}.github.io/${REPO_NAME}/` });
   if (!CODE_ONLY || args.has('--secrets')) {
     for (const name of ['GEMINI_API_KEY', 'DISCORD_BOT_TOKEN', 'REVIEW_WEBHOOK_URL', 'IG_ACCESS_TOKEN', 'IG_USER_ID', 'PEXELS_API_KEY', 'PIXABAY_API_KEY']) {
+      // token Instagrama w chmurze jest odświeżany automatycznie – lokalnej (starszej) kopii nie nadpisujemy
+      if (CODE_ONLY && name === 'IG_ACCESS_TOKEN') continue;
       if (process.env[name]) await setSecret(owner, REPO_NAME, name, process.env[name]);
     }
     await setSecret(owner, REPO_NAME, 'GH_PAT', GH);
