@@ -1,0 +1,131 @@
+{
+ "id": "2026-10-26-general-54x1g",
+ "weekStart": "2026-10-26",
+ "mode": "general",
+ "title": "Treści ogólne",
+ "createdAt": "2026-10-27T20:36:34.324Z",
+ "collaborators": [
+  "szymon_igg",
+  "majster_wihajsters"
+ ],
+ "publishHour": 21,
+ "items": [
+  {
+   "id": "2026-10-28-carousel-offer-4x1g",
+   "kind": "carousel_offer",
+   "label": "Karuzela – oferta",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-10-28",
+   "dateLabel": "środa 28.10",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "slides": [
+     "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide01.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide02.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide03.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide04.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide05.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide06.jpg"
+    ]
+   },
+   "caption": "Chcesz zmienić telefon, ale nie masz czasu użerać się ze sprzedażą na portalach?\n\nW iSelect robimy to prosto i bez zbędnego stresu:\n✔ Oddajesz swój dotychczasowy telefon w rozliczeniu\n✔ Mówisz, na jaki model chcesz przejść\n✔ Dopłacasz wyłącznie różnicę wartości\n\nNie musisz ryzykować dziwnych spotkań ani czekać tygodniami na kupca. Każdy sprzęt sprawdzamy rzetelnie – otwarcie mówimy o stanie wizualnym i kondycji baterii, bez owijania w bawełnę.\n\nSzukasz konkretnego modelu iPhone'a? Daj znać w wiadomości prywatnej. Znajdziemy odpowiedni egzemplarz pod Twój budżet.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka. Zapraszamy też sąsiadów z okolic: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie i Wrocław.\n\nNapisz na DM: MODEL, którego szukasz!\n#uzywanyiphone #dzierzoniow #swidnica #bielawa #applepolska",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": "https://www.instagram.com/p/DfDPo76kiq4/"
+  },
+  {
+   "id": "2026-10-29-story-4x1g",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-10-29",
+   "dateLabel": "czwartek 29.10",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-10-26-general-54x1g/2026-10-29-story-4x1g-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-10-30-reel-angle-4x1g",
+   "kind": "reel_angle",
+   "label": "Rolka – inny kąt (POV / porównanie)",
+   "format": "reel",
+   "auto": false,
+   "date": "2026-10-30",
+   "dateLabel": "piątek 30.10",
+   "status": "sent",
+   "version": 1,
+   "media": {
+    "video": "media/drafts/2026-10-26-general-54x1g/2026-10-30-reel-angle-4x1g-v1/reel.mp4",
+    "cover": "media/drafts/2026-10-26-general-54x1g/2026-10-30-reel-angle-4x1g-v1/cover.jpg"
+   },
+   "caption": "Znowu 60 Hz w nowym smartfonie za kilka tysięcy? Przecieki o 18e zaskakują.\n\nWedług ostatnich doniesień analityków, nadchodzący budżetowy iPhone 18e ma zachować odświeżanie 60 Hz. Tymczasem w bardzo podobnym budżecie na rynku wtórnym królują używane flagowce z serii Pro z ekranem ProMotion 120 Hz.\n\nUczciwie o technologii: płynność 120 Hz robi ogromną różnicę przy codziennym scrollowaniu. Kto raz spróbował, ten rzadko chce wracać do 60 Hz.\n\nSzukasz sprawdzonego telefonu z serii Pro? Napisz do nas na DM – powiedz, czego potrzebujesz, a dobierzemy sprzęt do Twojego budżetu. Pamiętaj, że przyjmujemy też dotychczasowe telefony w rozliczeniu.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka (Świdnica, Bielawa, Pieszyce, Wrocław).\n\nNapisz w komentarzu: wolisz NOWY podstawowy model czy UŻYWANY z serii Pro?\n#iphone #technologia #uzywanyiphone #dzierzoniow #applepolska",
+   "music": {
+    "mood": "dynamiczny, technologiczny",
+    "tempo": "średnie",
+    "ideas": [
+     "tech review synth bass",
+     "minimal electronic beat"
+    ]
+   },
+   "angle": "Kontrowersja: 60 Hz w nowym telefonie",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-10-31-story-4x1g",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-10-31",
+   "dateLabel": "sobota 31.10",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-10-26-general-54x1g/2026-10-31-story-4x1g-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-01-carousel-value-4x1g",
+   "kind": "carousel_value",
+   "label": "Karuzela – wiedza do zapisania",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-11-01",
+   "dateLabel": "niedziela 1.11",
+   "status": "approved",
+   "version": 1,
+   "media": {
+    "slides": [
+     "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide01.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide02.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide03.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide04.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide05.jpg",
+     "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide06.jpg"
+    ]
+   },
+   "caption": "Czy warto wydawać 10 000 zł na składany telefon? Mamy znacznie lepszy plan.\n\nNowinki technologiczne kuszą, ale doniesienia o pękających ekranach w zawiasach i astronomicznych kosztach napraw dają do myślenia.\n\nModularny zestaw: sprawdzony używany iPhone oraz poręczny iPad mini z ekranem OLED oferuje:\n✔ Dwa niezależne urządzenia – rozładowany telefon nie blokuje Ci pracy\n✔ Ekran bez zgięcia na środku i bez delikatnych zawiasów\n✔ Spory zapas gotówki w kieszeni zamiast przepłacania za eksperymenty\n\nUczciwie o technologii: sprawdzone rozwiązania bardzo często wygrywają z drogimi premierami. Zapisz ten post na później, żeby nie przepłacać przy kolejnej zmianie sprzętu.\n\nSzukasz iPhone'a dopasowanego do swoich potrzeb? Napisz do nas na DM – powiedz, czego szukasz, a znajdziemy odpowiedni model. Twój obecny telefon chętnie przyjmiemy w rozliczeniu.\n\nOdbiór osobisty: Dzierżoniów. Obsługujemy też Świdnicę, Bielawę, Pieszyce i Wrocław.\n\n#iphone #technologia #uzywanyiphone #dzierzoniow #swidnica",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  }
+ ]
+}

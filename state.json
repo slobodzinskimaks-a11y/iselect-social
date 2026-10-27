@@ -1,0 +1,3246 @@
+{
+  "version": 1,
+  "ownerId": "1199083689183826022",
+  "cursors": {
+    "intake": "1564746144125296650",
+    "log": "1564746332122390560"
+  },
+  "buffer": {
+    "messages": [
+      {
+        "id": "1563988468814585857",
+        "at": "2026-10-25T18:51:48.466000+00:00",
+        "text": "Zmień kompletnie wszystko bo nie wygląda to dobrze, slajdy na których nie ma telefonów mają być idealnie dopasowane żeby wyglądało to profesjonalnie i elegancko, jeśli to w czymś Ci pomoże możesz użyć innych zdjęć",
+        "attachments": []
+      },
+      {
+        "id": "1564045892355362988",
+        "at": "2026-10-25T22:39:59.305000+00:00",
+        "text": "Nie rób tego samego co ostatnio, zrób nowe filmy na temat telefonów ogólnie bazując na trendy hookach a nie na tych samych materiałach co w zeszłym tygodniu",
+        "attachments": []
+      },
+      {
+        "id": "1564334868240797701",
+        "at": "2026-10-26T17:48:16.525000+00:00",
+        "text": "Nie rób tego samego co wcześniej",
+        "attachments": []
+      }
+    ],
+    "asked": null,
+    "reminded": 3
+  },
+  "phones": {
+    "2026-10-17-iphone-13-pro": {
+      "id": "2026-10-17-iphone-13-pro",
+      "data": {
+        "model": "iPhone 13 pro",
+        "storage": "128gb",
+        "color": "sierra blue",
+        "battery": "100%",
+        "condition": "stan bardzo dobry",
+        "defects": [],
+        "kit": [
+          "telefon",
+          "case",
+          "kabel ładujący",
+          "szkło ochronne (dla zdecydowanego klienta)"
+        ],
+        "price": 1250,
+        "extras": ""
+      },
+      "photos": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "status": "available",
+      "createdAt": "2026-10-17T18:39:51.514Z"
+    }
+  },
+  "currentPhoneId": "2026-10-17-iphone-13-pro",
+  "weeks": {
+    "2026-10-12": {
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "draftId": "2026-10-12-phone-qr44e"
+    },
+    "2026-10-19": {
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "draftId": "2026-10-19-phone-rco55"
+    },
+    "2026-10-26": {
+      "mode": "general",
+      "phoneId": null,
+      "draftId": "2026-10-26-general-54x1g"
+    }
+  },
+  "requests": {
+    "2026-10-19": {
+      "at": "2026-10-18T09:10:28.123Z"
+    },
+    "2026-10-26": {
+      "at": "2026-10-25T12:25:06.096Z"
+    }
+  },
+  "drafts": {
+    "2026-10-12-phone-qr44e": {
+      "id": "2026-10-12-phone-qr44e",
+      "weekStart": "2026-10-12",
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "createdAt": "2026-10-17T18:40:33.471Z",
+      "itemIds": [
+        "2026-10-18-carousel-value-r44e"
+      ]
+    },
+    "2026-10-19-phone-rco55": {
+      "id": "2026-10-19-phone-rco55",
+      "weekStart": "2026-10-19",
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "createdAt": "2026-10-17T18:58:22.448Z",
+      "itemIds": [
+        "2026-10-19-reel-hook-co55",
+        "2026-10-20-story-co55",
+        "2026-10-21-carousel-offer-co55",
+        "2026-10-22-story-co55",
+        "2026-10-23-reel-angle-co55",
+        "2026-10-24-story-co55",
+        "2026-10-25-carousel-value-co55"
+      ]
+    },
+    "2026-10-26-general-2358d": {
+      "id": "2026-10-26-general-2358d",
+      "weekStart": "2026-10-26",
+      "mode": "general",
+      "phoneId": null,
+      "createdAt": "2026-10-25T16:44:19.804Z",
+      "itemIds": [
+        "2026-10-26-reel-hook-358d",
+        "2026-10-27-story-358d",
+        "2026-10-28-carousel-offer-358d",
+        "2026-10-29-story-358d",
+        "2026-10-30-reel-angle-358d",
+        "2026-10-31-story-358d",
+        "2026-11-01-carousel-value-358d"
+      ]
+    },
+    "2026-10-26-continue-2z6f6": {
+      "id": "2026-10-26-continue-2z6f6",
+      "weekStart": "2026-10-26",
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "createdAt": "2026-10-26T09:56:48.589Z",
+      "itemIds": [
+        "2026-10-26-reel-hook-z6f6",
+        "2026-10-27-story-z6f6",
+        "2026-10-28-carousel-offer-z6f6",
+        "2026-10-29-story-z6f6",
+        "2026-10-30-reel-angle-z6f6",
+        "2026-10-31-story-z6f6",
+        "2026-11-01-carousel-value-z6f6"
+      ]
+    },
+    "2026-10-26-general-54x1g": {
+      "id": "2026-10-26-general-54x1g",
+      "weekStart": "2026-10-26",
+      "mode": "general",
+      "phoneId": null,
+      "createdAt": "2026-10-27T20:36:34.324Z",
+      "itemIds": [
+        "2026-10-28-carousel-offer-4x1g",
+        "2026-10-29-story-4x1g",
+        "2026-10-30-reel-angle-4x1g",
+        "2026-10-31-story-4x1g",
+        "2026-11-01-carousel-value-4x1g"
+      ]
+    }
+  },
+  "items": {
+    "2026-10-18-carousel-value-r44e": {
+      "id": "2026-10-18-carousel-value-r44e",
+      "draftId": "2026-10-12-phone-qr44e",
+      "date": "2026-10-18",
+      "kind": "carousel_value",
+      "feed": true,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "published",
+      "version": 2,
+      "spec": {
+        "theme": "graphite",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "PORADA",
+            "title": "Czy iPhone 13 Pro wciąż się OPŁACA?",
+            "accent": "OPŁACA?",
+            "sub": "Sprawdź ZA i PRZECIW przed zakupem używanego flagowca w tym roku.",
+            "bullets": [
+              "+ Ekran 120 Hz i świetny aparat",
+              "+ Długa wspierana żywotność baterii",
+              "Zapisz na później, żeby nie zapomnieć!"
+            ],
+            "specs": [],
+            "photo": 11
+          },
+          {
+            "kind": "bullets",
+            "tag": "PLUSY",
+            "title": "Dlaczego warto wybrać 13 Pro?",
+            "accent": "warto",
+            "sub": "Mocne strony, które robią robotę na co dzień.",
+            "bullets": [
+              "+ Ekran ProMotion 120 Hz dający niesamowitą płynność",
+              "+ Trzy profesjonalne obiektywy z trybem makro i ProRes",
+              "+ Wydajny procesor A15 Bionic radzący sobie z każdą grą"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "MINUSY",
+            "title": "Na co uważać przy zakupie?",
+            "accent": "uważać",
+            "sub": "Minusy, o których warto pamiętać.",
+            "bullets": [
+              "- Waga urządzenia jest nieco wyższa niż w wersji podstawowej",
+              "- Używane egzemplarze bywają wyeksploatowane w niższych cenach",
+              "- Trzeba szukać pewnych źródeł bez ukrytych wad"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "specs",
+            "tag": "FAKTY",
+            "title": "Nasz aktualny egzemplarz",
+            "accent": "aktualny",
+            "sub": "Sprawdź specyfikację telefonu dostępnego od ręki w Dzierżoniowie.",
+            "bullets": [],
+            "specs": [
+              {
+                "label": "Model",
+                "value": "iPhone 13 Pro"
+              },
+              {
+                "label": "Pamięć",
+                "value": "128 GB"
+              },
+              {
+                "label": "Kolor",
+                "value": "Sierra Blue"
+              },
+              {
+                "label": "Bateria",
+                "value": "100%"
+              },
+              {
+                "label": "Stan",
+                "value": "Bardzo dobry"
+              },
+              {
+                "label": "Cena",
+                "value": "1250 zł"
+              }
+            ],
+            "photo": 11
+          },
+          {
+            "kind": "cta",
+            "tag": "OFERTA",
+            "title": "Masz stary telefon? Zostaw go w rozliczeniu!",
+            "accent": "rozliczeniu!",
+            "sub": "Wymień swój obecny smartfon na lepszy model z dopłatą.",
+            "bullets": [
+              "Odbiór osobisty w Dzierżoniowie lub szybka wysyłka",
+              "Przyjmujemy telefony w rozliczeniu – bez ściemy",
+              "Napisz do nas na DM lub OLX, żeby zapytać o szczegóły!"
+            ],
+            "specs": [],
+            "photo": 20
+          }
+        ],
+        "caption": "Czy iPhone 13 Pro ma jeszcze sens w tym roku? Sprawdź nasze zestawienie ZA i PRZECIW! 📱\n\nPrzeanalizowaliśmy najważniejsze kwestie, żeby ułatwić Ci decyzję. Pamiętaj, że u nas w iSelect w Dzierżoniowie znajdziesz sprawdzone urządzenia bez ściemy – stan opisujemy uczciwie, a wady zawsze widać na zdjęciach.\n\nAktualnie na stanie mamy gotowy egzemplarz iPhone 13 Pro 128GB Sierra Blue z baterią 100% w cenie 1250 zł. W zestawie dostajesz telefon, case, kabel i szkło ochronne dla zdecydowanego!\n\n✔ Przyjmujemy telefony w rozliczeniu – wymień stary na lepszy z dopłatą.\n✔ Odbiór osobisty (Dzierżoniów, okolice: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie, Wrocław) lub wysyłka.\n\nZapisz tę karuzelę na później i napisz do nas na DM lub OLX!\n\n#iphone #używanyiphone #dzierżoniów #bielawa #iphone13pro"
+      },
+      "caption": "Czy iPhone 13 Pro ma jeszcze sens w tym roku? Sprawdź nasze zestawienie ZA i PRZECIW! 📱\n\nPrzeanalizowaliśmy najważniejsze kwestie, żeby ułatwić Ci decyzję. Pamiętaj, że u nas w iSelect w Dzierżoniowie znajdziesz sprawdzone urządzenia bez ściemy – stan opisujemy uczciwie, a wady zawsze widać na zdjęciach.\n\nAktualnie na stanie mamy gotowy egzemplarz iPhone 13 Pro 128GB Sierra Blue z baterią 100% w cenie 1250 zł. W zestawie dostajesz telefon, case, kabel i szkło ochronne dla zdecydowanego!\n\n✔ Przyjmujemy telefony w rozliczeniu – wymień stary na lepszy z dopłatą.\n✔ Odbiór osobisty (Dzierżoniów, okolice: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie, Wrocław) lub wysyłka.\n\nZapisz tę karuzelę na później i napisz do nas na DM lub OLX!\n\n#iphone #używanyiphone #dzierżoniów #bielawa #iphone13pro",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [
+        {
+          "at": "2026-10-17T18:50:04.774Z",
+          "text": "zmień te morskie wstawki posta na takie w kolorze sierra blue jak ten iphone 13 pro"
+        }
+      ],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-12-phone-qr44e/2026-10-18-carousel-value-r44e-v2/slide01.jpg",
+          "media/drafts/2026-10-12-phone-qr44e/2026-10-18-carousel-value-r44e-v2/slide02.jpg",
+          "media/drafts/2026-10-12-phone-qr44e/2026-10-18-carousel-value-r44e-v2/slide03.jpg",
+          "media/drafts/2026-10-12-phone-qr44e/2026-10-18-carousel-value-r44e-v2/slide04.jpg",
+          "media/drafts/2026-10-12-phone-qr44e/2026-10-18-carousel-value-r44e-v2/slide05.jpg"
+        ]
+      },
+      "igMediaId": "18159591886503491",
+      "permalink": "https://www.instagram.com/p/DepoltDFFNJ/",
+      "publishedDate": "2026-10-18"
+    },
+    "2026-10-19-reel-hook-co55": {
+      "id": "2026-10-19-reel-hook-co55",
+      "draftId": "2026-10-19-phone-rco55",
+      "date": "2026-10-19",
+      "kind": "reel_hook",
+      "feed": true,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "sent",
+      "version": 1,
+      "spec": {
+        "angle": "Haczyk i decyzja widza",
+        "scenes": [
+          {
+            "kind": "hook",
+            "photo": 14,
+            "video": null,
+            "title": "Dostajesz iPhone 13 Pro. BIERZESZ?",
+            "accent": "BIERZESZ?",
+            "sub": "Jest jeden haczyk...",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 2
+          },
+          {
+            "kind": "list",
+            "photo": 11,
+            "video": null,
+            "title": "Kluczowe parametry",
+            "accent": "parametry",
+            "sub": "Oto co dostajesz",
+            "items": [
+              "+ Ekran ProMotion 120Hz",
+              "+ Kondycja baterii 100%",
+              "+ Pamięć 128 GB Sierra Blue"
+            ],
+            "left": null,
+            "right": null,
+            "seconds": 2
+          },
+          {
+            "kind": "photo",
+            "photo": 9,
+            "video": null,
+            "title": "Uczciwy stan",
+            "accent": "stan",
+            "sub": "Drobne ryski na krawędzi, stan bardzo dobry",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "list",
+            "photo": 20,
+            "video": null,
+            "title": "Cały zestaw",
+            "accent": "zestaw",
+            "sub": "W komplecie z telefonem",
+            "items": [
+              "+ Kabel ładujący",
+              "+ Etui ochronne",
+              "+ Szkło dla zdecydowanego"
+            ],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "price",
+            "photo": 12,
+            "video": null,
+            "title": "Cena zestawu",
+            "accent": "Cena",
+            "sub": "1250 zł",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "cta",
+            "photo": 5,
+            "video": null,
+            "title": "Bierzesz ten zestaw?",
+            "accent": "zestaw?",
+            "sub": "Napisz TAK lub NIE w komentarzu",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 2
+          }
+        ],
+        "cover": {
+          "title": "iPhone 13 Pro za 1250 zł?",
+          "accent": "1250 zł?",
+          "photo": 14
+        },
+        "caption": "Dostajesz iPhone'a 13 Pro za 1250 zł, ale jest jeden haczyk... 📱\n\nTo tylko jedna sztuka na stanie! Stan bardzo dobry, oryginalny kolor Sierra Blue, pojemność 128 GB i kondycja baterii 100%. Bez ukrytych wad, bez ściemy – wszystko widzisz na zdjęciach.\n\nW zestawie dajemy kabel ładujący, etui oraz szkło ochronne dla zdecydowanego kupca.\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu – oddajesz stary, dopłacasz i wychodzisz z lepszym sprzętem.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka. Zapraszamy też klientów z okolic: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie, Wrocław.\n\nNapisz TAK lub NIE w komentarzu!",
+        "music": {
+          "mood": "energiczny",
+          "tempo": "szybkie",
+          "ideas": [
+            "trending phonk beat",
+            "dynamic tech house"
+          ]
+        }
+      },
+      "caption": "Dostajesz iPhone'a 13 Pro za 1250 zł, ale jest jeden haczyk... 📱\n\nTo tylko jedna sztuka na stanie! Stan bardzo dobry, oryginalny kolor Sierra Blue, pojemność 128 GB i kondycja baterii 100%. Bez ukrytych wad, bez ściemy – wszystko widzisz na zdjęciach.\n\nW zestawie dajemy kabel ładujący, etui oraz szkło ochronne dla zdecydowanego kupca.\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu – oddajesz stary, dopłacasz i wychodzisz z lepszym sprzętem.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka. Zapraszamy też klientów z okolic: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie, Wrocław.\n\nNapisz TAK lub NIE w komentarzu!",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "video": "media/drafts/2026-10-19-phone-rco55/2026-10-19-reel-hook-co55-v1/reel.mp4",
+        "cover": "media/drafts/2026-10-19-phone-rco55/2026-10-19-reel-hook-co55-v1/cover.jpg"
+      },
+      "publishedDate": "2026-10-19"
+    },
+    "2026-10-20-story-co55": {
+      "id": "2026-10-20-story-co55",
+      "draftId": "2026-10-19-phone-rco55",
+      "date": "2026-10-20",
+      "kind": "story",
+      "feed": false,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "published",
+      "version": 1,
+      "spec": {
+        "tag": "NOWOŚĆ",
+        "title": "iPhone 13 Pro Sierra Blue",
+        "accent": "Sierra Blue",
+        "sub": "Bateria 100%, 128 GB. Stan bardzo dobry. Cena: 1250 zł.",
+        "cta": "Napisz na DM",
+        "photo": 11
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-19-phone-rco55/2026-10-20-story-co55-v1/story.jpg"
+      },
+      "igMediaId": "17951024793278562",
+      "publishedDate": "2026-10-20"
+    },
+    "2026-10-21-carousel-offer-co55": {
+      "id": "2026-10-21-carousel-offer-co55",
+      "draftId": "2026-10-19-phone-rco55",
+      "date": "2026-10-21",
+      "kind": "carousel_offer",
+      "feed": true,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "published",
+      "version": 2,
+      "spec": {
+        "theme": "graphite",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "NA SPRZEDAŻ",
+            "title": "iPhone 13 Pro Sierra Blue",
+            "accent": "Sierra Blue",
+            "sub": "Używany iPhone w super stanie",
+            "bullets": [
+              "+ Bateria 100%",
+              "+ 128 GB",
+              "+ Stan bardzo dobry"
+            ],
+            "specs": [],
+            "photo": 14
+          },
+          {
+            "kind": "specs",
+            "tag": "SPECYFIKACJA",
+            "title": "Dane techniczne",
+            "accent": "techniczne",
+            "sub": "Najważniejsze parametry egzemplarza",
+            "bullets": [],
+            "specs": [
+              {
+                "label": "Model",
+                "value": "13 Pro"
+              },
+              {
+                "label": "Pamięć",
+                "value": "128 GB"
+              },
+              {
+                "label": "Kolor",
+                "value": "Sierra Blue"
+              },
+              {
+                "label": "Bateria",
+                "value": "100%"
+              }
+            ],
+            "photo": 1
+          },
+          {
+            "kind": "text",
+            "tag": "STAN FIZYCZNY",
+            "title": "Uczciwie o stanie",
+            "accent": "Uczciwie",
+            "sub": "Pokazujemy jak jest",
+            "bullets": [
+              "+ Obudowa i plecki w bardzo dobrym stanie",
+              "+ Ekran bez głębokich rys",
+              "- Minimalne ślady użytkowania na ramce"
+            ],
+            "specs": [],
+            "photo": 9
+          },
+          {
+            "kind": "bullets",
+            "tag": "ZESTAW",
+            "title": "Co w komplecie?",
+            "accent": "komplecie?",
+            "sub": "Zestaw gotowy do użycia",
+            "bullets": [
+              "+ iPhone 13 Pro 128 GB",
+              "+ Kabel ładujący",
+              "+ Etui ochronne",
+              "+ Szkło ochronne dla zdecydowanego"
+            ],
+            "specs": [],
+            "photo": 22
+          },
+          {
+            "kind": "price",
+            "tag": "CENA",
+            "title": "Opcje zakupu",
+            "accent": "Opcje",
+            "sub": "Kup lub wymień stary telefon",
+            "bullets": [
+              "+ Przyjmujemy stary telefon w rozliczeniu",
+              "+ Odbiór osobisty lub wysyłka"
+            ],
+            "specs": [
+              {
+                "label": "Cena",
+                "value": "1250 zł"
+              }
+            ],
+            "photo": 12
+          },
+          {
+            "kind": "cta",
+            "tag": "KONTAKT",
+            "title": "Chcesz go kupić?",
+            "accent": "kupić?",
+            "sub": "Mamy tylko jedną sztukę w tej cenie",
+            "bullets": [
+              "1. Napisz wiadomość DM",
+              "2. Zapytaj o wymianę w rozliczeniu",
+              "3. Odbierz w Dzierżoniowie"
+            ],
+            "specs": [],
+            "photo": 5
+          }
+        ],
+        "caption": "Na sprzedaż trafia iPhone 13 Pro 128 GB w wyjątkowym kolorze Sierra Blue! 📱\n\nTelefon jest w stanie bardzo dobrym, kondycja baterii wynosi 100%. Uczciwie pokazujemy stan na zdjęciach – sprzęt jest gotowy do działania bez żadnych przykrych niespodzianek.\n\nW zestawie otrzymujesz kabel ładujący, etui oraz szkło ochronne dla zdecydowanego kupującego.\n\nChcesz obniżyć cenę? Przyjmujemy telefony w rozliczeniu. Zostaw swój stary telefon i dopłać różnicę.\n\nCena: 1250 zł. Zapraszamy do kontaktu przez DM. Lokalizacja: Dzierżoniów (blisko: Świdnica, Bielawa, Pieszyce, Ząbkowice Śląskie, Wrocław).\n\nZapisz ten post na później!\n\n#iphone #używanyiphone #iphone13pro #dzierżoniów #świdnica #iselect"
+      },
+      "caption": "Na sprzedaż trafia iPhone 13 Pro 128 GB w wyjątkowym kolorze Sierra Blue! 📱\n\nTelefon jest w stanie bardzo dobrym, kondycja baterii wynosi 100%. Uczciwie pokazujemy stan na zdjęciach – sprzęt jest gotowy do działania bez żadnych przykrych niespodzianek.\n\nW zestawie otrzymujesz kabel ładujący, etui oraz szkło ochronne dla zdecydowanego kupującego.\n\nChcesz obniżyć cenę? Przyjmujemy telefony w rozliczeniu. Zostaw swój stary telefon i dopłać różnicę.\n\nCena: 1250 zł. Zapraszamy do kontaktu przez DM. Lokalizacja: Dzierżoniów (blisko: Świdnica, Bielawa, Pieszyce, Ząbkowice Śląskie, Wrocław).\n\nZapisz ten post na później!\n\n#iphone #używanyiphone #iphone13pro #dzierżoniów #świdnica #iselect",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [
+        {
+          "at": "2026-10-17T22:36:36.895Z",
+          "text": "w pigułce pamięci ma być 128 GB"
+        }
+      ],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide01.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide02.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide03.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide04.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide05.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide06.jpg"
+        ]
+      },
+      "igMediaId": "18100890305062630",
+      "permalink": "https://www.instagram.com/p/DexUAWlGqwT/",
+      "publishedDate": "2026-10-21"
+    },
+    "2026-10-22-story-co55": {
+      "id": "2026-10-22-story-co55",
+      "draftId": "2026-10-19-phone-rco55",
+      "date": "2026-10-22",
+      "kind": "story",
+      "feed": false,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "published",
+      "version": 1,
+      "spec": {
+        "tag": "ROZLICZENIE",
+        "title": "Masz stary telefon?",
+        "accent": "stary telefon?",
+        "sub": "Przynieś go do nas! Przyjmujemy telefony w rozliczeniu przy zakupie 13 Pro.",
+        "cta": "Napisz na DM",
+        "photo": 20
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-19-phone-rco55/2026-10-22-story-co55-v1/story.jpg"
+      },
+      "igMediaId": "17989808529117449",
+      "publishedDate": "2026-10-22"
+    },
+    "2026-10-23-reel-angle-co55": {
+      "id": "2026-10-23-reel-angle-co55",
+      "draftId": "2026-10-19-phone-rco55",
+      "date": "2026-10-23",
+      "kind": "reel_angle",
+      "feed": true,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "sent",
+      "version": 1,
+      "spec": {
+        "angle": "POV Kupujesz flagowca za pół ceny",
+        "scenes": [
+          {
+            "kind": "hook",
+            "photo": 15,
+            "video": null,
+            "title": "POV: Kupujesz flagowca za PÓŁ CENY",
+            "accent": "PÓŁ CENY",
+            "sub": "iPhone 13 Pro w iSelect",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 2
+          },
+          {
+            "kind": "photo",
+            "photo": 4,
+            "video": null,
+            "title": "Ekran ProMotion 120Hz",
+            "accent": "ProMotion",
+            "sub": "Niezwykła płynność obrazu",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "photo",
+            "photo": 26,
+            "video": null,
+            "title": "Bateria 100%",
+            "accent": "100%",
+            "sub": "Maksymalna wydajność na cały dzień",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "list",
+            "photo": 22,
+            "video": null,
+            "title": "Akcesoria w cenie",
+            "accent": "cenie",
+            "sub": "Wszystko co potrzebne",
+            "items": [
+              "+ Kabel do ładowania",
+              "+ Etui ochronne",
+              "+ Szkło dla szybkiego kupca"
+            ],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "price",
+            "photo": 13,
+            "video": null,
+            "title": "Ile płacisz?",
+            "accent": "płacisz?",
+            "sub": "Tylko 1250 zł",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "cta",
+            "photo": 21,
+            "video": null,
+            "title": "Chcesz go kupić?",
+            "accent": "kupić?",
+            "sub": "Napisz CHCĘ na DM",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 2
+          }
+        ],
+        "cover": {
+          "title": "iPhone 13 Pro za PÓŁ CENY",
+          "accent": "PÓŁ CENY",
+          "photo": 15
+        },
+        "caption": "POV: Wybierasz flagowy model iPhone 13 Pro 128 GB Sierra Blue zamiast wydawać fortunę w markecie 📲\n\nDostajesz topowy aparat, płynny ekran 120Hz oraz baterię o kondycji 100%. Stan bardzo dobry, zadbany egzemplarz.\n\nW cenie 1250 zł dorzucamy etui, kabel ładujący i szkło ochronne dla zdecydowanej osoby.\n\nMasz swój dotychczasowy aparat? Przyjmujemy telefony w rozliczeniu – oddajesz stary, płacisz mniej!\n\nNapisz CHCĘ w wiadomości prywatnej (DM) lub w komentarzu.\n\nSklep iSelect, Dzierżoniów. Obsługujemy też Bielawę, Świdnicę, Pieszyce i okolice.",
+        "music": {
+          "mood": "pewny siebie",
+          "tempo": "średnie",
+          "ideas": [
+            "chill funk groove",
+            "lo-fi hip hop beat"
+          ]
+        }
+      },
+      "caption": "POV: Wybierasz flagowy model iPhone 13 Pro 128 GB Sierra Blue zamiast wydawać fortunę w markecie 📲\n\nDostajesz topowy aparat, płynny ekran 120Hz oraz baterię o kondycji 100%. Stan bardzo dobry, zadbany egzemplarz.\n\nW cenie 1250 zł dorzucamy etui, kabel ładujący i szkło ochronne dla zdecydowanej osoby.\n\nMasz swój dotychczasowy aparat? Przyjmujemy telefony w rozliczeniu – oddajesz stary, płacisz mniej!\n\nNapisz CHCĘ w wiadomości prywatnej (DM) lub w komentarzu.\n\nSklep iSelect, Dzierżoniów. Obsługujemy też Bielawę, Świdnicę, Pieszyce i okolice.",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "video": "media/drafts/2026-10-19-phone-rco55/2026-10-23-reel-angle-co55-v1/reel.mp4",
+        "cover": "media/drafts/2026-10-19-phone-rco55/2026-10-23-reel-angle-co55-v1/cover.jpg"
+      },
+      "publishedDate": "2026-10-23"
+    },
+    "2026-10-24-story-co55": {
+      "id": "2026-10-24-story-co55",
+      "draftId": "2026-10-19-phone-rco55",
+      "date": "2026-10-24",
+      "kind": "story",
+      "feed": false,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "published",
+      "version": 1,
+      "spec": {
+        "tag": "OSTATNIA SZTUKA",
+        "title": "iPhone 13 Pro czeka",
+        "accent": "czeka",
+        "sub": "Mamy tylko 1 sztukę. Bateria 100%, pełen zestaw, cena 1250 zł.",
+        "cta": "Napisz na DM",
+        "photo": 13
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-19-phone-rco55/2026-10-24-story-co55-v1/story.jpg"
+      },
+      "igMediaId": "18144820522599856",
+      "publishedDate": "2026-10-24"
+    },
+    "2026-10-25-carousel-value-co55": {
+      "id": "2026-10-25-carousel-value-co55",
+      "draftId": "2026-10-19-phone-rco55",
+      "date": "2026-10-25",
+      "kind": "carousel_value",
+      "feed": true,
+      "mode": "phone",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "review",
+      "version": 3,
+      "spec": {
+        "theme": "red",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "PORADNIK OLX",
+            "title": "3 czerwone flagi przy zakupie iPhone'a",
+            "accent": "czerwone flagi",
+            "sub": "Kupujesz z drugiej ręki? Zapisz ten post",
+            "bullets": [
+              "+ Jak uniknąć wpadki",
+              "+ Na co uważać w ogłoszeniach",
+              "+ Porady od iSelect"
+            ],
+            "specs": [],
+            "photo": 21
+          },
+          {
+            "kind": "bullets",
+            "tag": "FLAGA 1",
+            "title": "1. Brak opcji TrueTone",
+            "accent": "TrueTone",
+            "sub": "Centrum sterowania -> Jasność",
+            "bullets": [
+              "- Często oznacza nieoryginalny ekran",
+              "- Brak automatycznego dostosowania barw",
+              "+ Zawsze sprawdzaj to przed zakupem"
+            ],
+            "specs": [],
+            "photo": 2
+          },
+          {
+            "kind": "bullets",
+            "tag": "FLAGA 2",
+            "title": "2. Nienaturalnie niska cena",
+            "accent": "niska cena",
+            "sub": "Podejrzane oferty w sieci",
+            "bullets": [
+              "- Ryzyko blokady iCloud lub ratalnej",
+              "- Ukryte wady płyty głównej",
+              "+ Zawsze porównuj średnie ceny rynkowe"
+            ],
+            "specs": [],
+            "photo": 11
+          },
+          {
+            "kind": "bullets",
+            "tag": "FLAGA 3",
+            "title": "3. Ukrywanie kondycji baterii",
+            "accent": "baterii",
+            "sub": "Ustawienia -> Bateria",
+            "bullets": [
+              "- Sprzedawca unika zdjęcia z ustawień",
+              "- Bateria poniżej 80% szybko się rozładowuje",
+              "+ Żądaj aktualnego zrzutu ekranu"
+            ],
+            "specs": [],
+            "photo": 1
+          },
+          {
+            "kind": "specs",
+            "tag": "ALTERNATYWA",
+            "title": "Szukasz pewnej sztuki?",
+            "accent": "pewnej",
+            "sub": "U nas kupujesz uczciwie opisany sprzęt",
+            "bullets": [],
+            "specs": [
+              {
+                "label": "Model",
+                "value": "13 Pro 128GB"
+              },
+              {
+                "label": "Kolor",
+                "value": "Sierra Blue"
+              },
+              {
+                "label": "Bateria",
+                "value": "100%"
+              },
+              {
+                "label": "Cena",
+                "value": "1250 zł"
+              }
+            ],
+            "photo": 14
+          },
+          {
+            "kind": "cta",
+            "tag": "ISELECT DZIERŻONIÓW",
+            "title": "Chcesz kupić bez ryzyka?",
+            "accent": "bez ryzyka",
+            "sub": "Napisz do nas na DM lub wpadnij osobiście",
+            "bullets": [
+              "+ iPhone 13 Pro 128GB za 1250 zł",
+              "+ Przyjmujemy stary telefon w rozliczeniu",
+              "+ Zapisz ten post na później"
+            ],
+            "specs": [],
+            "photo": 20
+          }
+        ],
+        "caption": "Kupujesz używanego iPhone'a? Zapisz ten post, żeby nie dać się naciągnąć! 📌\n\nOto 3 czerwone flagi, na które musisz uważać:\n1. Brak TrueTone – często oznacza tanio wymieniony wyświetlacz.\n2. Nienaturalnie niska cena – ryzyko ukrytych wad lub blokad.\n3. Ukrywanie stanu baterii – unikanie zrzutu ekranu z ustawień.\n\nW iSelect w Dzierżoniowie stawiamy na pełną szczerość. Wszystkie wady i parametry pokazujemy od razu.\n\nMamy na stanie iPhone'a 13 Pro 128 GB Sierra Blue z baterią 100% w cenie 1250 zł. Zestaw zawiera telefon, case i kabel ładujący (dla zdecydowanego klienta dorzucamy szkło ochronne).\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu – wymieniasz na nowszy z dopłatą.\n\nOdbiór osobisty w Dzierżoniowie lub szybka wysyłka (okolice: Bielawa, Świdnica, Pieszyce, Ząbkowice Śląskie, Wrocław). Napisz do nas na DM!\n\n#iphone13pro #używanyiphone #dzierżoniów #poradnik #iselect"
+      },
+      "caption": "Kupujesz używanego iPhone'a? Zapisz ten post, żeby nie dać się naciągnąć! 📌\n\nOto 3 czerwone flagi, na które musisz uważać:\n1. Brak TrueTone – często oznacza tanio wymieniony wyświetlacz.\n2. Nienaturalnie niska cena – ryzyko ukrytych wad lub blokad.\n3. Ukrywanie stanu baterii – unikanie zrzutu ekranu z ustawień.\n\nW iSelect w Dzierżoniowie stawiamy na pełną szczerość. Wszystkie wady i parametry pokazujemy od razu.\n\nMamy na stanie iPhone'a 13 Pro 128 GB Sierra Blue z baterią 100% w cenie 1250 zł. Zestaw zawiera telefon, case i kabel ładujący (dla zdecydowanego klienta dorzucamy szkło ochronne).\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu – wymieniasz na nowszy z dopłatą.\n\nOdbiór osobisty w Dzierżoniowie lub szybka wysyłka (okolice: Bielawa, Świdnica, Pieszyce, Ząbkowice Śląskie, Wrocław). Napisz do nas na DM!\n\n#iphone13pro #używanyiphone #dzierżoniów #poradnik #iselect",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [
+        {
+          "at": "2026-10-17T20:32:22.819Z",
+          "text": "Zmień kolor morski na ten co na pozostałych materiałach"
+        },
+        {
+          "at": "2026-10-18T00:17:48.451Z",
+          "text": "Weź pod uwagę że mamy już podobny post"
+        }
+      ],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide01.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide02.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide03.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide04.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide05.jpg",
+          "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide06.jpg"
+        ]
+      }
+    },
+    "2026-10-26-reel-hook-358d": {
+      "id": "2026-10-26-reel-hook-358d",
+      "draftId": "2026-10-26-general-2358d",
+      "date": "2026-10-26",
+      "kind": "reel_hook",
+      "feed": true,
+      "mode": "general",
+      "phoneId": null,
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "angle": "3 bledy przy zakupie używanego iPhone",
+        "scenes": [
+          {
+            "kind": "hook",
+            "photo": null,
+            "video": null,
+            "title": "Kupujesz używanego iPhone? Omiń te TRZY błędy",
+            "accent": "TRZY",
+            "sub": "Bez ściemy",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "list",
+            "photo": null,
+            "video": null,
+            "title": "Błąd pierwszy",
+            "accent": "pierwszy",
+            "sub": "",
+            "items": [
+              "- Brak weryfikacji IMEI",
+              "- Ryzyko blokady rat"
+            ],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "list",
+            "photo": null,
+            "video": null,
+            "title": "Błąd drugi",
+            "accent": "drugi",
+            "sub": "",
+            "items": [
+              "- Kupno bez zerowania",
+              "- Ukryte profile MDM"
+            ],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "list",
+            "photo": null,
+            "video": null,
+            "title": "Błąd trzeci",
+            "accent": "trzeci",
+            "sub": "",
+            "items": [
+              "- Ignorowanie części",
+              "- Nieznane komponenty"
+            ],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "cta",
+            "photo": null,
+            "video": null,
+            "title": "Szukasz pewnego sprzętu?",
+            "accent": "pewnego",
+            "sub": "Napisz do nas na DM",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          }
+        ],
+        "cover": {
+          "title": "3 błędy przy zakupie używanego iPhone",
+          "accent": "błędy",
+          "photo": 0
+        },
+        "caption": "Kupujesz używanego iPhone'a? Sprawdź, jakich błędów unikać, żeby nie stracić pieniędzy. 📱\n\nUczciwie o stanie i bez ściemy podpowiadamy, na co zwrócić uwagę przed wpłatą gotówki. Wpadnij po pewny sprzęt w Dzierżoniowie.\n\nSzukasz konkretnego modelu? Napisz do nas na DM lub zadzwoń.\n\nNapisz WIEDZĘ w komentarzu, jeśli to było przydatne!\n\n#iphone #używanyiphone #dzierżoniów #bielawa #świdnica",
+        "music": {
+          "mood": "pewny siebie, energiczny",
+          "tempo": "szybkie",
+          "ideas": [
+            "business chill",
+            "modern beat",
+            "clean tech"
+          ]
+        }
+      },
+      "caption": "Kupujesz używanego iPhone'a? Sprawdź, jakich błędów unikać, żeby nie stracić pieniędzy. 📱\n\nUczciwie o stanie i bez ściemy podpowiadamy, na co zwrócić uwagę przed wpłatą gotówki. Wpadnij po pewny sprzęt w Dzierżoniowie.\n\nSzukasz konkretnego modelu? Napisz do nas na DM lub zadzwoń.\n\nNapisz WIEDZĘ w komentarzu, jeśli to było przydatne!\n\n#iphone #używanyiphone #dzierżoniów #bielawa #świdnica",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "video": "media/drafts/2026-10-26-general-2358d/2026-10-26-reel-hook-358d-v1/reel.mp4",
+        "cover": "media/drafts/2026-10-26-general-2358d/2026-10-26-reel-hook-358d-v1/cover.jpg"
+      }
+    },
+    "2026-10-27-story-358d": {
+      "id": "2026-10-27-story-358d",
+      "draftId": "2026-10-26-general-2358d",
+      "date": "2026-10-27",
+      "kind": "story",
+      "feed": false,
+      "mode": "general",
+      "phoneId": null,
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "tag": "ZAPYTAJ NAS",
+        "title": "Szukasz konkretnego iPhone'a?",
+        "accent": "Szukasz",
+        "sub": "Napisz model w wiadomości prywatnej – sprawdzimy, co możemy Ci zaoferować w Dzierżoniowie i okolicy.",
+        "cta": "Napisz na DM",
+        "photo": 1
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-general-2358d/2026-10-27-story-358d-v1/story.jpg"
+      }
+    },
+    "2026-10-28-carousel-offer-358d": {
+      "id": "2026-10-28-carousel-offer-358d",
+      "draftId": "2026-10-26-general-2358d",
+      "date": "2026-10-28",
+      "kind": "carousel_offer",
+      "feed": true,
+      "mode": "general",
+      "phoneId": null,
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "theme": "graphite",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "SKUP I WYMIANA",
+            "title": "Wymień starego na lepszego",
+            "accent": "Wymień",
+            "sub": "Zostaw swój stary telefon w rozliczeniu z dopłatą",
+            "bullets": [
+              "+ Szybka wycena na miejscu",
+              "+ Uczciwe podejście",
+              "+ Bezpieczna transakcja"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "KROK 1",
+            "title": "Przynieś lub opisz swój telefon",
+            "accent": "opisz",
+            "sub": "Działamy w Dzierżoniowie i okolicach",
+            "bullets": [
+              "1. Przyjdź do nas lub napisz w wiadomości",
+              "2. Podaj dokładny model i pamięć",
+              "3. Określ stan wizualny i kondycję baterii"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "KROK 2",
+            "title": "Otrzymaj naszą wycenę",
+            "accent": "wycenę",
+            "sub": "Bez ukrytych kosztów i ściemy",
+            "bullets": [
+              "Sprawdzamy urządzenie na miejscu",
+              "Proponujemy uczciwą kwotę odkupu",
+              "Dopłacasz tylko różnicę do wybranego modelu"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "cta",
+            "tag": "KONTAKT",
+            "title": "Masz stary telefon?",
+            "accent": "stary",
+            "sub": "Napisz do nas na DM i sprawdź, ile dopłacisz do zmiany",
+            "bullets": [
+              "Odbiór osobisty w Dzierżoniowie",
+              "Możliwa wysyłka",
+              "Odpowiadamy szybko na wiadomości"
+            ],
+            "specs": [],
+            "photo": 0
+          }
+        ],
+        "caption": "Masz dość swojego starego telefonu? Wymień go na lepszego u nas! 📱\n\nPrzyjmujemy używane telefony w rozliczeniu. Działamy w Dzierżoniowie oraz obsługujemy klientów z okolic takich jak Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie czy Wrocław.\n\nUczciwie o stanie, bez ściemy i ukrytych kosztów.\n\nSzukasz zmiany? Napisz do nas na DM jaki model masz i na jaki chcesz zmienić.\n\n#skuptelefonów #używanyiphone #dzierżoniów #bielawa #wymiana"
+      },
+      "caption": "Masz dość swojego starego telefonu? Wymień go na lepszego u nas! 📱\n\nPrzyjmujemy używane telefony w rozliczeniu. Działamy w Dzierżoniowie oraz obsługujemy klientów z okolic takich jak Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie czy Wrocław.\n\nUczciwie o stanie, bez ściemy i ukrytych kosztów.\n\nSzukasz zmiany? Napisz do nas na DM jaki model masz i na jaki chcesz zmienić.\n\n#skuptelefonów #używanyiphone #dzierżoniów #bielawa #wymiana",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-26-general-2358d/2026-10-28-carousel-offer-358d-v1/slide01.jpg",
+          "media/drafts/2026-10-26-general-2358d/2026-10-28-carousel-offer-358d-v1/slide02.jpg",
+          "media/drafts/2026-10-26-general-2358d/2026-10-28-carousel-offer-358d-v1/slide03.jpg",
+          "media/drafts/2026-10-26-general-2358d/2026-10-28-carousel-offer-358d-v1/slide04.jpg"
+        ]
+      }
+    },
+    "2026-10-29-story-358d": {
+      "id": "2026-10-29-story-358d",
+      "draftId": "2026-10-26-general-2358d",
+      "date": "2026-10-29",
+      "kind": "story",
+      "feed": false,
+      "mode": "general",
+      "phoneId": null,
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "tag": "SZYBKA PORADA",
+        "title": "Sprawdź kondycję baterii",
+        "accent": "baterii",
+        "sub": "Poniżej 80% to znak, że ogniwo powoli traci żywotność. Pytaj o to przed zakupem.",
+        "cta": "Szukasz iPhone'a? Napisz model",
+        "photo": 0
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-general-2358d/2026-10-29-story-358d-v1/story.jpg"
+      }
+    },
+    "2026-10-30-reel-angle-358d": {
+      "id": "2026-10-30-reel-angle-358d",
+      "draftId": "2026-10-26-general-2358d",
+      "date": "2026-10-30",
+      "kind": "reel_angle",
+      "feed": true,
+      "mode": "general",
+      "phoneId": null,
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "angle": "ceny używanych iphone 2026",
+        "scenes": [
+          {
+            "kind": "hook",
+            "photo": null,
+            "video": null,
+            "title": "Ile kosztuje używany iPhone w 2026 roku?",
+            "accent": "2026",
+            "sub": "Sprawdź aktualne widełki cenowe",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "list",
+            "photo": null,
+            "video": null,
+            "title": "Modele 12 i 13",
+            "accent": "12 i 13",
+            "sub": "",
+            "items": [
+              "+ iPhone 12: od 700 zł",
+              "+ iPhone 13: od 1100 zł"
+            ],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2.2
+          },
+          {
+            "kind": "list",
+            "photo": null,
+            "video": null,
+            "title": "Modele 14 i 15",
+            "accent": "14 i 15",
+            "sub": "",
+            "items": [
+              "+ iPhone 14: od 1550 zł",
+              "+ iPhone 15: od 2100 zł"
+            ],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2.2
+          },
+          {
+            "kind": "cta",
+            "photo": null,
+            "video": null,
+            "title": "Szukasz konkretu?",
+            "accent": "konkretu",
+            "sub": "Napisz model na DM",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          }
+        ],
+        "cover": {
+          "title": "Ile kosztuje używany iPhone w 2026 roku?",
+          "accent": "2026",
+          "photo": 1
+        },
+        "caption": "Zastanawiasz się, ile trzeba zapłacić za używanego iPhone'a? Zobacz aktualne orientacyjne ceny z rynku wtórnego. 📱\n\nOd budżetowej dwunastki po nowsze serie. Uczciwie i bez ściemy podpowiadamy, co się opłaca.\n\nSzukasz iPhone'a? Napisz do nas na DM, jaki model Cię interesuje, a znajdziemy coś dla Ciebie w Dzierżoniowie.\n\nNapisz CENA w komentarzu, jeśli chcesz poznać szczegóły!\n\n#używanyiphone #ceny #dzierżoniów #świdnica #okazja",
+        "music": {
+          "mood": "spokojny, profesjonalny",
+          "tempo": "średnie",
+          "ideas": [
+            "lofi background",
+            "tech minimalist"
+          ]
+        }
+      },
+      "caption": "Zastanawiasz się, ile trzeba zapłacić za używanego iPhone'a? Zobacz aktualne orientacyjne ceny z rynku wtórnego. 📱\n\nOd budżetowej dwunastki po nowsze serie. Uczciwie i bez ściemy podpowiadamy, co się opłaca.\n\nSzukasz iPhone'a? Napisz do nas na DM, jaki model Cię interesuje, a znajdziemy coś dla Ciebie w Dzierżoniowie.\n\nNapisz CENA w komentarzu, jeśli chcesz poznać szczegóły!\n\n#używanyiphone #ceny #dzierżoniów #świdnica #okazja",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "video": "media/drafts/2026-10-26-general-2358d/2026-10-30-reel-angle-358d-v1/reel.mp4",
+        "cover": "media/drafts/2026-10-26-general-2358d/2026-10-30-reel-angle-358d-v1/cover.jpg"
+      }
+    },
+    "2026-10-31-story-358d": {
+      "id": "2026-10-31-story-358d",
+      "draftId": "2026-10-26-general-2358d",
+      "date": "2026-10-31",
+      "kind": "story",
+      "feed": false,
+      "mode": "general",
+      "phoneId": null,
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "tag": "DZIERŻONIÓW",
+        "title": "Odbiór osobisty lub wysyłka",
+        "accent": "osobisty",
+        "sub": "Wszystkie nasze telefony sprawdzamy przed wystawieniem. Zapraszamy do kontaktu.",
+        "cta": "Napisz, jaki model Cię interesuje",
+        "photo": 1
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-general-2358d/2026-10-31-story-358d-v1/story.jpg"
+      }
+    },
+    "2026-11-01-carousel-value-358d": {
+      "id": "2026-11-01-carousel-value-358d",
+      "draftId": "2026-10-26-general-2358d",
+      "date": "2026-11-01",
+      "kind": "carousel_value",
+      "feed": true,
+      "mode": "general",
+      "phoneId": null,
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "theme": "green",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "PORADNIK ZAKUPOWY",
+            "title": "Który iPhone do 1500 zł w 2026?",
+            "accent": "1500 zł",
+            "sub": "Zapisz tę karuzelę na później, żeby nie przepłacić",
+            "bullets": [
+              "+ Sprawdzone modele",
+              "+ Realne ceny z rynku",
+              "+ Porady przed zakupem"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "BUDŻET 700 - 950 ZŁ",
+            "title": "iPhone 12",
+            "accent": "iPhone 12",
+            "sub": "Świetny punkt wyjścia",
+            "bullets": [
+              "+ Bardzo dobra płynność działania",
+              "+ Otrzymuje aktualne poprawki bezpieczeństwa",
+              "- Bateria w starszych egzemplarzach wymaga uwagi"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "HIT OPŁACALNOŚCI",
+            "title": "iPhone 13",
+            "accent": "iPhone 13",
+            "sub": "Cena: od 1100 do 1450 zł",
+            "bullets": [
+              "+ Dłuższy czas pracy na baterii",
+              "+ Nowe minimum na kolejne lata",
+              "+ Świetny aparat i niezawodność"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "cta",
+            "tag": "ZAPISZ NA PÓŹNIEJ",
+            "title": "Szukasz telefonu dla siebie?",
+            "accent": "siebie",
+            "sub": "Przyjmujemy też starsze modele w rozliczeniu",
+            "bullets": [
+              "Odbiór w Dzierżoniowie",
+              "Uczciwie o stanie i bez ściemy",
+              "Napisz na DM, jaki model szukasz"
+            ],
+            "specs": [],
+            "photo": 1
+          }
+        ],
+        "caption": "Szukasz używanego iPhone'a do 1500 zł? Zapisz tę karuzelę na później, żeby mieć pewność, co wybrać! 📌\n\nPokazujemy fakty o modelach 12 i 13, które wciąż królują na rynku wtórnym. Uczciwie o stanie i bez ściemy.\n\nSzukasz konkretnego modelu w Dzierżoniowie lub okolicy? Napisz do nas na DM – chętnie pomożemy dobrać sprzęt dopasowany do Twojego budżetu.\n\n#używanyiphone #poradnik #dzierżoniów #bielawa #zapisz"
+      },
+      "caption": "Szukasz używanego iPhone'a do 1500 zł? Zapisz tę karuzelę na później, żeby mieć pewność, co wybrać! 📌\n\nPokazujemy fakty o modelach 12 i 13, które wciąż królują na rynku wtórnym. Uczciwie o stanie i bez ściemy.\n\nSzukasz konkretnego modelu w Dzierżoniowie lub okolicy? Napisz do nas na DM – chętnie pomożemy dobrać sprzęt dopasowany do Twojego budżetu.\n\n#używanyiphone #poradnik #dzierżoniów #bielawa #zapisz",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-26-general-2358d/2026-11-01-carousel-value-358d-v1/slide01.jpg",
+          "media/drafts/2026-10-26-general-2358d/2026-11-01-carousel-value-358d-v1/slide02.jpg",
+          "media/drafts/2026-10-26-general-2358d/2026-11-01-carousel-value-358d-v1/slide03.jpg",
+          "media/drafts/2026-10-26-general-2358d/2026-11-01-carousel-value-358d-v1/slide04.jpg"
+        ]
+      }
+    },
+    "2026-10-26-reel-hook-z6f6": {
+      "id": "2026-10-26-reel-hook-z6f6",
+      "draftId": "2026-10-26-continue-2z6f6",
+      "date": "2026-10-26",
+      "kind": "reel_hook",
+      "feed": true,
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "review",
+      "version": 2,
+      "spec": {
+        "angle": "Dostajesz czy odrzucasz",
+        "style": "classic",
+        "scenes": [
+          {
+            "kind": "hook",
+            "photo": 14,
+            "video": null,
+            "title": "Dostajesz TEN iPhone 13 Pro",
+            "accent": "TEN",
+            "sub": "Zobacz stan i zdecyduj.",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 1.8
+          },
+          {
+            "kind": "photo",
+            "photo": 12,
+            "video": null,
+            "title": "Kolor Sierra Blue 128 GB",
+            "accent": "Sierra Blue",
+            "sub": "Aparat Pro i super ekran.",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 1.8
+          },
+          {
+            "kind": "list",
+            "photo": 24,
+            "video": null,
+            "title": "Pełna uczciwość",
+            "accent": "uczciwość",
+            "sub": "",
+            "items": [
+              "+ Kondycja baterii 100%",
+              "+ Stan bardzo dobry",
+              "+ W zestawie case i kabel"
+            ],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2.2
+          },
+          {
+            "kind": "price",
+            "photo": 22,
+            "video": null,
+            "title": "Cena za komplet",
+            "accent": "komplet",
+            "sub": "1250 zł",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 1.8
+          },
+          {
+            "kind": "cta",
+            "photo": 21,
+            "video": null,
+            "title": "Bierzesz ten telefon?",
+            "accent": "Bierzesz",
+            "sub": "Napisz TAK lub NIE w komentarzu!",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          }
+        ],
+        "cover": {
+          "title": "Dostajesz TEN iPhone 13 Pro",
+          "accent": "TEN",
+          "photo": 14
+        },
+        "caption": "Szukasz mocnego flagowca w dobrej cenie? Mamy 1 sztukę w Dzierżoniowie.\n\nOto używany iPhone 13 Pro 128 GB w pięknym kolorze Sierra Blue.\n\nKonkretne fakty:\n✔ Kondycja baterii: 100%\n✔ Stan bardzo dobry\n✔ W zestawie: telefon, case, kabel ładujący oraz szkło ochronne dla zdecydowanego klienta\n\nCena: 1250 zł\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu z dopłatą – oddajesz stary, dopłacasz różnicę i wychodzisz z lepszym sprzętem.\n\nOdbiór osobisty w Dzierżoniowie lub szybka wysyłka (Bielawa, Świdnica, Wrocław i okolice).\n\nNapisz TAK lub NIE w komentarzu!\n\n#iphone13pro #używanyiphone #dzierżoniów #bielawa #świdnica",
+        "music": {
+          "mood": "pewny siebie, energiczny",
+          "tempo": "szybkie",
+          "ideas": [
+            "trending phonk beat",
+            "hip hop beat instrumental",
+            "clean fast rhythm"
+          ]
+        }
+      },
+      "caption": "Szukasz mocnego flagowca w dobrej cenie? Mamy 1 sztukę w Dzierżoniowie.\n\nOto używany iPhone 13 Pro 128 GB w pięknym kolorze Sierra Blue.\n\nKonkretne fakty:\n✔ Kondycja baterii: 100%\n✔ Stan bardzo dobry\n✔ W zestawie: telefon, case, kabel ładujący oraz szkło ochronne dla zdecydowanego klienta\n\nCena: 1250 zł\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu z dopłatą – oddajesz stary, dopłacasz różnicę i wychodzisz z lepszym sprzętem.\n\nOdbiór osobisty w Dzierżoniowie lub szybka wysyłka (Bielawa, Świdnica, Wrocław i okolice).\n\nNapisz TAK lub NIE w komentarzu!\n\n#iphone13pro #używanyiphone #dzierżoniów #bielawa #świdnica",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [
+        {
+          "at": "2026-10-27T21:01:19.776Z",
+          "text": "mieliśmy już podobny post"
+        }
+      ],
+      "media": {
+        "video": "media/drafts/2026-10-26-continue-2z6f6/2026-10-26-reel-hook-z6f6-v2/reel.mp4",
+        "cover": "media/drafts/2026-10-26-continue-2z6f6/2026-10-26-reel-hook-z6f6-v2/cover.jpg"
+      }
+    },
+    "2026-10-27-story-z6f6": {
+      "id": "2026-10-27-story-z6f6",
+      "draftId": "2026-10-26-continue-2z6f6",
+      "date": "2026-10-27",
+      "kind": "story",
+      "feed": false,
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "published",
+      "version": 1,
+      "spec": {
+        "tag": "NOWOŚĆ NA STANIE",
+        "title": "iPhone 13 Pro 128 GB",
+        "accent": "13 Pro",
+        "sub": "Kolor Sierra Blue z baterią 100%. Jest tylko jedna sztuka w Dzierżoniowie!",
+        "cta": "Napisz na DM",
+        "photo": 11
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-continue-2z6f6/2026-10-27-story-z6f6-v1/story.jpg"
+      },
+      "igMediaId": "18131445811772750",
+      "publishedDate": "2026-10-27"
+    },
+    "2026-10-28-carousel-offer-z6f6": {
+      "id": "2026-10-28-carousel-offer-z6f6",
+      "draftId": "2026-10-26-continue-2z6f6",
+      "date": "2026-10-28",
+      "kind": "carousel_offer",
+      "feed": true,
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "theme": "graphite",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "NA SPRZEDAŻ",
+            "title": "iPhone 13 Pro 128 GB",
+            "accent": "13 Pro",
+            "sub": "Sprawdź szczegóły tego egzemplarza",
+            "bullets": [
+              "+ Sierra Blue",
+              "+ Bateria 100%",
+              "+ Gotowy do pracy"
+            ],
+            "specs": [],
+            "photo": 11
+          },
+          {
+            "kind": "specs",
+            "tag": "SPECYFIKACJA",
+            "title": "Co w nim siedzi?",
+            "accent": "",
+            "sub": "Pewne parametry bez ściemy",
+            "bullets": [],
+            "specs": [
+              {
+                "label": "Model",
+                "value": "iPhone 13 Pro"
+              },
+              {
+                "label": "Pamięć",
+                "value": "128 GB"
+              },
+              {
+                "label": "Kolor",
+                "value": "Sierra Blue"
+              },
+              {
+                "label": "Bateria",
+                "value": "100%"
+              }
+            ],
+            "photo": null
+          },
+          {
+            "kind": "photo",
+            "tag": "STAN",
+            "title": "Uczciwie o stanie",
+            "accent": "Uczciwie",
+            "sub": "Stan bardzo dobry, dokładnie taki jak na zdjęciach w ofercie.",
+            "bullets": [],
+            "specs": [],
+            "photo": 9
+          },
+          {
+            "kind": "bullets",
+            "tag": "ZESTAW",
+            "title": "Co dostajesz w cenie?",
+            "accent": "",
+            "sub": "Gotowy zestaw od razu do użytku",
+            "bullets": [
+              "+ Telefon iPhone 13 Pro",
+              "+ Case ochronny",
+              "+ Kabel ładujący",
+              "+ Szkło ochronne (dla zdecydowanego)"
+            ],
+            "specs": [],
+            "photo": 20
+          },
+          {
+            "kind": "price",
+            "tag": "CENA",
+            "title": "Atrakcyjna oferta",
+            "accent": "",
+            "sub": "Wymień stary telefon na lepszy z dopłatą",
+            "bullets": [
+              "+ Przyjmujemy telefony w rozliczeniu",
+              "+ Odbiór osobisty w Dzierżoniowie"
+            ],
+            "specs": [
+              {
+                "label": "Cena",
+                "value": "1250 zł"
+              }
+            ],
+            "photo": null
+          },
+          {
+            "kind": "cta",
+            "tag": "KONTAKT",
+            "title": "Zainteresowany?",
+            "accent": "Zainteresowany",
+            "sub": "Napisz wiadomość i zgarnij go, póki jest dostępny.",
+            "bullets": [
+              "Zapisz post na później",
+              "Sprawdź DM lub OLX"
+            ],
+            "specs": [],
+            "photo": 21
+          }
+        ],
+        "caption": "Szukasz pewnego sprzętu w rozsądnej cenie? Sprawdź tę ofertę z Dzierżoniowa. 📱\n\nModel: iPhone 13 Pro\nPamięć: 128 GB\nKolor: Sierra Blue\nKondycja baterii: 100%\nCena: 1250 zł\n\nStan bardzo dobry, wady pokazujemy bez ściemy na zdjęciach. Do zestawu dodajemy case, kabel oraz szkło ochronne dla zdecydowanego klienta. Masz stary telefon? Przyjmiemy go w rozliczeniu!\n\nOdbiór osobisty w Dzierżoniowie lub wysyłka. Napisz na DM lub OLX.\n\nZapisz ten post, żeby nie zgubić oferty! 👇\n\n#iphone #używanyiphone #dzierżoniów #bielawa #świdnica #olx"
+      },
+      "caption": "Szukasz pewnego sprzętu w rozsądnej cenie? Sprawdź tę ofertę z Dzierżoniowa. 📱\n\nModel: iPhone 13 Pro\nPamięć: 128 GB\nKolor: Sierra Blue\nKondycja baterii: 100%\nCena: 1250 zł\n\nStan bardzo dobry, wady pokazujemy bez ściemy na zdjęciach. Do zestawu dodajemy case, kabel oraz szkło ochronne dla zdecydowanego klienta. Masz stary telefon? Przyjmiemy go w rozliczeniu!\n\nOdbiór osobisty w Dzierżoniowie lub wysyłka. Napisz na DM lub OLX.\n\nZapisz ten post, żeby nie zgubić oferty! 👇\n\n#iphone #używanyiphone #dzierżoniów #bielawa #świdnica #olx",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-26-continue-2z6f6/2026-10-28-carousel-offer-z6f6-v1/slide01.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-10-28-carousel-offer-z6f6-v1/slide02.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-10-28-carousel-offer-z6f6-v1/slide03.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-10-28-carousel-offer-z6f6-v1/slide04.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-10-28-carousel-offer-z6f6-v1/slide05.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-10-28-carousel-offer-z6f6-v1/slide06.jpg"
+        ]
+      }
+    },
+    "2026-10-29-story-z6f6": {
+      "id": "2026-10-29-story-z6f6",
+      "draftId": "2026-10-26-continue-2z6f6",
+      "date": "2026-10-29",
+      "kind": "story",
+      "feed": false,
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "tag": "W ROZLICZENIU",
+        "title": "Masz stary telefon?",
+        "accent": "stary",
+        "sub": "Wymień go na tego iPhone 13 Pro z dopłatą. Oszczędzasz czas i pieniądze.",
+        "cta": "Napisz na DM",
+        "photo": 11
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-continue-2z6f6/2026-10-29-story-z6f6-v1/story.jpg"
+      }
+    },
+    "2026-10-30-reel-angle-z6f6": {
+      "id": "2026-10-30-reel-angle-z6f6",
+      "draftId": "2026-10-26-continue-2z6f6",
+      "date": "2026-10-30",
+      "kind": "reel_angle",
+      "feed": true,
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "angle": "POV zakup flagowca",
+        "scenes": [
+          {
+            "kind": "hook",
+            "photo": 14,
+            "video": null,
+            "title": "POV: szukasz flagowca Apple w super cenie",
+            "accent": "super cenie",
+            "sub": "Sprawdź, co mamy w Dzierżoniowie.",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "photo",
+            "photo": 11,
+            "video": null,
+            "title": "iPhone 13 Pro Sierra Blue",
+            "accent": "Sierra Blue",
+            "sub": "128 GB pamięci na wszystko.",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "list",
+            "photo": 1,
+            "video": null,
+            "title": "Konkrety bez ściemy",
+            "accent": "Konkrety",
+            "sub": "",
+            "items": [
+              "+ Bateria: 100%",
+              "+ Stan: bardzo dobry",
+              "+ Case i kabel w zestawie"
+            ],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2.5
+          },
+          {
+            "kind": "price",
+            "photo": 21,
+            "video": null,
+            "title": "Cena",
+            "accent": "Cena",
+            "sub": "1250 zł",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          },
+          {
+            "kind": "cta",
+            "photo": 14,
+            "video": null,
+            "title": "Ostatnia sztuka",
+            "accent": "Ostatnia",
+            "sub": "Napisz CENA na DM",
+            "items": [],
+            "left": {
+              "label": "",
+              "value": ""
+            },
+            "right": {
+              "label": "",
+              "value": ""
+            },
+            "seconds": 2
+          }
+        ],
+        "cover": {
+          "title": "POV: szukasz flagowca Apple w super cenie",
+          "accent": "super cenie",
+          "photo": 14
+        },
+        "caption": "Czas na zmianę telefonu? Ten iPhone 13 Pro 128 GB w kolorze Sierra Blue czeka w Dzierżoniowie. 📱\n\n✔ Kondycja baterii: 100%\n✔ Stan bardzo dobry\n✔ W zestawie case, kabel i szkło ochronne dla zdecydowanego\n\nPrzyjmujemy inne telefony w rozliczeniu. Odbiór osobisty lub szybka wysyłka.\n\nNapisz CENA na DM, żeby poznać szczegóły!\n\n#iphone #używanyiphone #dzierżoniów #pieszyce #ząbkowiceśląskie",
+        "music": {
+          "mood": "luźny, nowoczesny",
+          "tempo": "szybkie",
+          "ideas": [
+            "lofi hip hop beat",
+            "chill background track"
+          ]
+        }
+      },
+      "caption": "Czas na zmianę telefonu? Ten iPhone 13 Pro 128 GB w kolorze Sierra Blue czeka w Dzierżoniowie. 📱\n\n✔ Kondycja baterii: 100%\n✔ Stan bardzo dobry\n✔ W zestawie case, kabel i szkło ochronne dla zdecydowanego\n\nPrzyjmujemy inne telefony w rozliczeniu. Odbiór osobisty lub szybka wysyłka.\n\nNapisz CENA na DM, żeby poznać szczegóły!\n\n#iphone #używanyiphone #dzierżoniów #pieszyce #ząbkowiceśląskie",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "video": "media/drafts/2026-10-26-continue-2z6f6/2026-10-30-reel-angle-z6f6-v1/reel.mp4",
+        "cover": "media/drafts/2026-10-26-continue-2z6f6/2026-10-30-reel-angle-z6f6-v1/cover.jpg"
+      }
+    },
+    "2026-10-31-story-z6f6": {
+      "id": "2026-10-31-story-z6f6",
+      "draftId": "2026-10-26-continue-2z6f6",
+      "date": "2026-10-31",
+      "kind": "story",
+      "feed": false,
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "tag": "OSTATNIE DNI",
+        "title": "Ten iPhone nadal czeka",
+        "accent": "nadal czeka",
+        "sub": "Jedna sztuka iPhone 13 Pro 128 GB w Dzierżoniowie. Kto pierwszy, ten lepszy.",
+        "cta": "Napisz na DM",
+        "photo": 11
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-continue-2z6f6/2026-10-31-story-z6f6-v1/story.jpg"
+      }
+    },
+    "2026-11-01-carousel-value-z6f6": {
+      "id": "2026-11-01-carousel-value-z6f6",
+      "draftId": "2026-10-26-continue-2z6f6",
+      "date": "2026-11-01",
+      "kind": "carousel_value",
+      "feed": true,
+      "mode": "continue",
+      "phoneId": "2026-10-17-iphone-13-pro",
+      "status": "cancelled",
+      "version": 1,
+      "spec": {
+        "theme": "green",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "PORADNIK",
+            "title": "Czy iPhone 13 Pro wciąż się opłaca?",
+            "accent": "opłaca",
+            "sub": "Sprawdź 4 powody, dlaczego to świetny wybór",
+            "bullets": [
+              "+ Ekran ProMotion 120Hz",
+              "+ Świetny aparat",
+              "+ Mocna bateria"
+            ],
+            "specs": [],
+            "photo": 11
+          },
+          {
+            "kind": "bullets",
+            "tag": "1. WYDAJNOŚĆ",
+            "title": "Procesor A15 Bionic",
+            "accent": "A15 Bionic",
+            "sub": "Moc na lata bez zacięć",
+            "bullets": [
+              "+ Płynne działanie w grach i aplikacjach",
+              "+ Pełne wsparcie dla nowych wersji systemu",
+              "+ Niezawodna praca na co dzień"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "2. APARAT",
+            "title": "Zdjęcia i wideo na poziomie Pro",
+            "accent": "poziomie Pro",
+            "sub": "Tryb kinowy i makro",
+            "bullets": [
+              "+ Trzy obiektywy z trybem nocnym",
+              "+ Stabilizacja matrycy",
+              "+ Świetna jakość wideo 4K"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "3. EKRAN",
+            "title": "Ekran 120 Hz ProMotion",
+            "accent": "120 Hz",
+            "sub": "Różnicę widać od pierwszego dotknięcia",
+            "bullets": [
+              "+ Wyjątkowa płynność przewijania",
+              "+ Wysoka jasność w słońcu",
+              "+ Żywe kolory i głęboka czerń"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "bullets",
+            "tag": "4. CENA",
+            "title": "Mądry zakup używanego",
+            "accent": "Mądry zakup",
+            "sub": "Flagowiec w ułamku pierwotnej ceny",
+            "bullets": [
+              "+ Oszczędność tysięcy złotych względem premiery",
+              "+ Sprawdzony stan i uczciwa oferta",
+              "+ Możliwość wymiany starego telefonu"
+            ],
+            "specs": [],
+            "photo": null
+          },
+          {
+            "kind": "cta",
+            "tag": "OFERTA",
+            "title": "Szukasz takiego modelu?",
+            "accent": "Szukasz",
+            "sub": "Sprawdź naszą aktualną dostępność w Dzierżoniowie",
+            "bullets": [
+              "Zapisz post na później",
+              "Przyjmujemy telefony w rozliczeniu",
+              "Napisz na DM po szczegóły"
+            ],
+            "specs": [],
+            "photo": 11
+          }
+        ],
+        "caption": "Zastanawiasz się nad zakupem starszego flagowca Apple? iPhone 13 Pro nadal miażdży konkurencję w swojej klasie cenowej. 📱\n\nW karuzeli zebraliśmy 4 powody, dla których ten model to wciąż świetna inwestycja. Sprawdź, dlaczego warto!\n\nMasz stary telefon? Przynieś go do nas w Dzierżoniowie – przyjmujemy go w rozliczeniu z dopłatą.\n\nZapisz ten post na później i napisz na DM, jeśli szukasz pewnego telefonu!\n\n#iphone #używanyiphone #dzierżoniów #bielawa #świdnica #poradnik"
+      },
+      "caption": "Zastanawiasz się nad zakupem starszego flagowca Apple? iPhone 13 Pro nadal miażdży konkurencję w swojej klasie cenowej. 📱\n\nW karuzeli zebraliśmy 4 powody, dla których ten model to wciąż świetna inwestycja. Sprawdź, dlaczego warto!\n\nMasz stary telefon? Przynieś go do nas w Dzierżoniowie – przyjmujemy go w rozliczeniu z dopłatą.\n\nZapisz ten post na później i napisz na DM, jeśli szukasz pewnego telefonu!\n\n#iphone #używanyiphone #dzierżoniów #bielawa #świdnica #poradnik",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p2.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p3.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p4.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p5.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p6.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p7.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p8.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p9.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p10.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p11.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p12.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p13.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p14.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p15.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p16.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p17.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p18.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p19.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p20.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p21.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p22.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p23.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p24.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p25.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p26.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p27.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p28.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p29.jpg"
+      ],
+      "clipRefs": [],
+      "notes": [],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-26-continue-2z6f6/2026-11-01-carousel-value-z6f6-v1/slide01.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-11-01-carousel-value-z6f6-v1/slide02.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-11-01-carousel-value-z6f6-v1/slide03.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-11-01-carousel-value-z6f6-v1/slide04.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-11-01-carousel-value-z6f6-v1/slide05.jpg",
+          "media/drafts/2026-10-26-continue-2z6f6/2026-11-01-carousel-value-z6f6-v1/slide06.jpg"
+        ]
+      }
+    },
+    "2026-10-28-carousel-offer-4x1g": {
+      "id": "2026-10-28-carousel-offer-4x1g",
+      "draftId": "2026-10-26-general-54x1g",
+      "date": "2026-10-28",
+      "kind": "carousel_offer",
+      "feed": true,
+      "mode": "general",
+      "phoneId": null,
+      "status": "published",
+      "version": 1,
+      "spec": {
+        "theme": "editorial",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "PORADNIK",
+            "title": "Wymień stary telefon na lepszy model",
+            "accent": "Wymień stary",
+            "sub": "Prosty proces bez użerania się z przypadkowymi kupcami.",
+            "bullets": [
+              "+ Bezpieczna transakcja",
+              "+ Uczciwa wycena sprzętu",
+              "+ Płacisz tylko różnicę"
+            ],
+            "specs": [],
+            "photo": 2
+          },
+          {
+            "kind": "bullets",
+            "tag": "KROK 1",
+            "title": "Wyceniasz swój obecny telefon",
+            "accent": "Wyceniasz swój",
+            "sub": "Bez ukrytych haczyków i zbijania ceny na siłę.",
+            "bullets": [
+              "+ Podajesz model i pamięć urządzenia",
+              "+ Uczciwie opisujesz stan wizualny",
+              "+ Wstępną wycenę dostajesz od ręki na DM"
+            ],
+            "specs": [],
+            "photo": 3
+          },
+          {
+            "kind": "bullets",
+            "tag": "KROK 2",
+            "title": "Mówisz jakiego modelu szukasz",
+            "accent": "jakiego modelu",
+            "sub": "Dobieramy sprzęt pod Twoje codzienne wymagania.",
+            "bullets": [
+              "+ Określasz budżet i oczekiwaną serię",
+              "+ Podpowiadamy najbardziej opłacalny wybór",
+              "+ Nie wciskamy najdroższych nowinek"
+            ],
+            "specs": [],
+            "photo": 4
+          },
+          {
+            "kind": "bullets",
+            "tag": "KROK 3",
+            "title": "Dokładnie weryfikujemy każdy detal",
+            "accent": "weryfikujemy każdy",
+            "sub": "Zero niespodzianek po wyjęciu sprzętu z pudełka.",
+            "bullets": [
+              "+ Szczegółowy test baterii i aparatów",
+              "+ Weryfikacja ekranu i mikrofonów",
+              "+ Pełna transparentność co do rys i śladów"
+            ],
+            "specs": [],
+            "photo": 5
+          },
+          {
+            "kind": "bullets",
+            "tag": "KROK 4",
+            "title": "Wymieniasz i dopłacasz tylko różnicę",
+            "accent": "dopłacasz tylko",
+            "sub": "Oszczędzasz czas, nerwy i pieniądze.",
+            "bullets": [
+              "+ Oddajesz stary telefon w rozliczeniu",
+              "+ Odbierasz przygotowany egzemplarz",
+              "+ Masz spokój i sprzęt gotowy do działania"
+            ],
+            "specs": [],
+            "photo": 6
+          },
+          {
+            "kind": "cta",
+            "tag": "ZACZNIJ TERAZ",
+            "title": "Szukasz konkretnego iPhone'a?",
+            "accent": "Szukasz konkretnego",
+            "sub": "Napisz do nas model i budżet, a znajdziemy go dla Ciebie.",
+            "bullets": [
+              "+ Odbiór osobisty w Dzierżoniowie",
+              "+ Bezpieczna wysyłka w całej Polsce",
+              "+ Napisz na DM swój obecny telefon"
+            ],
+            "specs": [],
+            "photo": 7
+          }
+        ],
+        "caption": "Chcesz zmienić telefon, ale nie masz czasu użerać się ze sprzedażą na portalach?\n\nW iSelect robimy to prosto i bez zbędnego stresu:\n✔ Oddajesz swój dotychczasowy telefon w rozliczeniu\n✔ Mówisz, na jaki model chcesz przejść\n✔ Dopłacasz wyłącznie różnicę wartości\n\nNie musisz ryzykować dziwnych spotkań ani czekać tygodniami na kupca. Każdy sprzęt sprawdzamy rzetelnie – otwarcie mówimy o stanie wizualnym i kondycji baterii, bez owijania w bawełnę.\n\nSzukasz konkretnego modelu iPhone'a? Daj znać w wiadomości prywatnej. Znajdziemy odpowiedni egzemplarz pod Twój budżet.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka. Zapraszamy też sąsiadów z okolic: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie i Wrocław.\n\nNapisz na DM: MODEL, którego szukasz!\n#uzywanyiphone #dzierzoniow #swidnica #bielawa #applepolska"
+      },
+      "caption": "Chcesz zmienić telefon, ale nie masz czasu użerać się ze sprzedażą na portalach?\n\nW iSelect robimy to prosto i bez zbędnego stresu:\n✔ Oddajesz swój dotychczasowy telefon w rozliczeniu\n✔ Mówisz, na jaki model chcesz przejść\n✔ Dopłacasz wyłącznie różnicę wartości\n\nNie musisz ryzykować dziwnych spotkań ani czekać tygodniami na kupca. Każdy sprzęt sprawdzamy rzetelnie – otwarcie mówimy o stanie wizualnym i kondycji baterii, bez owijania w bawełnę.\n\nSzukasz konkretnego modelu iPhone'a? Daj znać w wiadomości prywatnej. Znajdziemy odpowiedni egzemplarz pod Twój budżet.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka. Zapraszamy też sąsiadów z okolic: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie i Wrocław.\n\nNapisz na DM: MODEL, którego szukasz!\n#uzywanyiphone #dzierzoniow #swidnica #bielawa #applepolska",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hands-holding-modern-sleek-sma-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-inspecting-used-smartph-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-display-lineup-mini-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/macro-shot-smartphone-edge-tit-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/two-smartphones-lying-side-by--1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/coffee-and-smartphone-on-clean-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/broken-smartphone-glass-screen-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-software-update-scr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/minimal-desk-setup-tablet-and--2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/expensive-fragile-tech-concept-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-holding-small-tablet-co-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/apple-ecosystem-devices-syncin-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/modern-clean-tech-workspace-no-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smiling-person-texting-on-smar-1.jpg"
+      ],
+      "clipRefs": [
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-holding-modern-smartpho.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-swiping-smartphone-screen-fing.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-two-smartphones-comparison-sid.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-holding-premium-titanium-smart.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-typing-on-smartphone-sc.mp4"
+      ],
+      "notes": [],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide01.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide02.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide03.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide04.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide05.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-10-28-carousel-offer-4x1g-v1/slide06.jpg"
+        ]
+      },
+      "igMediaId": "18015901919779259",
+      "permalink": "https://www.instagram.com/p/DfDPo76kiq4/",
+      "publishedDate": "2026-10-28"
+    },
+    "2026-10-29-story-4x1g": {
+      "id": "2026-10-29-story-4x1g",
+      "draftId": "2026-10-26-general-54x1g",
+      "date": "2026-10-29",
+      "kind": "story",
+      "feed": false,
+      "mode": "general",
+      "phoneId": null,
+      "status": "published",
+      "version": 1,
+      "spec": {
+        "tag": "NEWS",
+        "title": "Ekran za 10 000 zł pęka sam z siebie?",
+        "accent": "10 000 zł",
+        "sub": "W sieci głośno o usterkach w nowym składanym iPhone Duo. iFixit rozebrał telefon i bada sprawę.",
+        "cta": "Wolisz składaka czy klasyk",
+        "photo": 8,
+        "theme": "editorial"
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hands-holding-modern-sleek-sma-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-inspecting-used-smartph-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-display-lineup-mini-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/macro-shot-smartphone-edge-tit-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/two-smartphones-lying-side-by--1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/coffee-and-smartphone-on-clean-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/broken-smartphone-glass-screen-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-software-update-scr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/minimal-desk-setup-tablet-and--2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/expensive-fragile-tech-concept-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-holding-small-tablet-co-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/apple-ecosystem-devices-syncin-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/modern-clean-tech-workspace-no-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smiling-person-texting-on-smar-1.jpg"
+      ],
+      "clipRefs": [
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-holding-modern-smartpho.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-swiping-smartphone-screen-fing.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-two-smartphones-comparison-sid.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-holding-premium-titanium-smart.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-typing-on-smartphone-sc.mp4"
+      ],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-general-54x1g/2026-10-29-story-4x1g-v1/story.jpg"
+      },
+      "igMediaId": "18173140282460598",
+      "publishedDate": "2026-10-29"
+    },
+    "2026-10-30-reel-angle-4x1g": {
+      "id": "2026-10-30-reel-angle-4x1g",
+      "draftId": "2026-10-26-general-54x1g",
+      "date": "2026-10-30",
+      "kind": "reel_angle",
+      "feed": true,
+      "mode": "general",
+      "phoneId": null,
+      "status": "sent",
+      "version": 1,
+      "spec": {
+        "angle": "Kontrowersja: 60 Hz w nowym telefonie",
+        "style": "editorial",
+        "scenes": [
+          {
+            "kind": "hook",
+            "photo": 9,
+            "video": 0,
+            "title": "Nowy iPhone znów dostanie ekran 60 Hz?",
+            "accent": "ekran 60 Hz",
+            "sub": "Przecieki o iPhone 18e budzą spore emocje.",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "list",
+            "photo": 10,
+            "video": 1,
+            "title": "Co szykuje Apple w budżetowcu?",
+            "accent": "budżetowcu",
+            "sub": "",
+            "items": [
+              "- Ekran OLED tylko 60 Hz",
+              "+ Nowy procesor i aparat",
+              "- Brak płynności 120 Hz"
+            ],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "compare",
+            "photo": 11,
+            "video": 2,
+            "title": "W tej samej cenie masz wybór",
+            "accent": "masz wybór",
+            "sub": "",
+            "items": [],
+            "left": {
+              "label": "Nowy 18e",
+              "value": "60 Hz ekran"
+            },
+            "right": {
+              "label": "Używany Pro",
+              "value": "120 Hz ProMotion"
+            },
+            "seconds": 1.8
+          },
+          {
+            "kind": "list",
+            "photo": 12,
+            "video": 3,
+            "title": "Dlaczego flagowiec wygrywa?",
+            "accent": "flagowiec wygrywa",
+            "sub": "",
+            "items": [
+              "+ Ekran ProMotion 120 Hz",
+              "+ Teleobiektyw i lepsze wideo",
+              "+ Wykonanie ze stali lub tytanu"
+            ],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          },
+          {
+            "kind": "cta",
+            "photo": 13,
+            "video": 4,
+            "title": "Kupujesz nowość czy sprawdzony Pro?",
+            "accent": "sprawdzony Pro",
+            "sub": "Napisz PRO lub NOWY w komentarzu!",
+            "items": [],
+            "left": null,
+            "right": null,
+            "seconds": 1.8
+          }
+        ],
+        "cover": {
+          "title": "Nowy iPhone z ekranem 60 Hz?",
+          "accent": "60 Hz",
+          "photo": 9
+        },
+        "caption": "Znowu 60 Hz w nowym smartfonie za kilka tysięcy? Przecieki o 18e zaskakują.\n\nWedług ostatnich doniesień analityków, nadchodzący budżetowy iPhone 18e ma zachować odświeżanie 60 Hz. Tymczasem w bardzo podobnym budżecie na rynku wtórnym królują używane flagowce z serii Pro z ekranem ProMotion 120 Hz.\n\nUczciwie o technologii: płynność 120 Hz robi ogromną różnicę przy codziennym scrollowaniu. Kto raz spróbował, ten rzadko chce wracać do 60 Hz.\n\nSzukasz sprawdzonego telefonu z serii Pro? Napisz do nas na DM – powiedz, czego potrzebujesz, a dobierzemy sprzęt do Twojego budżetu. Pamiętaj, że przyjmujemy też dotychczasowe telefony w rozliczeniu.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka (Świdnica, Bielawa, Pieszyce, Wrocław).\n\nNapisz w komentarzu: wolisz NOWY podstawowy model czy UŻYWANY z serii Pro?\n#iphone #technologia #uzywanyiphone #dzierzoniow #applepolska",
+        "music": {
+          "mood": "dynamiczny, technologiczny",
+          "tempo": "średnie",
+          "ideas": [
+            "tech review synth bass",
+            "minimal electronic beat"
+          ]
+        }
+      },
+      "caption": "Znowu 60 Hz w nowym smartfonie za kilka tysięcy? Przecieki o 18e zaskakują.\n\nWedług ostatnich doniesień analityków, nadchodzący budżetowy iPhone 18e ma zachować odświeżanie 60 Hz. Tymczasem w bardzo podobnym budżecie na rynku wtórnym królują używane flagowce z serii Pro z ekranem ProMotion 120 Hz.\n\nUczciwie o technologii: płynność 120 Hz robi ogromną różnicę przy codziennym scrollowaniu. Kto raz spróbował, ten rzadko chce wracać do 60 Hz.\n\nSzukasz sprawdzonego telefonu z serii Pro? Napisz do nas na DM – powiedz, czego potrzebujesz, a dobierzemy sprzęt do Twojego budżetu. Pamiętaj, że przyjmujemy też dotychczasowe telefony w rozliczeniu.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka (Świdnica, Bielawa, Pieszyce, Wrocław).\n\nNapisz w komentarzu: wolisz NOWY podstawowy model czy UŻYWANY z serii Pro?\n#iphone #technologia #uzywanyiphone #dzierzoniow #applepolska",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hands-holding-modern-sleek-sma-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-inspecting-used-smartph-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-display-lineup-mini-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/macro-shot-smartphone-edge-tit-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/two-smartphones-lying-side-by--1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/coffee-and-smartphone-on-clean-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/broken-smartphone-glass-screen-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-software-update-scr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/minimal-desk-setup-tablet-and--2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/expensive-fragile-tech-concept-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-holding-small-tablet-co-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/apple-ecosystem-devices-syncin-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/modern-clean-tech-workspace-no-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smiling-person-texting-on-smar-1.jpg"
+      ],
+      "clipRefs": [
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-holding-modern-smartpho.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-swiping-smartphone-screen-fing.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-two-smartphones-comparison-sid.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-holding-premium-titanium-smart.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-typing-on-smartphone-sc.mp4"
+      ],
+      "notes": [],
+      "media": {
+        "video": "media/drafts/2026-10-26-general-54x1g/2026-10-30-reel-angle-4x1g-v1/reel.mp4",
+        "cover": "media/drafts/2026-10-26-general-54x1g/2026-10-30-reel-angle-4x1g-v1/cover.jpg"
+      },
+      "publishedDate": "2026-10-30"
+    },
+    "2026-10-31-story-4x1g": {
+      "id": "2026-10-31-story-4x1g",
+      "draftId": "2026-10-26-general-54x1g",
+      "date": "2026-10-31",
+      "kind": "story",
+      "feed": false,
+      "mode": "general",
+      "phoneId": null,
+      "status": "published",
+      "version": 1,
+      "spec": {
+        "tag": "PORADA",
+        "title": "Masz starszego iPhone'a? Sprawdź aktualizację",
+        "accent": "Sprawdź aktualizację",
+        "sub": "Apple wydało iOS 26.7.2 z krytyczną łatką bezpieczeństwa CoreGraphics. Zdecydowanie warto zainstalować.",
+        "cta": "Zaktualizowany? Napisz TAK",
+        "photo": 14,
+        "theme": "editorial"
+      },
+      "caption": "",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hands-holding-modern-sleek-sma-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-inspecting-used-smartph-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-display-lineup-mini-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/macro-shot-smartphone-edge-tit-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/two-smartphones-lying-side-by--1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/coffee-and-smartphone-on-clean-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/broken-smartphone-glass-screen-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-software-update-scr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/minimal-desk-setup-tablet-and--2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/expensive-fragile-tech-concept-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-holding-small-tablet-co-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/apple-ecosystem-devices-syncin-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/modern-clean-tech-workspace-no-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smiling-person-texting-on-smar-1.jpg"
+      ],
+      "clipRefs": [
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-holding-modern-smartpho.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-swiping-smartphone-screen-fing.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-two-smartphones-comparison-sid.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-holding-premium-titanium-smart.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-typing-on-smartphone-sc.mp4"
+      ],
+      "notes": [],
+      "media": {
+        "image": "media/drafts/2026-10-26-general-54x1g/2026-10-31-story-4x1g-v1/story.jpg"
+      },
+      "igMediaId": "18154207330544120",
+      "publishedDate": "2026-10-31"
+    },
+    "2026-11-01-carousel-value-4x1g": {
+      "id": "2026-11-01-carousel-value-4x1g",
+      "draftId": "2026-10-26-general-54x1g",
+      "date": "2026-11-01",
+      "kind": "carousel_value",
+      "feed": true,
+      "mode": "general",
+      "phoneId": null,
+      "status": "approved",
+      "version": 1,
+      "spec": {
+        "theme": "editorial",
+        "slides": [
+          {
+            "kind": "cover",
+            "tag": "PORÓWNANIE",
+            "title": "Zamiast telefonu za 10 000 zł kup to",
+            "accent": "10 000 zł",
+            "sub": "Sprytna alternatywa dla drogiego składaka, która chroni portfel.",
+            "bullets": [
+              "+ Mniejsze ryzyko usterki",
+              "+ Dwa niezależne ekrany",
+              "+ Kilka tysięcy w kieszeni"
+            ],
+            "specs": [],
+            "photo": 15
+          },
+          {
+            "kind": "bullets",
+            "tag": "ANALIZA",
+            "title": "Dlaczego składaki to droga zabawa?",
+            "accent": "droga zabawa",
+            "sub": "Płacisz fortunę za sprzęt z problemami wieku dziecięcego.",
+            "bullets": [
+              "- Koszt zakupu zaczyna się od 10k zł",
+              "- Ryzyko pęknięcia zgięcia ekranu",
+              "- Kosmiczne koszty ewentualnej naprawy"
+            ],
+            "specs": [],
+            "photo": 16
+          },
+          {
+            "kind": "bullets",
+            "tag": "STRATEGIA",
+            "title": "Zestaw modularny: iPhone plus iPad",
+            "accent": "iPhone plus iPad",
+            "sub": "Pewny smartfon w kieszeni i czytelny tablet do pracy.",
+            "bullets": [
+              "+ Sprawdzony flagowy iPhone na co dzień",
+              "+ Nowy iPad mini OLED do multimediów",
+              "+ Łączny koszt o wiele niższy niż składak"
+            ],
+            "specs": [],
+            "photo": 17
+          },
+          {
+            "kind": "bullets",
+            "tag": "KORZYŚCI",
+            "title": "Dlaczego dwa urządzenia działają lepiej?",
+            "accent": "działają lepiej",
+            "sub": "Ekosystem Apple łączy sprzęty w jeden spójny organizm.",
+            "bullets": [
+              "+ Rozładowanie jednego nie odcina Cię od świata",
+              "+ Ekran bez widocznego zagięcia na środku",
+              "+ Wyższa wartość przy przyszłej odsprzedaży"
+            ],
+            "specs": [],
+            "photo": 18
+          },
+          {
+            "kind": "bullets",
+            "tag": "WNIOSEK",
+            "title": "Zapisz ten plan na zakupy",
+            "accent": "Zapisz ten plan",
+            "sub": "Technologia ma ułatwiać życie, a nie generować stres o zawias.",
+            "bullets": [
+              "1. Wybierz sprawdzony, używany model iPhone'a",
+              "2. Dobierz poręczny tablet do zadań na dużym ekranie",
+              "3. Zaoszczędzone pieniądze zatrzymaj na koncie"
+            ],
+            "specs": [],
+            "photo": 19
+          },
+          {
+            "kind": "cta",
+            "tag": "KONTAKT",
+            "title": "Szukasz sprawdzonego iPhone'a?",
+            "accent": "sprawdzonego iPhone'a",
+            "sub": "Pomożemy dobrać sprzęt i przyjmiemy stary telefon w rozliczeniu.",
+            "bullets": [
+              "+ Doradzamy model dopasowany do budżetu",
+              "+ Uczciwie mówimy o stanie każdego telefonu",
+              "+ Dzierżoniów (odbiór) lub ubezpieczona wysyłka"
+            ],
+            "specs": [],
+            "photo": 20
+          }
+        ],
+        "caption": "Czy warto wydawać 10 000 zł na składany telefon? Mamy znacznie lepszy plan.\n\nNowinki technologiczne kuszą, ale doniesienia o pękających ekranach w zawiasach i astronomicznych kosztach napraw dają do myślenia.\n\nModularny zestaw: sprawdzony używany iPhone oraz poręczny iPad mini z ekranem OLED oferuje:\n✔ Dwa niezależne urządzenia – rozładowany telefon nie blokuje Ci pracy\n✔ Ekran bez zgięcia na środku i bez delikatnych zawiasów\n✔ Spory zapas gotówki w kieszeni zamiast przepłacania za eksperymenty\n\nUczciwie o technologii: sprawdzone rozwiązania bardzo często wygrywają z drogimi premierami. Zapisz ten post na później, żeby nie przepłacać przy kolejnej zmianie sprzętu.\n\nSzukasz iPhone'a dopasowanego do swoich potrzeb? Napisz do nas na DM – powiedz, czego szukasz, a znajdziemy odpowiedni model. Twój obecny telefon chętnie przyjmiemy w rozliczeniu.\n\nOdbiór osobisty: Dzierżoniów. Obsługujemy też Świdnicę, Bielawę, Pieszyce i Wrocław.\n\n#iphone #technologia #uzywanyiphone #dzierzoniow #swidnica"
+      },
+      "caption": "Czy warto wydawać 10 000 zł na składany telefon? Mamy znacznie lepszy plan.\n\nNowinki technologiczne kuszą, ale doniesienia o pękających ekranach w zawiasach i astronomicznych kosztach napraw dają do myślenia.\n\nModularny zestaw: sprawdzony używany iPhone oraz poręczny iPad mini z ekranem OLED oferuje:\n✔ Dwa niezależne urządzenia – rozładowany telefon nie blokuje Ci pracy\n✔ Ekran bez zgięcia na środku i bez delikatnych zawiasów\n✔ Spory zapas gotówki w kieszeni zamiast przepłacania za eksperymenty\n\nUczciwie o technologii: sprawdzone rozwiązania bardzo często wygrywają z drogimi premierami. Zapisz ten post na później, żeby nie przepłacać przy kolejnej zmianie sprzętu.\n\nSzukasz iPhone'a dopasowanego do swoich potrzeb? Napisz do nas na DM – powiedz, czego szukasz, a znajdziemy odpowiedni model. Twój obecny telefon chętnie przyjmiemy w rozliczeniu.\n\nOdbiór osobisty: Dzierżoniów. Obsługujemy też Świdnicę, Bielawę, Pieszyce i Wrocław.\n\n#iphone #technologia #uzywanyiphone #dzierzoniow #swidnica",
+      "photoRefs": [
+        "media/phones/2026-10-17-iphone-13-pro/p0.jpg",
+        "media/phones/2026-10-17-iphone-13-pro/p1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hands-holding-modern-sleek-sma-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-inspecting-used-smartph-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-display-lineup-mini-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/macro-shot-smartphone-edge-tit-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/two-smartphones-lying-side-by--1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/coffee-and-smartphone-on-clean-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/broken-smartphone-glass-screen-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-minimal-dark-backgr-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/hand-holding-smartphone-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smartphone-software-update-scr-1.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/minimal-desk-setup-tablet-and--2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/expensive-fragile-tech-concept-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/person-holding-small-tablet-co-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/apple-ecosystem-devices-syncin-2.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/modern-clean-tech-workspace-no-0.jpg",
+        "media/drafts/2026-10-26-general-54x1g/src/smiling-person-texting-on-smar-1.jpg"
+      ],
+      "clipRefs": [
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-holding-modern-smartpho.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-swiping-smartphone-screen-fing.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-two-smartphones-comparison-sid.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-holding-premium-titanium-smart.mp4",
+        "media/drafts/2026-10-26-general-54x1g/src/v-person-typing-on-smartphone-sc.mp4"
+      ],
+      "notes": [],
+      "media": {
+        "slides": [
+          "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide01.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide02.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide03.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide04.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide05.jpg",
+          "media/drafts/2026-10-26-general-54x1g/2026-11-01-carousel-value-4x1g-v1/slide06.jpg"
+        ]
+      }
+    }
+  },
+  "jobs": [],
+  "outbox": [],
+  "notified": {
+    "wait-2026-10-25-carousel-value-co55": "2026-10-25",
+    "wait-2026-10-26-reel-hook-z6f6": "2026-10-26",
+    "wait-2026-10-27-story-z6f6": "2026-10-27"
+  },
+  "ig": {
+    "tokenRefreshedAt": "2026-10-17T18:05:57.145Z"
+  },
+  "performance": {
+    "updatedAt": "2026-10-25T12:25:10.398Z",
+    "items": [
+      {
+        "type": "rolka",
+        "date": "2026-10-23",
+        "hook": "POV: Wybierasz flagowy model iPhone 13 Pro 128 GB Sierra Blue zamiast wydawać fortunę w markecie 📲",
+        "permalink": "https://www.instagram.com/reel/De2YDGEIho-/",
+        "likes": 2,
+        "comments": 0,
+        "reach": 263,
+        "views": 480,
+        "saves": 0,
+        "shares": 1,
+        "watch_s": 2.1
+      },
+      {
+        "type": "karuzela",
+        "date": "2026-10-21",
+        "hook": "Na sprzedaż trafia iPhone 13 Pro 128 GB w wyjątkowym kolorze Sierra Blue! 📱",
+        "permalink": "https://www.instagram.com/p/DexUAWlGqwT/",
+        "likes": 7,
+        "comments": 0,
+        "reach": 196,
+        "views": 707,
+        "saves": 0,
+        "shares": 2
+      },
+      {
+        "type": "rolka",
+        "date": "2026-10-19",
+        "hook": "Dostajesz iPhone’a 13 Pro za 1250 zł, ale jest jeden haczyk... 📱",
+        "permalink": "https://www.instagram.com/reel/DesO_HSIfDm/",
+        "likes": 4,
+        "comments": 0,
+        "reach": 232,
+        "views": 509,
+        "saves": 0,
+        "shares": 1,
+        "watch_s": 3.4
+      },
+      {
+        "type": "karuzela",
+        "date": "2026-10-18",
+        "hook": "Czy iPhone 13 Pro ma jeszcze sens w tym roku? Sprawdź nasze zestawienie ZA i PRZECIW! 📱",
+        "permalink": "https://www.instagram.com/p/DepoltDFFNJ/",
+        "likes": 5,
+        "comments": 0,
+        "reach": 191,
+        "views": 745,
+        "saves": 0,
+        "shares": 1
+      },
+      {
+        "type": "karuzela",
+        "date": "2026-10-15",
+        "hook": "iPhone 13 Pro w 2026. Czy warto? 4 powody ZA i 2 powody PRZECIW. 📱",
+        "permalink": "https://www.instagram.com/p/Dehq4TjCHpD/",
+        "likes": 3,
+        "comments": 0,
+        "reach": 149,
+        "views": 286,
+        "saves": 0,
+        "shares": 2
+      },
+      {
+        "type": "rolka",
+        "date": "2026-10-14",
+        "hook": "iPhone 13 Pro w 2026: 3 powody ZA i 1 powód NIE.",
+        "permalink": "https://www.instagram.com/reel/DefPBmVo50G/",
+        "likes": 2,
+        "comments": 1,
+        "reach": 245,
+        "views": 313,
+        "saves": 0,
+        "shares": 1,
+        "watch_s": 3.2
+      },
+      {
+        "type": "karuzela",
+        "date": "2026-10-13",
+        "hook": "6 red flagów przy kupnie telefonu z ogłoszenia. Zapisz, zanim komuś zapłacisz. 🚩",
+        "permalink": "https://www.instagram.com/p/Dectyl3iHL2/",
+        "likes": 12,
+        "comments": 0,
+        "reach": 243,
+        "views": 988,
+        "saves": 0,
+        "shares": 1
+      },
+      {
+        "type": "rolka",
+        "date": "2026-10-12",
+        "hook": "iPhone 13 Pro, Graphite. Studyjne ujęcia telefonu z oferty. 🎬",
+        "permalink": "https://www.instagram.com/reel/DeaGMItoWCI/",
+        "likes": 5,
+        "comments": 0,
+        "reach": 218,
+        "views": 387,
+        "saves": 0,
+        "shares": 0,
+        "watch_s": 3.6
+      },
+      {
+        "type": "karuzela",
+        "date": "2026-10-11",
+        "hook": "Kupujesz używanego iPhone’a? 5 rzeczy, które sprawdzam ZANIM zapłacę. 👇",
+        "permalink": "https://www.instagram.com/p/DeXiI5yCK2i/",
+        "likes": 6,
+        "comments": 1,
+        "reach": 387,
+        "views": 1298,
+        "saves": 0,
+        "shares": 3
+      },
+      {
+        "type": "rolka",
+        "date": "2026-10-10",
+        "hook": "Flip loading… 0% → 100%. Ten telefon miał jeden błąd po drodze. 😅",
+        "permalink": "https://www.instagram.com/reel/DeUlXXaIXgI/",
+        "likes": 6,
+        "comments": 2,
+        "reach": 326,
+        "views": 620,
+        "saves": 0,
+        "shares": 1,
+        "watch_s": 4
+      },
+      {
+        "type": "karuzela",
+        "date": "2026-10-09",
+        "hook": "NA SPRZEDAŻ: iPhone 13 Pro 128 GB, Graphite. 📱",
+        "permalink": "https://www.instagram.com/p/DeScwO4COWx/",
+        "likes": 8,
+        "comments": 3,
+        "reach": 291,
+        "views": 1231,
+        "saves": 0,
+        "shares": 2
+      },
+      {
+        "type": "rolka",
+        "date": "2026-10-08",
+        "hook": "Dostajesz iPhone’a 13 Pro. Jest jeden haczyk: pęknięta szybka. Bierzesz? 🤔",
+        "permalink": "https://www.instagram.com/reel/DePdRr4oG7x/",
+        "likes": 9,
+        "comments": 6,
+        "reach": 474,
+        "views": 1013,
+        "saves": 1,
+        "shares": 1,
+        "watch_s": 6.8
+      }
+    ]
+  },
+  "preferences": [
+    {
+      "at": "2026-10-27",
+      "text": "Nie powtarzaj materiałów, tematów ani hooków z poprzednich tygodni"
+    },
+    {
+      "at": "2026-10-27",
+      "text": "Treści ogólne mają dotyczyć telefonów ogólnie (newsy, trendy, porady), nie naszego iPhone’a 13 Pro"
+    },
+    {
+      "at": "2026-10-27",
+      "text": "Grafiki mają wyglądać profesjonalnie i elegancko – zdjęcie dopasowane do treści każdego slajdu"
+    },
+    {
+      "at": "2026-10-27",
+      "text": "Rolki opieraj na aktualnie trendujących formatach hooków"
+    }
+  ],
+  "chat": [
+    {
+      "who": "Bot",
+      "text": "<@1199083689183826022> 🔧 Bot zaktualizowany: rozumiem teraz zwykłe zdania, treści ogólne biorę z newsów i trendów, a zdjęcia z legalnych banków. Robię nowe treści ogólne od jutra – link przyjdzie tut"
+    },
+    {
+      "who": "Bot",
+      "text": "<@1199083689183826022> 🎬 **Materiały gotowe do akceptacji** – 5 szt. (środa 28.10 → niedziela 1.11).\nObejrzyj, popraw opisy, kliknij Akceptuj albo Popraw z uwagami:\n[link]"
+    },
+    {
+      "who": "Bot",
+      "text": "<@1199083689183826022> ⏰ Dziś o 21:00 miało wyjść: **Relacja** – czeka na Twoją akceptację: [link]\nPo akceptacji wypuszczę to do 23:59, a jeśli nie zdążysz – jutro o 21:00."
+    },
+    {
+      "who": "Bot",
+      "text": "👍 Zapisane: zaakceptowane 6, do poprawki 1 (robię nowe wersje). Publikacja o 21:00 w zaplanowane dni."
+    },
+    {
+      "who": "Bot",
+      "text": "<@1199083689183826022> ✏️ **Poprawiona wersja**: Rolka – hook sprzedażowy (poniedziałek 26.10).\nSprawdź: [link]"
+    }
+  ]
+}
