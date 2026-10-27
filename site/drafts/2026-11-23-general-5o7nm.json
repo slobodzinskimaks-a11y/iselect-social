@@ -1,0 +1,41 @@
+{
+ "id": "2026-11-23-general-5o7nm",
+ "weekStart": "2026-11-23",
+ "mode": "general",
+ "title": "Treści ogólne",
+ "createdAt": "2026-11-23T11:07:51.099Z",
+ "collaborators": [
+  "szymon_igg",
+  "majster_wihajsters"
+ ],
+ "publishHour": 21,
+ "items": [
+  {
+   "id": "2026-11-23-reel-hook-o7nm",
+   "kind": "reel_hook",
+   "label": "Rolka – hook sprzedażowy",
+   "format": "reel",
+   "auto": false,
+   "date": "2026-11-23",
+   "dateLabel": "poniedziałek 23.11",
+   "status": "review",
+   "version": 1,
+   "media": {
+    "video": "media/drafts/2026-11-23-general-5o7nm/2026-11-23-reel-hook-o7nm-v1/reel.mp4",
+    "cover": "media/drafts/2026-11-23-general-5o7nm/2026-11-23-reel-hook-o7nm-v1/cover.jpg"
+   },
+   "caption": "Apple szykuje sporą zmianę na początku roku! 🍏\n\nWedług doniesień z rynku, na przełomie lutego i marca zobaczymy nie tylko budżetowego iPhone'a 18e, ale też smukłego iPhone'a Air 2 z podwójnym aparatem. Do tego dochodzi nowy MacBook Neo 2 ze zwiększoną pamięcią RAM.\n\nCzy warto czekać na nowości? Jeśli nie chcesz wydawać majątku w dniu premiery, rynek wtórny to obecnie najbardziej opłacalna opcja.\n\nSzukasz konkretnego iPhone'a dla siebie? Napisz do nas na DM, jaki model Cię interesuje – znajdziemy pewną sztukę w uczciwym stanie!\n\nLokalnie Dzierżoniów, Świdnica, Bielawa, Ząbkowice Śląskie, Wrocław lub wysyłka.\n\n#iphone #apple #używanyiphone #dzierżoniów #technologia #iselect",
+   "music": {
+    "mood": "nowoczesny, ekspert, stonowany",
+    "tempo": "średnie",
+    "ideas": [
+     "tech news background beats",
+     "minimal lo-fi synth beats"
+    ]
+   },
+   "angle": "News z komentarzem o nadchodzących iPhone 18e i Air 2",
+   "notes": [],
+   "permalink": null
+  }
+ ]
+}

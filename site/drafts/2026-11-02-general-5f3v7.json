@@ -1,0 +1,175 @@
+{
+ "id": "2026-11-02-general-5f3v7",
+ "weekStart": "2026-11-02",
+ "mode": "general",
+ "title": "Treści ogólne",
+ "createdAt": "2026-11-02T11:05:57.994Z",
+ "collaborators": [
+  "szymon_igg",
+  "majster_wihajsters"
+ ],
+ "publishHour": 21,
+ "items": [
+  {
+   "id": "2026-11-02-reel-hook-f3v7",
+   "kind": "reel_hook",
+   "label": "Rolka – hook sprzedażowy",
+   "format": "reel",
+   "auto": false,
+   "date": "2026-11-02",
+   "dateLabel": "poniedziałek 2.11",
+   "status": "sent",
+   "version": 1,
+   "media": {
+    "video": "media/drafts/2026-11-02-general-5f3v7/2026-11-02-reel-hook-f3v7-v1/reel.mp4",
+    "cover": "media/drafts/2026-11-02-general-5f3v7/2026-11-02-reel-hook-f3v7-v1/cover.jpg"
+   },
+   "caption": "Kryzys pamięci flash oznacza jedno: nowa elektronika będzie tylko droższa. 📈\n\nZamiast przepłacać w salonach za nowe flagowce, coraz więcej osób wybiera świetne, używane iPhone'y. W Dzierżoniowie pomożemy Ci dobrać idealny model w uczciwej cenie. Masz stary telefon? Przyjmujemy go w rozliczeniu!\n\n✔ Oszczędzasz setki złotych\n✔ Pełna uczciwość bez ściemy\n✔ Odbiór osobisty lub wysyłka\n\nSzukasz konkretnego modelu? Napisz do nas na DM – znajdziemy go dla Ciebie.\n\n#używanyiphone #dzierżoniów #bielawa #ekonomia #smartfony",
+   "music": {
+    "mood": "pewny siebie, biznesowy",
+    "tempo": "średnie",
+    "ideas": [
+     "tech news beat",
+     "minimal electronic background"
+    ]
+   },
+   "angle": "News z komentarzem o kryzysie pamięci flash",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-03-story-f3v7",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-11-03",
+   "dateLabel": "wtorek 3.11",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-11-02-general-5f3v7/2026-11-03-story-f3v7-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-04-carousel-offer-f3v7",
+   "kind": "carousel_offer",
+   "label": "Karuzela – oferta",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-11-04",
+   "dateLabel": "środa 4.11",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "slides": [
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-04-carousel-offer-f3v7-v1/slide01.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-04-carousel-offer-f3v7-v1/slide02.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-04-carousel-offer-f3v7-v1/slide03.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-04-carousel-offer-f3v7-v1/slide04.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-04-carousel-offer-f3v7-v1/slide05.jpg"
+    ]
+   },
+   "caption": "Chcesz zmienić telefon, ale nie chcesz tracić czasu na wystawianie go w internecie? 📱\n\nW iSelect w Dzierżoniowie robimy to prosto i uczciwie. Przynosisz swój stary smartfon, my go wyceniamy, a Ty dopłacasz tylko różnicę do wybranego urządzenia.\n\n✔ Bezpieczna transakcja bez stresu\n✔ Uczciwa wycena na miejscu\n✔ Odbiór osobisty lub wysyłka\n\nZapisz tę karuzelę na później, jeśli planujesz zakup w najbliższym czasie! 📌\n\nSzukasz konkretnego modelu? Napisz do nas na DM – znajdziemy go.\n\n#dzierżoniów #bielawa #świdnica #używanyiphone #wymiana",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": "https://www.instagram.com/p/DfVRL0Rj9eO/"
+  },
+  {
+   "id": "2026-11-05-story-f3v7",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-11-05",
+   "dateLabel": "czwartek 5.11",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-11-02-general-5f3v7/2026-11-05-story-f3v7-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-06-reel-angle-f3v7",
+   "kind": "reel_angle",
+   "label": "Rolka – inny kąt (POV / porównanie)",
+   "format": "reel",
+   "auto": false,
+   "date": "2026-11-06",
+   "dateLabel": "piątek 6.11",
+   "status": "sent",
+   "version": 1,
+   "media": {
+    "video": "media/drafts/2026-11-02-general-5f3v7/2026-11-06-reel-angle-f3v7-v1/reel.mp4",
+    "cover": "media/drafts/2026-11-02-general-5f3v7/2026-11-06-reel-angle-f3v7-v1/cover.jpg"
+   },
+   "caption": "Używasz iPhone'a z aplikacją do sprawdzania błędów w samochodzie przed zakupem? Uważaj, bo nieuczciwi sprzedawcy wykorzystują to samo narzędzie, żeby ukryć poważne awarie! 🚗📱\n\nSzybkie skasowanie błędów ze sterownika uśpi czujność każdego. Lepiej zawsze podjechać do niezależnego mechanika.\n\nA jeśli szukasz pewnego iPhone'a bez żadnych niespodzianek, dobrze trafiłeś. W iSelect stawiamy na pełną szczerość i uczciwy stan.\n\nSzukasz konkretnego modelu? Napisz do nas na DM – znajdziemy go.\n\n#motoryzacja #dzierżoniów #używanyiphone #porada #bielawa",
+   "music": {
+    "mood": "napięty, ostrzegawczy",
+    "tempo": "szybkie",
+    "ideas": [
+     "suspense tech beat",
+     "mystery background music"
+    ]
+   },
+   "angle": "Ostrzeżenie przed trikiem ze skanerami OBD w iPhone",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-07-story-f3v7",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-11-07",
+   "dateLabel": "sobota 7.11",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-11-02-general-5f3v7/2026-11-07-story-f3v7-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-08-carousel-value-f3v7",
+   "kind": "carousel_value",
+   "label": "Karuzela – wiedza do zapisania",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-11-08",
+   "dateLabel": "niedziela 8.11",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "slides": [
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-08-carousel-value-f3v7-v1/slide01.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-08-carousel-value-f3v7-v1/slide02.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-08-carousel-value-f3v7-v1/slide03.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-08-carousel-value-f3v7-v1/slide04.jpg",
+     "media/drafts/2026-11-02-general-5f3v7/2026-11-08-carousel-value-f3v7-v1/slide05.jpg"
+    ]
+   },
+   "caption": "Premiera nowych modeli przyniosła wysokie ceny, ale na rynku wtórnym dzieją się świetne rzeczy! 📉📱\n\nModel iPhone 17 Pro Max mocno potaniał, co czyni go absolutnym królem opłacalności pod koniec 2026 roku. Zamiast przepłacać za świeżynki z wadami wieku dziecięcego, zyskujesz potężny sprzęt w znacznie lepszej cenie.\n\n✔ Oszczędzasz tysiąc złotych i więcej\n✔ Uczciwy stan bez ściemy\n✔ Możliwość wymiany starego telefonu w rozliczeniu\n\nZapisz tę karuzelę na później, jeśli planujesz zakup nowego smartfona! 📌\n\nSzukasz konkretnego modelu? Napisz do nas na DM – znajdziemy go w Dzierżoniowie.\n\n#używanyiphone #dzierżoniów #bielawa #świdnica #smartfony",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": "https://www.instagram.com/p/DffkWSSDyUs/"
+  }
+ ]
+}

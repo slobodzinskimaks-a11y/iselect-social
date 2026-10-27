@@ -1,0 +1,191 @@
+{
+ "id": "2026-10-19-phone-rco55",
+ "weekStart": "2026-10-19",
+ "mode": "phone",
+ "title": "iPhone 13 pro · 1250 zł",
+ "createdAt": "2026-10-17T18:58:22.448Z",
+ "collaborators": [
+  "szymon_igg",
+  "majster_wihajsters"
+ ],
+ "publishHour": 21,
+ "items": [
+  {
+   "id": "2026-10-19-reel-hook-co55",
+   "kind": "reel_hook",
+   "label": "Rolka – hook sprzedażowy",
+   "format": "reel",
+   "auto": false,
+   "date": "2026-10-19",
+   "dateLabel": "poniedziałek 19.10",
+   "status": "sent",
+   "version": 1,
+   "media": {
+    "video": "media/drafts/2026-10-19-phone-rco55/2026-10-19-reel-hook-co55-v1/reel.mp4",
+    "cover": "media/drafts/2026-10-19-phone-rco55/2026-10-19-reel-hook-co55-v1/cover.jpg"
+   },
+   "caption": "Dostajesz iPhone'a 13 Pro za 1250 zł, ale jest jeden haczyk... 📱\n\nTo tylko jedna sztuka na stanie! Stan bardzo dobry, oryginalny kolor Sierra Blue, pojemność 128 GB i kondycja baterii 100%. Bez ukrytych wad, bez ściemy – wszystko widzisz na zdjęciach.\n\nW zestawie dajemy kabel ładujący, etui oraz szkło ochronne dla zdecydowanego kupca.\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu – oddajesz stary, dopłacasz i wychodzisz z lepszym sprzętem.\n\nOdbiór osobisty w Dzierżoniowie lub bezpieczna wysyłka. Zapraszamy też klientów z okolic: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie, Wrocław.\n\nNapisz TAK lub NIE w komentarzu!",
+   "music": {
+    "mood": "energiczny",
+    "tempo": "szybkie",
+    "ideas": [
+     "trending phonk beat",
+     "dynamic tech house"
+    ]
+   },
+   "angle": "Haczyk i decyzja widza",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-10-20-story-co55",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-10-20",
+   "dateLabel": "wtorek 20.10",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-10-19-phone-rco55/2026-10-20-story-co55-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-10-21-carousel-offer-co55",
+   "kind": "carousel_offer",
+   "label": "Karuzela – oferta",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-10-21",
+   "dateLabel": "środa 21.10",
+   "status": "published",
+   "version": 2,
+   "media": {
+    "slides": [
+     "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide01.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide02.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide03.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide04.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide05.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-21-carousel-offer-co55-v2/slide06.jpg"
+    ]
+   },
+   "caption": "Na sprzedaż trafia iPhone 13 Pro 128 GB w wyjątkowym kolorze Sierra Blue! 📱\n\nTelefon jest w stanie bardzo dobrym, kondycja baterii wynosi 100%. Uczciwie pokazujemy stan na zdjęciach – sprzęt jest gotowy do działania bez żadnych przykrych niespodzianek.\n\nW zestawie otrzymujesz kabel ładujący, etui oraz szkło ochronne dla zdecydowanego kupującego.\n\nChcesz obniżyć cenę? Przyjmujemy telefony w rozliczeniu. Zostaw swój stary telefon i dopłać różnicę.\n\nCena: 1250 zł. Zapraszamy do kontaktu przez DM. Lokalizacja: Dzierżoniów (blisko: Świdnica, Bielawa, Pieszyce, Ząbkowice Śląskie, Wrocław).\n\nZapisz ten post na później!\n\n#iphone #używanyiphone #iphone13pro #dzierżoniów #świdnica #iselect",
+   "music": null,
+   "angle": "",
+   "notes": [
+    {
+     "at": "2026-10-17T22:36:36.895Z",
+     "text": "w pigułce pamięci ma być 128 GB"
+    }
+   ],
+   "permalink": "https://www.instagram.com/p/DexUAWlGqwT/"
+  },
+  {
+   "id": "2026-10-22-story-co55",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-10-22",
+   "dateLabel": "czwartek 22.10",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-10-19-phone-rco55/2026-10-22-story-co55-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-10-23-reel-angle-co55",
+   "kind": "reel_angle",
+   "label": "Rolka – inny kąt (POV / porównanie)",
+   "format": "reel",
+   "auto": false,
+   "date": "2026-10-23",
+   "dateLabel": "piątek 23.10",
+   "status": "sent",
+   "version": 1,
+   "media": {
+    "video": "media/drafts/2026-10-19-phone-rco55/2026-10-23-reel-angle-co55-v1/reel.mp4",
+    "cover": "media/drafts/2026-10-19-phone-rco55/2026-10-23-reel-angle-co55-v1/cover.jpg"
+   },
+   "caption": "POV: Wybierasz flagowy model iPhone 13 Pro 128 GB Sierra Blue zamiast wydawać fortunę w markecie 📲\n\nDostajesz topowy aparat, płynny ekran 120Hz oraz baterię o kondycji 100%. Stan bardzo dobry, zadbany egzemplarz.\n\nW cenie 1250 zł dorzucamy etui, kabel ładujący i szkło ochronne dla zdecydowanej osoby.\n\nMasz swój dotychczasowy aparat? Przyjmujemy telefony w rozliczeniu – oddajesz stary, płacisz mniej!\n\nNapisz CHCĘ w wiadomości prywatnej (DM) lub w komentarzu.\n\nSklep iSelect, Dzierżoniów. Obsługujemy też Bielawę, Świdnicę, Pieszyce i okolice.",
+   "music": {
+    "mood": "pewny siebie",
+    "tempo": "średnie",
+    "ideas": [
+     "chill funk groove",
+     "lo-fi hip hop beat"
+    ]
+   },
+   "angle": "POV Kupujesz flagowca za pół ceny",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-10-24-story-co55",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-10-24",
+   "dateLabel": "sobota 24.10",
+   "status": "published",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-10-19-phone-rco55/2026-10-24-story-co55-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-10-25-carousel-value-co55",
+   "kind": "carousel_value",
+   "label": "Karuzela – wiedza do zapisania",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-10-25",
+   "dateLabel": "niedziela 25.10",
+   "status": "review",
+   "version": 3,
+   "media": {
+    "slides": [
+     "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide01.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide02.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide03.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide04.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide05.jpg",
+     "media/drafts/2026-10-19-phone-rco55/2026-10-25-carousel-value-co55-v3/slide06.jpg"
+    ]
+   },
+   "caption": "Kupujesz używanego iPhone'a? Zapisz ten post, żeby nie dać się naciągnąć! 📌\n\nOto 3 czerwone flagi, na które musisz uważać:\n1. Brak TrueTone – często oznacza tanio wymieniony wyświetlacz.\n2. Nienaturalnie niska cena – ryzyko ukrytych wad lub blokad.\n3. Ukrywanie stanu baterii – unikanie zrzutu ekranu z ustawień.\n\nW iSelect w Dzierżoniowie stawiamy na pełną szczerość. Wszystkie wady i parametry pokazujemy od razu.\n\nMamy na stanie iPhone'a 13 Pro 128 GB Sierra Blue z baterią 100% w cenie 1250 zł. Zestaw zawiera telefon, case i kabel ładujący (dla zdecydowanego klienta dorzucamy szkło ochronne).\n\nMasz stary telefon? Przyjmujemy telefony w rozliczeniu – wymieniasz na nowszy z dopłatą.\n\nOdbiór osobisty w Dzierżoniowie lub szybka wysyłka (okolice: Bielawa, Świdnica, Pieszyce, Ząbkowice Śląskie, Wrocław). Napisz do nas na DM!\n\n#iphone13pro #używanyiphone #dzierżoniów #poradnik #iselect",
+   "music": null,
+   "angle": "",
+   "notes": [
+    {
+     "at": "2026-10-17T20:32:22.819Z",
+     "text": "Zmień kolor morski na ten co na pozostałych materiałach"
+    },
+    {
+     "at": "2026-10-18T00:17:48.451Z",
+     "text": "Weź pod uwagę że mamy już podobny post"
+    }
+   ],
+   "permalink": null
+  }
+ ]
+}

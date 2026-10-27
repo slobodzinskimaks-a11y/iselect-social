@@ -1,0 +1,150 @@
+{
+ "id": "2026-11-23-continue-kx4wg",
+ "weekStart": "2026-11-23",
+ "mode": "continue",
+ "title": "iPhone 13 pro · 1250 zł",
+ "createdAt": "2026-11-24T10:57:52.834Z",
+ "collaborators": [
+  "szymon_igg",
+  "majster_wihajsters"
+ ],
+ "publishHour": 21,
+ "items": [
+  {
+   "id": "2026-11-24-story-x4wg",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-11-24",
+   "dateLabel": "wtorek 24.11",
+   "status": "review",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-11-23-continue-kx4wg/2026-11-24-story-x4wg-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-25-carousel-offer-x4wg",
+   "kind": "carousel_offer",
+   "label": "Karuzela – oferta",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-11-25",
+   "dateLabel": "środa 25.11",
+   "status": "review",
+   "version": 1,
+   "media": {
+    "slides": [
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-25-carousel-offer-x4wg-v1/slide01.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-25-carousel-offer-x4wg-v1/slide02.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-25-carousel-offer-x4wg-v1/slide03.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-25-carousel-offer-x4wg-v1/slide04.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-25-carousel-offer-x4wg-v1/slide05.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-25-carousel-offer-x4wg-v1/slide06.jpg"
+    ]
+   },
+   "caption": "Szukasz flagowego iPhone'a z płynnym ekranem 120Hz i baterią 100%?\n\niPhone 13 Pro 128GB w pięknym odcieniu Sierra Blue czeka w Dzierżoniowie. Stan bardzo dobry, bateria 100%. W zestawie etui i kabel ładujący, a dla zdecydowanego dorzucamy szkło ochronne na ekran!\n\nChcesz obniżyć cenę? Masz stary telefon? Przyjmujemy używane iPhone'y w rozliczeniu – przynosisz stary, dopłacasz różnicę i wychodzisz z lepszym sprzętem.\n\nOdbiór osobisty w Dzierżoniowie (blisko: Bielawa, Pieszyce, Świdnica, Ząbkowice Śląskie) lub ubezpieczona wysyłka.\n\nNapisz DM, aby zarezerwować przed innymi!\n\n#iphone13pro #używanyiphone #dzierżoniów #bielawa #świdnica",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-26-story-x4wg",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-11-26",
+   "dateLabel": "czwartek 26.11",
+   "status": "review",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-11-23-continue-kx4wg/2026-11-26-story-x4wg-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-27-reel-angle-x4wg",
+   "kind": "reel_angle",
+   "label": "Rolka – inny kąt (POV / porównanie)",
+   "format": "reel",
+   "auto": false,
+   "date": "2026-11-27",
+   "dateLabel": "piątek 27.11",
+   "status": "review",
+   "version": 1,
+   "media": {
+    "video": "media/drafts/2026-11-23-continue-kx4wg/2026-11-27-reel-angle-x4wg-v1/reel.mp4",
+    "cover": "media/drafts/2026-11-23-continue-kx4wg/2026-11-27-reel-angle-x4wg-v1/cover.jpg"
+   },
+   "caption": "Czy noszenie Sierra Blue bez etui ma sens? Wygląda genialnie, ale warto dbać o obudowę. U nas w iSelect dostajesz telefon w stanie bardzo dobrym z baterią 100% oraz dopasowane etui i kabel w zestawie. Dla szybkiego kupca dorzucamy szkło na ekran!\n\nCena: 1250 zł.\nMasz dotychczasowy telefon? Przyjmujemy stare urządzenia w rozliczeniu!\n\nOdbiór osobisty w Dzierżoniowie lub wysyłka (Bielawa, Świdnica, Wrocław, Ząbkowice Śląskie).\n\nNapisz CHCĘ w komentarzu lub odezwij się na DM!\n\n#iphone13pro #dzierżoniów #używanyiphone #świdnica #bielawa",
+   "music": {
+    "mood": "pewny siebie, energiczny",
+    "tempo": "średnie",
+    "ideas": [
+     "Minimal energetic beat",
+     "Modern phonk bass drop"
+    ]
+   },
+   "angle": "Porównanie z etui i bez etui",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-28-story-x4wg",
+   "kind": "story",
+   "label": "Relacja",
+   "format": "story",
+   "auto": true,
+   "date": "2026-11-28",
+   "dateLabel": "sobota 28.11",
+   "status": "review",
+   "version": 1,
+   "media": {
+    "image": "media/drafts/2026-11-23-continue-kx4wg/2026-11-28-story-x4wg-v1/story.jpg"
+   },
+   "caption": "",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  },
+  {
+   "id": "2026-11-29-carousel-value-x4wg",
+   "kind": "carousel_value",
+   "label": "Karuzela – wiedza do zapisania",
+   "format": "carousel",
+   "auto": true,
+   "date": "2026-11-29",
+   "dateLabel": "niedziela 29.11",
+   "status": "review",
+   "version": 1,
+   "media": {
+    "slides": [
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-29-carousel-value-x4wg-v1/slide01.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-29-carousel-value-x4wg-v1/slide02.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-29-carousel-value-x4wg-v1/slide03.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-29-carousel-value-x4wg-v1/slide04.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-29-carousel-value-x4wg-v1/slide05.jpg",
+     "media/drafts/2026-11-23-continue-kx4wg/2026-11-29-carousel-value-x4wg-v1/slide06.jpg"
+    ]
+   },
+   "caption": "Kupujesz używanego iPhone'a z serii Pro? Zapisz ten post, żeby nie przegapić najważniejszych kroków podczas sprawdzania telefonu!\n\nW iSelect stawiamy na pełną szczerość. Prezentowany iPhone 13 Pro 128GB Sierra Blue ma baterię 100%, stan bardzo dobry, komplet akcesoriów (case, kabel) oraz dodatkowe szkło dla zdecydowanego kupca. Cena to 1250 zł.\n\nChcesz oddać swój obecny telefon? Przyjmujemy telefony w rozliczeniu – zapłacisz mniej!\n\nLokalizacja: Dzierżoniów (blisko Bielawa, Pieszyce, Świdnica, Wrocław, Ząbkowice Śląskie) lub ubezpieczona wysyłka.\n\nZapisz ten post na później i napisz do nas na DM, jeśli chcesz zarezerwować urządzenie!\n\n#używanyiphone #iphone13pro #poradyapple #dzierżoniów #świdnica",
+   "music": null,
+   "angle": "",
+   "notes": [],
+   "permalink": null
+  }
+ ]
+}
