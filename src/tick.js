@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { config, env, reviewLink, reviewWebhookId, siteUrl } from './config.js';
-import { extractPhone, missingFields } from './content.js';
+import { classifyMessage, extractPhone, missingFields } from './content.js';
 import * as discord from './discord.js';
 import * as ig from './instagram.js';
 import { mention, runGenerate, runRevise, runSoldStory } from './jobs.js';
@@ -37,7 +37,7 @@ Dodatkowo:
 + **zdjęcia, do ${config.MAX_PHOTOS}** (przód, tył, boki, ekran z kondycją baterii, wady z bliska, telefon z pudełkiem).
 Gdy wyślesz wszystko, napisz **\`gotowe\`** – dopiero wtedy zaczynam.
 
-Inne odpowiedzi: \`dalej\` – zeszły telefon nadal dostępny (\`dalej 999\` = nowa cena) · \`ogólne\` – w tym tygodniu bez telefonu · \`sprzedany\` – zeszły sprzedany · \`status\` – plan publikacji.
+Albo po prostu napisz, co chcesz – np. „ten sam telefon, nowa cena 1199”, „w tym tygodniu treści ogólne”, „sprzedany”, „zmień styl na bardziej…”. Rozumiem zwykłe zdania.
 Jeśli nie odpiszesz do poniedziałku ${config.GENERAL_FALLBACK_HOUR}:00, przygotuję treści ogólne (porady, nowości, skup w rozliczeniu).`;
 
 function statusText(state, local) {
@@ -61,14 +61,18 @@ async function handleIntake(state, local) {
     if (m.author?.bot || m.webhook_id) continue;
     state.ownerId ??= m.author.id;
     const text = (m.content ?? '').trim();
-    const cmd = m.attachments?.length ? '' : text.toLowerCase();
-    if (cmd && cmd.length < 40) {
-      if (/^(dalej|nadal|dost[eę]pny)/.test(cmd)) { await commandContinue(state, local, cmd); continue; }
-      if (/^(og[oó]lne|brak)/.test(cmd)) { commandGeneral(state, local); continue; }
-      if (/^sprzedan/.test(cmd)) { commandSold(state, local); continue; }
-      if (/^(status|plan)/.test(cmd)) { say(state, statusText(state, local)); continue; }
-      if (/^(pomoc|help)/.test(cmd)) { say(state, REQUEST_TEXT(mondayOf(addDays(local.date, 7)))); continue; }
-      if (/^(gotowe|gotowy|generuj|koniec|to wszystko)/.test(cmd)) { state.buffer.force = true; continue; }
+    const cmd = m.attachments?.length ? '' : text.toLowerCase().replace(/[.!]+$/, '');
+    if (text) remember(state, 'Ty', text);
+    // dokładne komendy – bez AI
+    if (cmd) {
+      if (/^(og[oó]lne|tre[sś]ci og[oó]lne)$/.test(cmd)) { commandGeneral(state, local); continue; }
+      if (/^(nadal dost[eę]pny|ten sam( telefon)?)( \d+)?$/.test(cmd)) { await commandContinue(state, local, cmd); continue; }
+      if (/^sprzedany$/.test(cmd)) { commandSold(state, local); continue; }
+      if (/^(status|plan)$/.test(cmd)) { say(state, statusText(state, local)); continue; }
+      if (/^(pomoc|help)$/.test(cmd)) { say(state, REQUEST_TEXT(mondayOf(addDays(local.date, 7)))); continue; }
+      if (/^(gotowe|gotowy|generuj|koniec|to wszystko)$/.test(cmd)) { state.buffer.force = true; continue; }
+      // zwykła wiadomość – AI rozpoznaje, o co chodzi
+      if (!env.MOCK && await handleFreeText(state, local, text)) continue;
     }
     state.buffer.messages.push({
       id: m.id, at: m.timestamp, text,
@@ -98,7 +102,7 @@ async function maybeProcessSubmission(state, local) {
   // Zbieramy wiadomości aż do „gotowe” (zdjęcia przychodzą partiami po 10). Bez „gotowe” – tylko przypomnienie.
   if (!buf.force) {
     const idleMin = (Date.now() - new Date(buf.messages.at(-1).at).getTime()) / 60000;
-    if (idleMin >= config.SUBMISSION_REMIND_MINUTES && buf.reminded !== buf.messages.length) {
+    if (attachments.length && idleMin >= config.SUBMISSION_REMIND_MINUTES && buf.reminded !== buf.messages.length) {
       buf.reminded = buf.messages.length;
       say(state, `📸 Mam ${attachments.length} zdjęć${text ? ' i opis' : ''}. Gdy wyślesz wszystko, napisz **gotowe** – wtedy zaczynam.`, { ping: true });
     }
@@ -128,21 +132,65 @@ async function maybeProcessSubmission(state, local) {
   say(state, `✅ Przyjęte: **${data.model}**, ${data.price} zł, ${files.length} zdjęć. Tworzę materiały od ${formatDatePl(win.fromDate)} (zwykle 5–15 min).${warn}`);
 }
 
-async function commandContinue(state, local, cmd) {
+function remember(state, who, text) {
+  state.chat = [...(state.chat ?? []), { who, text: text.slice(0, 300) }].slice(-10);
+}
+
+// Zwraca true, jeśli wiadomość została obsłużona (false = to dane telefonu → do zgłoszenia).
+async function handleFreeText(state, local, text) {
+  const week = state.weeks[mondayOf(targetWindow(local, config.PUBLISH_HOUR, config.WEEK_PLAN).fromDate)];
+  const phone = state.phones[state.currentPhoneId];
+  let cls;
+  try {
+    cls = await classifyMessage(text, {
+      currentMode: week ? (week.mode === 'general' ? 'treści ogólne' : 'treści o telefonie') : null,
+      currentPhone: phone && phone.status !== 'sold' ? `${phone.data.model}, ${phone.data.price} zł` : null,
+      bufferPhotos: state.buffer.messages.flatMap((m) => m.attachments).length,
+      recent: (state.chat ?? []).slice(0, -1),
+    });
+  } catch (e) {
+    log('Rozpoznanie wiadomości', e.message);
+    return false;
+  }
+  log('Intencja:', JSON.stringify(cls));
+  if (cls.remember?.trim()) {
+    state.preferences = [...(state.preferences ?? []), { at: local.date, text: cls.remember.trim() }].slice(-10);
+  }
+  switch (cls.intent) {
+    case 'phone_data': return false;
+    case 'general': commandGeneral(state, local, cls.notes, cls.reply); return true;
+    case 'same_phone': await commandContinue(state, local, String(cls.price ?? ''), cls.notes, cls.reply); return true;
+    case 'sold': commandSold(state, local); return true;
+    case 'status': say(state, statusText(state, local)); return true;
+    case 'feedback': {
+      const mode = cls.mode === 'general' ? 'general' : cls.mode === 'same_phone' ? 'continue' : week?.mode ?? 'general';
+      if (mode === 'general' || !phone || phone.status === 'sold') commandGeneral(state, local, cls.notes || text, cls.reply);
+      else await commandContinue(state, local, '', cls.notes || text, cls.reply);
+      return true;
+    }
+    default:
+      say(state, cls.reply || 'Nie do końca rozumiem 🙂 Napisz np. „zrób treści ogólne”, „telefon nadal dostępny”, „sprzedany” albo co zmienić w materiałach.');
+      return true;
+  }
+}
+
+async function commandContinue(state, local, cmd, notes = '', reply = '') {
   const phone = state.phones[state.currentPhoneId];
   if (!phone) return say(state, 'Nie mam zapisanego telefonu – wyślij dane i zdjęcia.');
   const price = Number(cmd.replace(/[^\d]/g, ''));
   if (price > 50) phone.data.price = price;
   phone.status = 'available';
   const win = targetWindow(local, config.PUBLISH_HOUR, config.WEEK_PLAN);
-  state.jobs.push({ type: 'generate', mode: 'continue', phoneId: phone.id, ...win });
-  say(state, `👌 ${phone.data.model} dalej w ofercie${price > 50 ? ` (nowa cena: ${price} zł)` : ''}. Przygotuję nowe kąty i hooki.`);
+  state.jobs = state.jobs.filter((j) => j.type !== 'generate');
+  state.jobs.push({ type: 'generate', mode: 'continue', phoneId: phone.id, ...win, notes });
+  say(state, `👌 ${reply || `${phone.data.model} dalej w ofercie${price > 50 ? ` (nowa cena: ${price} zł)` : ''}. Przygotuję nowe kąty i hooki.`} Gotowe materiały przyjdą tutaj (zwykle 10–20 min).`);
 }
 
-function commandGeneral(state, local) {
+function commandGeneral(state, local, notes = '', reply = '') {
   const win = targetWindow(local, config.PUBLISH_HOUR, config.WEEK_PLAN);
-  state.jobs.push({ type: 'generate', mode: 'general', ...win });
-  say(state, '👌 W tym tygodniu treści ogólne – sprawdzę aktualne tematy w internecie i przygotuję materiały.');
+  state.jobs = state.jobs.filter((j) => j.type !== 'generate'); // nowsza decyzja zastępuje wcześniejszą
+  state.jobs.push({ type: 'generate', mode: 'general', ...win, notes });
+  say(state, `👌 ${reply || 'Robię treści ogólne – sprawdzę aktualne tematy i trendy w internecie i dobiorę zdjęcia.'} Gotowe materiały przyjdą tutaj (zwykle 10–20 min).`);
 }
 
 function commandSold(state, local) {

@@ -21,6 +21,8 @@ export function emptyState() {
     notified: {},
     ig: { tokenRefreshedAt: null },
     performance: null,
+    preferences: [],
+    chat: [],
   };
 }
 

@@ -50,13 +50,14 @@ Dodatkowo:
 
 Nowy telefon możesz wysłać **w każdy dzień** – bot podmieni kolejne dni tygodnia.`,
 
-  `## ⌨️ Komendy (${ch('intake')})
-• \`gotowe\` – wysłałem wszystko, zaczynaj
-• \`dalej\` – zeszły telefon nadal dostępny → nowe hooki i kąty · \`dalej 999\` – to samo z nową ceną
-• \`ogólne\` – w tym tygodniu bez telefonu → treści o iPhone’ach na podstawie aktualnych informacji z internetu
-• \`sprzedany\` – wstrzymuje materiały o tym telefonie, robi relację „SPRZEDANE” i treści ogólne na resztę tygodnia
-• \`status\` – plan publikacji i statusy
-• \`pomoc\` – formularz zgłoszenia
+  `## 💬 Jak rozmawiać z botem (${ch('intake')})
+**Pisz normalnie** – bot rozumie zwykłe zdania, np.:
+• „w tym tygodniu treści ogólne” → newsy, porady, rankingi o iPhone’ach z aktualnych źródeł, bez konkretnego telefonu
+• „telefon dalej się nie sprzedał, zrób nowe materiały o nim” (można dodać nową cenę)
+• „sprzedany” → wstrzymuje materiały o telefonie, relacja „SPRZEDANE” + treści ogólne na resztę tygodnia
+• „to wygląda słabo, zrób bardziej…” → bot przerabia materiały tego tygodnia wg uwag
+• „nigdy nie używaj…”, „zawsze dodawaj…” → bot **zapamiętuje to na kolejne tygodnie**
+Krótkie komendy też działają: \`gotowe\` · \`ogólne\` · \`sprzedany\` · \`status\` · \`pomoc\`
 Brak odpowiedzi do **poniedziałku ${c.GENERAL_FALLBACK_HOUR}:00** = bot sam przygotuje treści ogólne.`,
 
   `## ✅ Akceptacja (strona z linku)
@@ -82,8 +83,9 @@ Instagram nie pozwala botom dodawać muzyki z biblioteki IG, a trendujące dźwi
 3. **Uczciwość:** wady opisujemy konkretnie i pokazujemy na zdjęciach. Bot nie wymyśla parametrów ani stanu – bierze tylko to, co podasz.
 4. **Nie wspominamy o gwarancji.** Zawsze: ${c.CITY}, odbiór osobisty lub wysyłka, przyjmujemy telefony w rozliczeniu.
 5. **Współtwórcy** muszą zaakceptować zaproszenie w aplikacji Instagram po każdej publikacji. Jeśli Instagram kogoś odrzuci, bot opublikuje bez niego i da znać.
-6. **Bot się uczy:** w niedzielę wysyła podsumowanie tygodnia (wyświetlenia, komentarze, zapisy) i bierze pod uwagę, co działało najlepiej.
-7. **Koszt: 0 zł** – darmowe Gemini, GitHub i Instagram API.`,
+6. **Bot się uczy:** w niedzielę wysyła podsumowanie tygodnia (wyświetlenia, komentarze, zapisy) i bierze pod uwagę, co działało najlepiej. Pamięta też ostatnie tematy, żeby się nie powtarzać.
+7. **Źródła treści ogólnych:** newsy (iMagazine, Spider’s Web, Antyweb, Google News, MacRumors, 9to5Mac) + wyszukiwarka. Zdjęcia i filmy tylko z legalnych źródeł (Pexels, wolne licencje) lub nasze – nigdy cudze zdjęcia z Instagrama/TikToka (prawa autorskie, ryzyko blokady konta).
+8. **Koszt: 0 zł** – darmowe Gemini, GitHub i Instagram API.`,
 
   `## 🛠️ Gdy coś nie działa
 • Bot nie reaguje 👀 – przebiegi są co ~10 min, czasem GitHub opóźnia je do kilkudziesięciu minut. Poczekaj chwilę.

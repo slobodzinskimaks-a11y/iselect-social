@@ -17,6 +17,7 @@ async function request(model, body) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
     body: JSON.stringify(body),
+    signal: AbortSignal.timeout(180000),
   });
   const text = await res.text();
   if (!res.ok) {
@@ -71,18 +72,18 @@ export async function generateJson({ system, parts, temperature = 0.9 }) {
   return parseJson(await withFallback(body));
 }
 
-// Badanie tematu z Google Search (zwraca zwykły tekst z faktami).
+// Analiza tematów (zwykły tekst). Wyszukiwarka Google w Gemini jest płatna – włączysz ją przez GEMINI_SEARCH w config.json.
 export async function research(prompt) {
   const body = {
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
-    tools: [{ google_search: {} }],
     generationConfig: { temperature: 0.4, maxOutputTokens: 4096 },
   };
-  try {
-    return await withFallback(body);
-  } catch (e) {
-    log('research bez wyszukiwarki:', e.message);
-    delete body.tools;
-    return withFallback(body);
+  if (config.GEMINI_SEARCH) {
+    try {
+      return await withFallback({ ...body, tools: [{ google_search: {} }] });
+    } catch (e) {
+      log('research bez wyszukiwarki:', e.message);
+    }
   }
+  return withFallback(body);
 }

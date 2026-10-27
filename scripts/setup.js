@@ -1,7 +1,7 @@
 // Konfiguracja jednym poleceniem (po uzupełnieniu .env):
 //   npm run setup            – sprawdza klucze, tworzy kanały Discord, repozytorium GitHub, sekrety, stronę i uruchamia bota
 //   npm run setup -- --check – tylko sprawdza klucze (nic nie zmienia)
-//   npm run setup -- --code  – tylko wgrywa nowszą wersję kodu do repozytorium
+//   npm run setup -- --code  – tylko wgrywa nowszą wersję kodu do repozytorium (+ --secrets: aktualizuje też klucze z .env)
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -179,8 +179,8 @@ async function setupGithub(discordInfo) {
     await new Promise((r) => setTimeout(r, 3000));
   }
   saveConfig({ SITE_URL: `https://${owner}.github.io/${REPO_NAME}/` });
-  if (!CODE_ONLY) {
-    for (const name of ['GEMINI_API_KEY', 'DISCORD_BOT_TOKEN', 'REVIEW_WEBHOOK_URL', 'IG_ACCESS_TOKEN', 'IG_USER_ID', 'PEXELS_API_KEY']) {
+  if (!CODE_ONLY || args.has('--secrets')) {
+    for (const name of ['GEMINI_API_KEY', 'DISCORD_BOT_TOKEN', 'REVIEW_WEBHOOK_URL', 'IG_ACCESS_TOKEN', 'IG_USER_ID', 'PEXELS_API_KEY', 'PIXABAY_API_KEY']) {
       if (process.env[name]) await setSecret(owner, REPO_NAME, name, process.env[name]);
     }
     await setSecret(owner, REPO_NAME, 'GH_PAT', GH);

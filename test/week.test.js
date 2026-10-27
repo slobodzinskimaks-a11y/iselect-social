@@ -47,6 +47,11 @@ globalThis.fetch = async (url, opts = {}) => {
     if (req.tools) text = 'Ceny używanych iPhone’ów stabilne; nowy iOS; uwaga na fałszywe linki do płatności.';
     else if (/Wyciągasz dane/.test(req.systemInstruction?.parts[0].text ?? '')) {
       text = JSON.stringify({ model: 'iPhone 13 Pro', storage: '128 GB', color: 'Graphite', battery: '100%', condition: 'pęknięta szybka w rogu', defects: ['pęknięta szybka'], kit: ['pudełko'], price: 1100, extras: '' });
+    } else if (prompt.includes('NOWA WIADOMOŚĆ WŁAŚCICIELA')) {
+      const general = /og[oó]ln/i.test(prompt.split('NOWA WIADOMOŚĆ WŁAŚCICIELA')[1]);
+      text = JSON.stringify(general
+        ? { intent: 'general', mode: 'general', notes: 'trendy hooki, bez powtórek', remember: 'Nie powtarzaj materiałów z poprzednich tygodni', price: null, reply: 'Jasne, robię treści ogólne.' }
+        : { intent: 'other', mode: null, notes: '', remember: '', price: null, reply: 'Nie rozumiem' });
     } else if (prompt.includes('OBECNA WERSJA:')) {
       const spec = JSON.parse(prompt.split('OBECNA WERSJA:')[1].split(/\n\n(?:Zdjęcia|Brak zdjęć)/)[0]);
       spec.scenes[0].title = 'Nowy, mocniejszy hook';
@@ -146,13 +151,21 @@ test('pełny tydzień bota', { timeout: 15 * 60 * 1000 }, async () => {
   assert.equal(container.params.caption, 'NOWY OPIS');
   assert.ok(igCalls.filter((c) => c.params.is_carousel_item === 'true').every((c) => c.params.image_url.startsWith('https://example.test/iselect/media/')));
 
+  // Czwartek 9:00 – zwykłe zdanie zamiast komendy → AI rozpoznaje „treści ogólne” i zapamiętuje uwagę
+  messages[10].push({ id: '1035', author: { id: '555', bot: false }, timestamp: new Date().toISOString(), content: 'Nikt nie kupuje, zrób od dziś treści ogólne i nie powtarzaj starych', attachments: [] });
+  state = await tick(at('2026-10-22T07:00:00Z'));
+  takeOutbox();
+  assert.equal(state.buffer.messages.length, 0, 'zwykłe zdanie nie trafia do zgłoszenia telefonu');
+  assert.ok(state.preferences.some((p) => p.text.includes('Nie powtarzaj')), 'stała uwaga zapamiętana');
+  assert.ok(Object.values(state.items).some((it) => it.mode === 'general' && it.date === '2026-10-22' && it.status === 'review'), 'treści ogólne od dziś');
+
   // Czwartek 12:00 – „sprzedany”
-  messages[10].push({ id: '104', author: { id: '555', bot: false }, timestamp: new Date().toISOString(), content: 'sprzedany', attachments: [] });
+  messages[10].push({ id: '1040', author: { id: '555', bot: false }, timestamp: new Date().toISOString(), content: 'sprzedany', attachments: [] });
   state = await tick(at('2026-10-22T10:00:00Z'));
   out = takeOutbox();
   const all = Object.values(state.items);
   assert.ok(all.some((it) => it.kind === 'story_sold' && it.status === 'review'));
   assert.equal(state.items[angle.id].status, 'cancelled', 'piątkowa rolka o sprzedanym telefonie wstrzymana');
-  assert.equal(all.filter((it) => it.mode === 'general').length, 3, 'pt–nd: treści ogólne');
+  assert.equal(all.filter((it) => it.mode === 'general' && it.status !== 'cancelled').length, 4, 'czw–nd: treści ogólne (pt–nd odświeżone po sprzedaży)');
   assert.ok(out.some((m) => m.content.includes('Gratulacje')));
 });

@@ -23,6 +23,7 @@ export const env = {
   IG_ACCESS_TOKEN: process.env.IG_ACCESS_TOKEN || '',
   IG_USER_ID: process.env.IG_USER_ID || '',
   PEXELS_API_KEY: process.env.PEXELS_API_KEY || '',
+  PIXABAY_API_KEY: process.env.PIXABAY_API_KEY || '',
   SITE_URL: (process.env.SITE_URL || config.SITE_URL || '').replace(/\/?$/, '/'),
   // MOCK=1: bez Discorda/Gemini/Instagrama (testy i podgląd lokalny).
   MOCK: process.env.MOCK === '1',

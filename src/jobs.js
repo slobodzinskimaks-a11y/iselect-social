@@ -2,8 +2,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { config, reviewLink } from './config.js';
-import { generatePackage, reviseSpec, soldStorySpec } from './content.js';
-import { fetchStockClips } from './photos.js';
+import { generateGeneral, generatePackage, reviseSpec, soldStorySpec } from './content.js';
+import { photoCandidates, recentHeadlines, videoCandidate } from './sources.js';
 import { jobSlots, KIND_INFO } from './plan.js';
 import { createRenderer } from './render.js';
 import { SITE, toAbs, toRel } from './site.js';
@@ -21,6 +21,15 @@ export function archivePhotos(state, max = 6) {
     .flatMap((p) => p.photos.slice(0, 2))
     .filter((rel) => fs.existsSync(toAbs(rel)))
     .slice(0, max);
+}
+
+// Tematy/hooki ze wszystkich materiałów z ostatnich ~6 tygodni (anty-powtórki niezależnie od trybu).
+function contentHistory(state) {
+  return Object.values(state.items)
+    .filter((it) => it.spec && it.status !== 'cancelled')
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .map((it) => `${KIND_INFO[it.kind]?.label ?? it.kind}: ${it.spec.angle ? `[${it.spec.angle}] ` : ''}${it.spec.scenes?.[0]?.title || it.spec.slides?.[0]?.title || it.spec.title || ''}`)
+    .slice(-40);
 }
 
 function previousHooks(state, phoneId) {
@@ -68,7 +77,7 @@ function newDraftId(weekStart, mode) {
 }
 
 // job: { type: 'generate', mode: 'phone'|'continue'|'general', weekStart, fromDate, phoneId?, notes? }
-export async function runGenerate(state, job, { generator = generatePackage } = {}) {
+export async function runGenerate(state, job, generators = {}) {
   const slots = jobSlots(job, config.WEEK_PLAN).map((s) => ({ ...s, id: `${s.date}_${s.kind}` }));
   if (!slots.length) return null;
   const slotDates = new Set(slots.map((s) => `${s.date}|${KIND_INFO[s.kind].feed}`));
@@ -76,25 +85,38 @@ export async function runGenerate(state, job, { generator = generatePackage } = 
     if (OPEN.has(it.status) && it.kind !== 'story_sold' && slotDates.has(`${it.date}|${it.feed}`)) it.status = 'cancelled';
   }
 
-  const phone = job.phoneId ? state.phones[job.phoneId] : null;
-  const photoRefs = job.mode === 'general' ? archivePhotos(state) : phone.photos;
+  const phone = job.mode === 'general' ? null : state.phones[job.phoneId];
   const draftId = newDraftId(job.weekStart, job.mode);
-  let clipRefs = [];
-  if (job.mode === 'general') {
-    const clips = await fetchStockClips(['iphone', 'smartphone in hand', 'phone unboxing'], path.join(SITE, 'media', 'drafts', draftId, 'clips'));
-    clipRefs = clips.map((c) => toRel(c.file));
-  }
+  const memory = { preferences: (state.preferences ?? []).map((p) => p.text), history: contentHistory(state) };
   log(`Generuję treści (${job.mode}) na ${slots.length} slotów…`);
-  const specs = await generator({
-    mode: job.mode,
-    phone,
-    photos: photoRefs.map((rel) => ({ file: toAbs(rel) })),
-    slots,
-    perf: state.performance,
-    previousHooks: phone ? previousHooks(state, phone.id) : [],
-    stockClips: clipRefs.map((rel, i) => ({ file: toAbs(rel), query: ['iphone', 'telefon w dłoni', 'rozpakowanie'][i] ?? 'telefon' })),
-    notes: job.notes ?? '',
-  });
+  let photoRefs;
+  let clipRefs = [];
+  let specs;
+  if (job.mode === 'general') {
+    const mediaDir = path.join(SITE, 'media', 'drafts', draftId, 'src');
+    const own = archivePhotos(state, 4);
+    const g = await (generators.general ?? generateGeneral)({
+      slots, perf: state.performance, notes: job.notes ?? '', ...memory,
+      ownPhotos: own.map(toAbs), mediaDir,
+      headlines: await recentHeadlines(), findPhotos: photoCandidates, findVideo: videoCandidate,
+    });
+    photoRefs = g.photos.map((p) => toRel(p.file));
+    clipRefs = g.clips.map((c) => toRel(c.file));
+    specs = g.specs;
+    if (g.credits.length) for (const s of Object.values(specs)) if (s.caption) s.caption += `\n\nZdjęcia: ${g.credits.join('; ')}`;
+  } else {
+    photoRefs = phone.photos;
+    specs = await (generators.phone ?? generatePackage)({
+      mode: job.mode,
+      phone,
+      photos: photoRefs.map((rel) => ({ file: toAbs(rel) })),
+      slots,
+      perf: state.performance,
+      previousHooks: previousHooks(state, phone.id),
+      notes: job.notes ?? '',
+      ...memory,
+    });
+  }
 
   const renderer = await createRenderer([...photoRefs, ...clipRefs].map(toAbs));
   const itemIds = [];

@@ -1,5 +1,5 @@
 // Generowanie treści (Gemini) + walidacja, żeby szablony graficzne zawsze dostały poprawne dane.
-import { brandGuide, KIND_BRIEF } from './brand.js';
+import { brandGuide, HOOK_FORMATS, KIND_BRIEF } from './brand.js';
 import { generateJson, imagePart, research } from './gemini.js';
 import { KIND_INFO } from './plan.js';
 import { formatDatePl, stripEmoji } from './util.js';
@@ -63,27 +63,24 @@ async function photoParts(photos, label) {
   return parts;
 }
 
-// Pakiet treści na sloty tygodnia. mode: phone | continue | general.
-export async function generatePackage({ mode, phone, photos, slots, perf, previousHooks = [], stockClips = [], notes = '' }) {
-  const kindSet = mode === 'general' ? KIND_BRIEF.general : KIND_BRIEF.phone;
-  let researchText = '';
-  if (mode === 'general') {
-    const month = new Date().toLocaleDateString('pl-PL', { month: 'long', year: 'numeric' });
-    researchText = await research(`Jest ${month}. Jesteś researcherem marki sprzedającej używane iPhone'y w Polsce (Dzierżoniów).
-Znajdź aktualne, sprawdzone informacje do treści na Instagram: 1) aktualne orientacyjne ceny używanych iPhone'ów 12–17 w Polsce (OLX/Allegro),
-2) najnowsze wiadomości Apple/iOS ważne dla zwykłego użytkownika, 3) aktualne oszustwa przy sprzedaży telefonów w Polsce,
-4) porady przy zakupie używanego iPhone'a. Podaj zwięzłe fakty z liczbami, po polsku. Zaznacz, czego nie jesteś pewien.`);
-  }
-  const slotList = slots.map((s) => `- ${s.id}: ${formatDatePl(s.date)} → ${s.kind}: ${kindSet[s.kind] ?? KIND_BRIEF.phone.story}`).join('\n');
+// Stałe wskazówki właściciela + lista tego, co już było (żeby się nie powtarzać).
+function memoryBlock({ preferences = [], history = [] }) {
+  return [
+    preferences.length ? `\nSTAŁE WSKAZÓWKI WŁAŚCICIELA (zawsze ich przestrzegaj):\n${preferences.map((p) => `- ${p}`).join('\n')}` : '',
+    history.length ? `\nTO JUŻ BYŁO W OSTATNICH TYGODNIACH – NIE POWTARZAJ tych tematów, hooków ani formatów:\n${history.map((h) => `- ${h}`).join('\n')}` : '',
+  ].join('\n');
+}
+
+// Pakiet treści o konkretnym telefonie. mode: phone | continue.
+export async function generatePackage({ mode, phone, photos, slots, perf, previousHooks = [], notes = '', preferences = [], history = [] }) {
+  const slotList = slots.map((s) => `- ${s.id}: ${formatDatePl(s.date)} → ${s.kind}: ${KIND_BRIEF.phone[s.kind] ?? KIND_BRIEF.phone.story}`).join('\n');
   const prompt = `
-${mode === 'general' ? `W tym tygodniu NIE MA telefonu na sprzedaż. Tworzysz treści ogólne, które budują zasięg i zaufanie, a w CTA zapraszają do kontaktu („szukasz iPhone'a? napisz, jaki model”).
-RESEARCH (aktualne informacje z internetu – używaj tylko pewnych faktów, bez wymyślania liczb):
-${researchText}` : phoneBlock(phone)}
+${phoneBlock(phone)}
 ${mode === 'continue' ? `\nTen telefon był już promowany w poprzednich tygodniach i nadal jest dostępny. Użyj NOWYCH kątów i hooków. Nie powtarzaj tych hooków:\n${previousHooks.map((h) => `- ${h}`).join('\n')}` : ''}
-${notes ? `\nUWAGI WŁAŚCICIELA: ${notes}` : ''}
+${notes ? `\nUWAGI WŁAŚCICIELA DO TEGO PAKIETU: ${notes}` : ''}
+${memoryBlock({ preferences, history })}
 ${performanceNote(perf)}
-${photos.length ? `\nZDJĘCIA: poniżej ${photos.length} zdjęć (numery 0–${photos.length - 1}). ${mode === 'general' ? 'To zdjęcia telefonów z naszego archiwum – używaj jako tła.' : 'Wybieraj najlepsze ujęcia: na okładki i hooki ostre, efektowne zdjęcie całego telefonu; wady pokazuj zdjęciami wad. Nie używaj tego samego zdjęcia w dwóch scenach z rzędu.'}` : '\nBRAK ZDJĘĆ: ustaw "photo": null wszędzie (grafiki będą typograficzne).'}
-${stockClips.length ? `\nKLIPY WIDEO (numery 0–${stockClips.length - 1}) do użycia w rolkach jako tło przez pole "video": ${stockClips.map((c, i) => `${i}: ${c.query}`).join('; ')}` : ''}
+${photos.length ? `\nZDJĘCIA: poniżej ${photos.length} zdjęć (numery 0–${photos.length - 1}). Wybieraj najlepsze ujęcia: na okładki i hooki ostre, efektowne zdjęcie całego telefonu; wady pokazuj zdjęciami wad. Nie używaj tego samego zdjęcia w dwóch scenach z rzędu.` : '\nBRAK ZDJĘĆ: ustaw "photo": null wszędzie.'}
 
 SLOTY DO WYPEŁNIENIA (każdy inny, razem mają tworzyć spójny tydzień, który prowadzi do sprzedaży):
 ${slotList}
@@ -100,9 +97,172 @@ ${FORMAT}`.trim();
   const result = {};
   for (const s of slots) {
     if (!items[s.id]) throw new Error(`Gemini nie przygotował slotu ${s.id}`);
-    result[s.id] = normalizeSpec(s.kind, items[s.id], photos.length, stockClips.length);
+    result[s.id] = normalizeSpec(s.kind, items[s.id], photos.length);
   }
   return result;
+}
+
+// ---------- treści ogólne (bez konkretnego telefonu) ----------
+// Krok 1: research (newsy z RSS + wyszukiwarka) → krok 2: plan z opisem zdjęcia do każdego slajdu/sceny
+// → krok 3: bot szuka zdjęć/filmów w legalnych bankach, AI wybiera najlepiej pasujące → specyfikacje z numerami zdjęć.
+export async function generateGeneral({ slots, perf, notes = '', preferences = [], history = [], ownPhotos = [], mediaDir, headlines, findPhotos, findVideo }) {
+  const month = new Date().toLocaleDateString('pl-PL', { month: 'long', year: 'numeric' });
+  const researchText = await research(`Jest ${month}. Jesteś researcherem i strategiem treści konta na Instagramie o iPhone'ach (sklep z używanymi iPhone'ami, Polska).
+Oto świeże nagłówki z serwisów technologicznych:
+${headlines.map((h) => `- [${h.source}, ${h.date}] ${h.title}${h.desc ? ` — ${h.desc}` : ''}`).join('\n') || '- (brak)'}
+
+Zadanie: wybierz 6–8 tematów, które TERAZ najbardziej zaciekawią Polaków kupujących lub używających iPhone'a
+(nowości Apple/iOS z nagłówków, ceny, porównania modeli, oszustwa, triki, mity, ponadczasowe porady).
+Do każdego tematu dopisz konkretne fakty – TYLKO z nagłówków powyżej albo powszechnie znane i pewne. Zaznacz, czego nie jesteś pewien
+(takich rzeczy nie podawaj jako faktów). Po polsku, zwięźle.`);
+
+  const slotList = slots.map((s) => `- ${s.id}: ${formatDatePl(s.date)} → ${s.kind}: ${KIND_BRIEF.general[s.kind] ?? KIND_BRIEF.general.story}`).join('\n');
+  const prompt = `
+W tym tygodniu NIE promujemy konkretnego telefonu. Tworzysz TREŚCI OGÓLNE w stylu profesjonalnego magazynu technologicznego:
+budują zasięg, zaufanie i pozycję eksperta, a CTA zaprasza do kontaktu („szukasz iPhone'a? napisz, jaki model – znajdziemy”).
+NIE wspominaj o żadnym konkretnym egzemplarzu z naszej oferty ani jego cenie. Nie używaj słowa „gwarancja” w żadnym kontekście.
+KAŻDY materiał tygodnia na INNY temat (ten sam temat/produkt może pojawić się najwyżej raz w tygodniu) i w INNYM formacie hooka.
+Dodaj do każdej specyfikacji pole "topic" – krótka nazwa tematu.
+
+RESEARCH (używaj tylko pewnych faktów, bez wymyślania liczb):
+${researchText}
+
+FORMATY HOOKÓW, które teraz działają (każdy materiał w tygodniu w INNYM formacie):
+${HOOK_FORMATS.map((h) => `- ${h}`).join('\n')}
+${notes ? `\nUWAGI WŁAŚCICIELA DO TEGO PAKIETU: ${notes}` : ''}
+${memoryBlock({ preferences, history })}
+${performanceNote(perf)}
+
+ZDJĘCIA: każdy slajd karuzeli, każda relacja i każda scena rolki MUSI mieć tło. Zamiast numeru zdjęcia podaj:
+- "image_query": krótkie zapytanie PO ANGIELSKU do banku zdjęć, opisujące konkretny, estetyczny kadr pasujący do treści slajdu
+  (np. "iphone on wooden desk minimal", "person holding smartphone city night", "phone battery charging close up", "apple store interior").
+  Unikaj zapytań o logo i konkretne reklamy. Różne slajdy = różne zapytania.
+${ownPhotos.length ? `- albo "own_photo": numer 0–${ownPhotos.length - 1} – nasze własne zdjęcia telefonów (tylko gdy slajd mówi o naszej ofercie / skupie).` : ''}
+- w rolkach dodatkowo możesz podać "video_query" (po angielsku) – krótki pionowy klip jako tło sceny (np. "scrolling phone hands", "unboxing smartphone").
+Pole "photo" pomiń.
+Karuzele i relacje: "theme": "editorial". Pole "tag" = kategoria materiału, np. PORADNIK, NEWS, RANKING, MIT CZY FAKT, TRIK, PORÓWNANIE.
+
+SLOTY DO WYPEŁNIENIA (każdy na inny temat, razem spójny tydzień):
+${slotList}
+
+Zwróć JSON: { "items": { "<id slotu>": <specyfikacja> } }
+
+${FORMAT}`.trim();
+
+  const out = await generateJson({ system: brandGuide(), parts: [{ text: prompt }] });
+  const raw = out.items ?? out;
+  for (const s of slots) if (!raw[s.id]) throw new Error(`Gemini nie przygotował slotu ${s.id}`);
+
+  // --- dobór zdjęć ---
+  const targets = []; // { key, text, query, own, set(photoIndex) }
+  for (const s of slots) {
+    const spec = raw[s.id];
+    const units = KIND_INFO[s.kind].format === 'reel' ? (spec.scenes ?? []) : KIND_INFO[s.kind].format === 'carousel' ? (spec.slides ?? []) : [spec];
+    units.forEach((u, i) => targets.push({ key: `${s.id}#${i}`, unit: u, text: [u.title, u.sub, ...(u.items ?? u.bullets ?? [])].filter(Boolean).join(' · '), query: u.image_query, own: u.own_photo }));
+  }
+  const photos = [...ownPhotos.map((file) => ({ file }))];
+  const queries = [...new Set(targets.map((t) => t.query).filter(Boolean))].slice(0, 24);
+  const candidates = {};
+  for (const q of queries) candidates[q] = await findPhotos(q, mediaDir);
+
+  // AI ocenia kandydatów i wybiera najlepiej pasujące zdjęcie do każdego slajdu
+  const choiceParts = [{ text: `Do każdego slajdu wybierz zdjęcie, które NAJLEPIEJ pasuje do jego treści i wygląda profesjonalnie (ostre, estetyczne, bez napisów, bez cudzych logo na pierwszym planie, bez osób w dziwnych pozach).
+Jeśli żaden kandydat nie pasuje, wybierz -1. Zwróć JSON: { "choices": { "<klucz slajdu>": <numer kandydata albo -1> } }` }];
+  for (const t of targets) {
+    const c = t.query ? candidates[t.query] ?? [] : [];
+    if (!c.length) continue;
+    choiceParts.push({ text: `\nSLAJD ${t.key}: ${t.text}\nKandydaci:` });
+    for (const [i, cand] of c.entries()) {
+      choiceParts.push({ text: `[${i}]` });
+      choiceParts.push(await imagePart(cand.file));
+    }
+  }
+  let choices = {};
+  if (choiceParts.length > 1) {
+    try {
+      choices = (await generateJson({ system: 'Jesteś art directorem marki premium. Odpowiadasz wyłącznie JSON-em.', parts: choiceParts, temperature: 0.2 })).choices ?? {};
+    } catch {
+      choices = {};
+    }
+  }
+  const indexOf = new Map();
+  const credits = new Set();
+  const use = (cand) => {
+    if (!indexOf.has(cand.file)) { indexOf.set(cand.file, photos.length); photos.push(cand); }
+    if (cand.credit && cand.source === 'openverse') credits.add(cand.credit);
+    return indexOf.get(cand.file);
+  };
+  // Zapas neutralnych, eleganckich zdjęć – gdy AI odrzuci kandydatów (zamiast wstawiać nasz telefon)
+  let pool = null;
+  let poolNext = 0;
+  const neutral = async () => {
+    if (!pool) {
+      pool = [];
+      for (const q of ['smartphone minimal dark background', 'hand holding smartphone', 'iphone on desk']) pool.push(...await findPhotos(q, mediaDir));
+    }
+    return pool.length ? pool[poolNext++ % pool.length] : null;
+  };
+  for (const t of targets) {
+    delete t.unit.photo;
+    if (Number.isInteger(t.own) && t.own >= 0 && t.own < ownPhotos.length) { t.unit.photo = t.own; continue; }
+    const c = t.query ? candidates[t.query] ?? [] : [];
+    const pick = Number.isInteger(choices[t.key]) ? choices[t.key] : 0;
+    const cand = pick >= 0 && pick < c.length ? c[pick] : pick === -1 ? null : c[0];
+    const chosen = cand ?? await neutral();
+    t.unit.photo = chosen ? use(chosen) : null;
+  }
+
+  // --- klipy do rolek ---
+  const clips = [];
+  const clipIndex = new Map();
+  for (const s of slots.filter((x) => KIND_INFO[x.kind].format === 'reel')) {
+    for (const sc of raw[s.id].scenes ?? []) {
+      if (!sc.video_query || clips.length >= 6) continue;
+      if (!clipIndex.has(sc.video_query)) {
+        const v = await findVideo(sc.video_query, mediaDir);
+        clipIndex.set(sc.video_query, v ? clips.push(v) - 1 : null);
+      }
+      sc.video = clipIndex.get(sc.video_query);
+    }
+  }
+
+  const result = {};
+  for (const s of slots) {
+    const spec = raw[s.id];
+    if (KIND_INFO[s.kind].format !== 'reel') spec.theme = 'editorial';
+    else spec.style = 'editorial';
+    result[s.id] = normalizeSpec(s.kind, spec, photos.length, clips.length);
+  }
+  return { specs: result, photos, clips, credits: [...credits] };
+}
+
+// ---------- rozumienie wiadomości ----------
+// Zwykła wiadomość bez zdjęć → intencja (żeby „Dalej”, „zmień wszystko”, „zrób ogólne” działały naturalnie).
+export async function classifyMessage(text, ctx) {
+  const out = await generateJson({
+    system: 'Jesteś asystentem bota social media sklepu z używanymi iPhone’ami. Rozpoznajesz, czego chce właściciel. Odpowiadasz wyłącznie JSON-em.',
+    parts: [{ text: `KONTEKST:
+- Aktualnie zaplanowane treści: ${ctx.currentMode ?? 'brak'}${ctx.currentPhone ? ` (telefon: ${ctx.currentPhone})` : ''}
+- Zgłoszenie telefonu w toku: ${ctx.bufferPhotos ? `tak, ${ctx.bufferPhotos} zdjęć` : 'nie'}
+- Ostatnie wiadomości (od najstarszej):
+${ctx.recent.map((m) => `  ${m.who}: ${m.text}`).join('\n')}
+
+NOWA WIADOMOŚĆ WŁAŚCICIELA: """${text}"""
+
+Rozpoznaj intencję:
+- "general" – chce treści ogólnych (bez konkretnego telefonu)
+- "same_phone" – ten sam telefon nadal na sprzedaż, chce nowych treści o nim (ew. nowa cena)
+- "sold" – telefon sprzedany
+- "feedback" – uwagi do obecnych/przyszłych materiałów, chce zmian (np. „zmień wszystko”, „nie powtarzaj się”, „ładniejsze zdjęcia”)
+- "phone_data" – podaje dane telefonu do zgłoszenia (model, cena, bateria…)
+- "status" – pyta o plan publikacji
+- "other" – pytanie lub coś innego
+Zwróć JSON: { "intent": "...", "mode": "general|same_phone|null (dla feedback: w jakim trybie robić nowe treści; null = bez zmiany)",
+"notes": "uwagi do zastosowania przy tworzeniu (po polsku, konkretnie)", "remember": "stała zasada na przyszłe tygodnie albo pusty tekst",
+"price": <nowa cena albo null>, "reply": "krótka, ludzka odpowiedź do właściciela po polsku" }` }],
+    temperature: 0.1,
+  });
+  return out;
 }
 
 // Poprawka jednego elementu wg uwag właściciela.
@@ -204,6 +364,7 @@ export function normalizeSpec(kind, spec, nPhotos, nClips = 0) {
     const coverTitle = clip(spec.cover?.title || scenes[0].title, 60);
     return {
       angle: clip(spec.angle, 60),
+      style: spec.style === 'editorial' ? 'editorial' : 'classic',
       scenes,
       cover: { title: coverTitle, accent: accentOf(coverTitle, spec.cover?.accent || scenes[0].accent), photo: idx(spec.cover?.photo, nPhotos) ?? scenes[0].photo },
       caption: String(spec.caption ?? '').trim().slice(0, 2200),
@@ -232,7 +393,7 @@ export function normalizeSpec(kind, spec, nPhotos, nClips = 0) {
     if (slides.length < 2) throw new Error('Karuzela ma za mało slajdów');
     slides[0].kind = 'cover';
     return {
-      theme: ['graphite', 'red', 'green'].includes(spec.theme) ? spec.theme : 'graphite',
+      theme: ['graphite', 'red', 'green', 'editorial'].includes(spec.theme) ? spec.theme : 'graphite',
       slides,
       caption: String(spec.caption ?? '').trim().slice(0, 2200),
     };
@@ -243,8 +404,9 @@ export function normalizeSpec(kind, spec, nPhotos, nClips = 0) {
     title,
     accent: accentOf(title, spec.accent),
     sub: clip(spec.sub, 110),
-    cta: clip(spec.cta || 'Napisz na DM', 40),
+    cta: clip(spec.cta || 'Napisz na DM', 26),
     photo: idx(spec.photo, nPhotos),
+    theme: spec.theme === 'editorial' ? 'editorial' : undefined,
   };
 }
 

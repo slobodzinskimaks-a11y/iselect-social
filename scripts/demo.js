@@ -37,8 +37,10 @@ async function mockGenerator({ slots, photos }) {
 
 const local = zoned(new Date(), config.TIMEZONE);
 const weekStart = mondayOf(addDays(local.date, 7));
-await runGenerate(state, { type: 'generate', mode: 'phone', phoneId: 'demo', weekStart, fromDate: weekStart },
-  { generator: process.env.DEMO_AI === '1' ? generatePackage : mockGenerator });
+// DEMO_MODE=general – treści ogólne (prawdziwe Gemini, newsy i banki zdjęć; wymaga GEMINI_API_KEY)
+const mode = process.env.DEMO_MODE === 'general' ? 'general' : 'phone';
+await runGenerate(state, { type: 'generate', mode, phoneId: 'demo', weekStart, fromDate: weekStart },
+  mode === 'general' ? {} : { phone: process.env.DEMO_AI === '1' ? generatePackage : mockGenerator });
 writeManifests(state);
 saveState(state);
 

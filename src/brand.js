@@ -17,7 +17,7 @@ FAKTY O FIRMIE (używaj dokładnie):
 - Miasto: ${c.CITY} (pisownia: Dzierżoniów). Okolice do SEO w opisie: ${c.NEARBY.join(', ')}.
 - Kontakt: ${contact}. Odbiór: ${c.DELIVERY.join(' lub ')}.
 - ${c.TRADE_IN ? 'Przyjmujemy telefony w rozliczeniu (wymiana starego na lepszy z dopłatą) – to mocny argument, używaj go.' : ''}
-- NIGDY nie wspominaj o gwarancji, rękojmi, „sprawdzonym serwisie” ani nie obiecuj niczego, czego nie ma w danych.
+- NIGDY nie używaj słów „gwarancja”, „rękojmia” (w żadnym kontekście), nie pisz o „sprawdzonym serwisie” ani nie obiecuj niczego, czego nie ma w danych.
 - Nie wymyślaj parametrów, wad ani zestawu. Wady opisuj uczciwie i konkretnie – szczerość to nasza przewaga („Uczciwie o stanie”, „bez ściemy”, „wady widać na zdjęciach”).
 - Jedna sztuka na stanie to prawda – możesz grać niedostępnością („jest jeden”), ale bez fałszywych terminów.
 
@@ -51,6 +51,24 @@ TEKSTY NA GRAFIKACH: bez emoji (nie wyświetlą się), krótko, polskie znaki po
 `.trim();
 }
 
+// Sprawdzone formaty hooków w krótkich wideo/karuzelach (tech / zakupy). Gemini wybiera różne co tydzień.
+export const HOOK_FORMATS = [
+  'Ostrzeżenie: „Nie kupuj iPhone’a X, zanim nie zobaczysz tego”',
+  'Sekret branży: „Sprzedawcy telefonów nie chcą, żebyś to wiedział”',
+  'Lista z liczbą: „3 ustawienia, które musisz zmienić od razu”',
+  'Ranking / tier list: „Oceniam każdego iPhone’a od 11 do 17”',
+  'Mit czy fakt: „Ładowanie przez noc niszczy baterię?”',
+  'Porównanie w 10 sekund: „X vs Y – różnica, która się liczy”',
+  'Zgadnij cenę: „Ile dziś kosztuje używany iPhone X? Strzelaj w komentarzu”',
+  'POV / scenka: „POV: kupujesz telefon z ogłoszenia i…”',
+  'News z komentarzem: „Apple właśnie zmieniło X. Co to znaczy dla Ciebie?”',
+  'Błąd, który robi każdy: „90% ludzi robi to źle z baterią”',
+  'Najlepszy wybór za kwotę: „Najlepszy iPhone do 1500 zł w 2026”',
+  'Kontrowersja: „Nowy iPhone to strata pieniędzy. Dlaczego?”',
+  'Ukryta funkcja: „Twój iPhone potrafi to, a nie wiesz”',
+  'Test / eksperyment: „Sprawdziłem, ile naprawdę wytrzymuje bateria po 3 latach”',
+];
+
 // Opisy formatów slotów tygodnia – Gemini dostaje je razem z listą slotów.
 export const KIND_BRIEF = {
   phone: {
@@ -61,10 +79,10 @@ export const KIND_BRIEF = {
     story: 'RELACJA: jeden przekaz, różny w każdej relacji tygodnia (np. „Nowość na stanie”, „Ile byś za niego dał?”, „Przyjmujemy w rozliczeniu”, „Ostatnie dni?”, zbliżenie na atut). Krótko + CTA „Napisz na DM”.',
   },
   general: {
-    reel_hook: 'ROLKA EDUKACYJNA z mocnym hookiem o używanych iPhone’ach / aktualnych nowościach Apple (np. „3 błędy przy kupnie używanego iPhone’a”, „Ten iPhone to najlepszy zakup w 2026”). Wartość + CTA do obserwowania / DM.',
-    reel_angle: 'ROLKA w innym formacie niż reel_hook: mit vs fakt, ranking, „POV”, szybkie porównanie modeli i ich cen używanych. Oparta na aktualnych informacjach z researchu.',
-    carousel_offer: 'KARUZELA „WYMIEŃ STAREGO NA LEPSZEGO / SKUPUJEMY”: przyjmujemy telefony w rozliczeniu, jak to działa krok po kroku, co przygotować, CTA na DM.',
-    carousel_value: 'KARUZELA DO ZAPISANIA: poradnik / checklista / ranking oparty na aktualnym researchu (np. „Który iPhone kupić do 1500 zł?”).',
-    story: 'RELACJA: szybka porada, pytanie do widzów albo zachęta do napisania, czego szukają („Szukasz iPhone’a? Napisz model – znajdziemy”).',
+    reel_hook: 'ROLKA O AKTUALNYM TEMACIE (news, trend, kontrowersja) z mocnym hookiem z biblioteki formatów. Wartość dla widza, a na końcu CTA do obserwowania / komentarza.',
+    reel_angle: 'ROLKA w zupełnie innym formacie i temacie niż reel_hook (np. mit czy fakt, ranking, zgadnij cenę, ukryta funkcja). Oparta na researchu.',
+    carousel_offer: 'KARUZELA SPRZEDAŻOWA BEZ KONKRETNEGO TELEFONU: „Wymień starego na lepszego” / „Szukasz iPhone’a? Znajdziemy go” – jak działa zakup i odkup w rozliczeniu u nas, krok po kroku, CTA na DM.',
+    carousel_value: 'KARUZELA DO ZAPISANIA: poradnik / checklista / ranking / porównanie oparte na aktualnym researchu.',
+    story: 'RELACJA: news dnia w jednym zdaniu, szybka porada albo pytanie do widzów. Każda relacja tygodnia o czymś innym.',
   },
 };

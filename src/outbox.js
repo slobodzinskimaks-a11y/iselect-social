@@ -38,6 +38,7 @@ export async function flush() {
           files: last ? (msg.files ?? []).map((f) => ({ path: toAbs(f.path), name: f.name })) : [],
         });
       }
+      if (msg.channel === 'intake') state.chat = [...(state.chat ?? []), { who: 'Bot', text: msg.content.replace(/https?:\S+/g, '[link]').slice(0, 200) }].slice(-10);
     } catch (e) {
       log('Wysyłka nieudana', e.message);
       msg.attempts = (msg.attempts ?? 0) + 1;

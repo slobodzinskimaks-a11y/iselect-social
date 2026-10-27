@@ -2,6 +2,7 @@
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
 import { Background, Bullet, Glass, MUTED, parseBullet, Pill, THEMES, Title } from './ui.jsx';
+import { EditorialSlide, EditorialStory } from './Editorial.jsx';
 
 const PAD = 72;
 
@@ -53,6 +54,7 @@ function Contact({ brand, theme, size = 34 }) {
 }
 
 export function Slide({ slide, index, total, theme, photos, brand }) {
+  if (theme === 'editorial') return <EditorialSlide slide={slide} index={index} total={total} photos={photos} brand={brand} />;
   const photo = slide.photo != null ? photos[slide.photo] : null;
   const heavy = ['bullets', 'specs', 'text', 'cta', 'price'].includes(slide.kind);
   const accent = THEMES[theme].accent;
@@ -129,6 +131,7 @@ export function Slide({ slide, index, total, theme, photos, brand }) {
 const TEXT_SOFT = 'rgba(244,241,234,0.92)';
 
 export function Story({ story, theme, photos, brand }) {
+  if (story.theme === 'editorial') return <EditorialStory story={story} photos={photos} brand={brand} />;
   const photo = story.photo != null ? photos[story.photo] : null;
   const accent = THEMES[theme].accent;
   return (
